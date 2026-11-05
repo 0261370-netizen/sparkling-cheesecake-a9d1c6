@@ -1,0 +1,1639 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1f3a30">
+<meta name="description" content="The Design Library — tu biblioteca editorial de diseño de producto, mobiliario, materiales, colores y tendencias.">
+<title>The Design Library · Atelier NORVID</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#193b32;--ink2:#24483d;--cream:#f7f5ef;--paper:#fffdf8;--muted:#6e766e;--line:#dcded4;--coral:#d58b6f;--apricot:#f6c6a1;--lav:#c4b9d3;--olive:#d8ddad;--blue:#547ca2;--shadow:0 16px 38px rgba(28,52,43,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);font-family:'Hanken Grotesk',Arial,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #d68a70;outline-offset:3px}::selection{background:#d8ddad;color:var(--ink)}
+.shell{display:grid;grid-template-columns:237px minmax(0,1fr);min-height:100vh}.rail{background:#17392e;color:#fff;position:sticky;top:0;height:100vh;padding:30px 22px;display:flex;flex-direction:column;z-index:20}.brandmark{font-family:'Instrument Serif',Georgia,serif;font-size:24px;letter-spacing:-1.4px;line-height:1.05}.brandmark em{font-style:italic;color:#cbd8ac}.brand-label{font:10px 'DM Mono',monospace;letter-spacing:2px;text-transform:uppercase;color:#bfd2c4;margin-bottom:14px}.rail-line{height:1px;background:#456354;margin:29px 0 22px}.rail-caption{font:10px 'DM Mono',monospace;color:#a4b8ad;letter-spacing:1.9px;margin:0 0 14px}.nav{display:flex;flex-direction:column;gap:5px}.nav a{display:flex;align-items:center;gap:11px;font-size:12.5px;color:#d4e2d7;padding:11px 12px;border-radius:9px;transition:.2s}.nav a:hover,.nav a.active{color:#fff;background:#365a4c}.nav .nav-number{font:10px 'DM Mono',monospace;color:#c3ceae;width:24px}.rail-bottom{margin-top:auto}.rail-deco{height:128px;position:relative;overflow:hidden;border-radius:12px;background:#43665a;margin-bottom:19px}.rail-deco .sun{width:105px;height:105px;background:#dfae89;position:absolute;border-radius:50%;right:-15px;top:-20px}.rail-deco .arch{position:absolute;height:105px;width:80px;border:9px solid #b8c69c;border-bottom:0;border-radius:80px 80px 0 0;left:15px;bottom:-12px}.rail-deco .wave{position:absolute;width:140px;height:70px;background:#244f48;transform:rotate(-28deg);right:-10px;bottom:-37px;border-radius:55%}.rail-bottom p{font:11px/1.7 'DM Mono',monospace;color:#c5d5ca;margin:0}.rail-bottom span{color:#d4aa8b}
+.main{min-width:0}.topbar{height:76px;display:flex;justify-content:space-between;align-items:center;padding:0 clamp(24px,4.5vw,76px);border-bottom:1px solid var(--line);gap:15px;background:rgba(247,245,239,.93);backdrop-filter:blur(12px);position:sticky;top:0;z-index:10}.top-title{font:11px 'DM Mono',monospace;letter-spacing:1.7px;color:#6e7c70}.top-right{display:flex;align-items:center;gap:20px}.today{font:11px 'DM Mono',monospace;color:#697c71}.top-search{background:#eeeee6;border:1px solid #e1e2d8;padding:10px 14px;border-radius:999px;display:flex;align-items:center;gap:9px;min-width:230px;font-size:12px;color:#5c6b62;cursor:pointer}.kbd{margin-left:auto;font-size:10px;color:#8b928a;border:1px solid #d7dacf;border-radius:4px;padding:2px 5px}.content{max-width:1580px;margin:auto;padding:0 clamp(22px,4.5vw,76px) 88px}.eyebrow{font:10px 'DM Mono',monospace;letter-spacing:2.2px;font-weight:500;text-transform:uppercase;color:#698172}.section{scroll-margin-top:105px;margin-top:76px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:25px}.section-head h2{font:500 clamp(36px,4.1vw,58px)/1.08 'Instrument Serif',Georgia,serif;letter-spacing:-2px;margin:9px 0 0}.section-head p{color:var(--muted);font-size:13px;max-width:330px;line-height:1.6;margin:0}.text-button{border:0;background:none;color:var(--ink);font:11px 'DM Mono',monospace;border-bottom:1px solid var(--ink);padding:7px 0}
+.hero{padding-top:40px}.hero-card{min-height:540px;background:#e5e9d6;display:grid;grid-template-columns:1.07fr .93fr;overflow:hidden;border-radius:13px;position:relative}.hero-left{padding:clamp(37px,5.5vw,86px) clamp(30px,4.8vw,74px);display:flex;flex-direction:column;align-items:flex-start;position:relative;z-index:2}.hero-mini{border:1px solid #91ab94;border-radius:40px;padding:9px 13px;font:10px 'DM Mono',monospace;letter-spacing:1.2px;text-transform:uppercase}.hero h1{font:500 clamp(56px,6.3vw,105px)/.98 'Instrument Serif',Georgia,serif;letter-spacing:-4.5px;max-width:750px;margin:42px 0 25px}.hero h1 em{font-weight:400;color:#a25e4b}.hero p{font-size:14px;line-height:1.8;max-width:435px;margin:0 0 32px;color:#4d6355}.pill-btn{border:0;background:var(--ink);color:#fff;border-radius:999px;padding:16px 23px;display:flex;gap:22px;align-items:center;font-size:12px;font-weight:600;transition:transform .2s,background .2s}.pill-btn:hover{transform:translateY(-3px);background:#315c4b}.hero-right{position:relative;overflow:hidden;background:#c6baae}.hero-right:before{content:'';position:absolute;inset:0;background:linear-gradient(130deg,#d7c6b7 0%,#baa490 65%,#8e9a82);opacity:.8}.hero-frame{position:absolute;inset:9% 13% 9% 9%;border:1px solid rgba(255,255,255,.65);display:grid;grid-template-columns:1.2fr .8fr;grid-template-rows:1.2fr .8fr;gap:12px;padding:12px;transform:rotate(3deg);box-shadow:0 25px 50px rgba(37,50,36,.12);background:#eee8de}.himage{position:relative;background-color:#a58c78;background-size:cover;background-position:center;overflow:hidden}.himage:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(22,33,28,.3),transparent 60%)}.im1{grid-row:span 2;background-image:url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1000&q=85'),url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiB2aWV3Qm94PSIwIDAgNTYwIDczMCI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyYWluIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0wIDZIMjRNMCAyMUgyNCIgc3Ryb2tlPSIjMjE0ODNmIiBvcGFjaXR5PSIuMDc1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTTM4IDBIMFYzOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjE0ODNmIiBzdHJva2Utb3BhY2l0eT0iLjEzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiBmaWxsPSIjYTRiOWE2Ii8+PHJlY3Qgd2lkdGg9IjU2MCIgaGVpZ2h0PSI3MzAiIGZpbGw9InVybCgjZ3JhaW4pIi8+PHJlY3QgeD0iMzYiIHk9IjU4IiB3aWR0aD0iNDkwIiBoZWlnaHQ9IjYxMCIgZmlsbD0iI2U5ZTVkNSIgb3BhY2l0eT0iLjY1Ii8+PHBhdGggZD0iTTg0IDUwMEg0OTAiIHN0cm9rZT0iIzIxNDgzZiIgb3BhY2l0eT0iLjI1IiBzdHJva2Utd2lkdGg9IjMiLz48cmVjdCB4PSIxMjAiIHk9IjMyMCIgd2lkdGg9IjM0NSIgaGVpZ2h0PSIyNSIgcng9IjQiIGZpbGw9IiNkY2JmOWYiIHN0cm9rZT0iIzIxNDgzZiIgc3Ryb2tlLXdpZHRoPSIzIi8+PHBhdGggZD0iTTE0MyAzNDVMMTE1IDYxME00NDQgMzQ1TDQ2NSA2MTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIxNDgzZiIgc3Ryb2tlLXdpZHRoPSIxNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHJlY3QgeD0iMTUwIiB5PSIyNjQiIHdpZHRoPSIxNDUiIGhlaWdodD0iNTYiIHJ4PSI1IiBmaWxsPSIjMjE0ODNmIiBvcGFjaXR5PSIuNzUiLz48cGF0aCBkPSJNMTc1IDI2NHYtMTJoOTV2MTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIxNDgzZiIgc3Ryb2tlLXdpZHRoPSI1Ii8+PGVsbGlwc2UgY3g9IjQ0MCIgY3k9IjI5NSIgcng9IjMxIiByeT0iMTMiIGZpbGw9IiMyMTQ4M2YiIG9wYWNpdHk9Ii43Ii8+PHBhdGggZD0iTTQzOSAyODJDNDIxIDI0MSAzOTMgMjI2IDM3MyAyMTFNNDM4IDI4MUM0NDggMjIxIDQ3MiAxOTAgNDkxIDE4NE00NDAgMjcwQzQzOCAyMTYgNDI2IDE3OSA0MTUgMTU4IiBzdHJva2U9IiMyMTQ4M2YiIHN0cm9rZS13aWR0aD0iNyIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTQwOCAyMjhRMzczIDE4NSAzNDcgMjA3UTM2OSAyNDYgNDA4IDIyOFpNNDU3IDIzNVE0ODIgMTkwIDUxOSAyMTZRNDkzIDI1NCA0NTcgMjM1Wk00MjggMTk1UTQwMyAxNTcgNDI2IDEyNlE0NDUgMTYyIDQyOCAxOTVaIiBmaWxsPSIjMjE0ODNmIiBvcGFjaXR5PSIuNzgiLz48cmVjdCB4PSI0MTAiIHk9IjI4NiIgd2lkdGg9IjYxIiBoZWlnaHQ9IjQ4IiByeD0iNSIgZmlsbD0iI2RjYmY5ZiIvPjxjaXJjbGUgY3g9Ijk2IiBjeT0iMTUwIiByPSI1MCIgZmlsbD0iI2RjYmY5ZiIgb3BhY2l0eT0iLjgiLz48cGF0aCBkPSJNNzAgMTUwSDEyMk05NiAxMjRWMTc2IiBzdHJva2U9IiNlOWU1ZDUiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjgiLz48cmVjdCB4PSIyNSIgeT0iMjUiIHdpZHRoPSI1MTAiIGhlaWdodD0iNjgwIiBmaWxsPSJub25lIiBzdHJva2U9IiMyMTQ4M2YiIHN0cm9rZS1vcGFjaXR5PSIuMjUiIHN0cm9rZS13aWR0aD0iMiIvPjxjaXJjbGUgY3g9IjQ5MCIgY3k9IjYwIiByPSI3IiBmaWxsPSIjMjE0ODNmIi8+PC9zdmc+")}.im2{background-image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=700&q=80'),url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiB2aWV3Qm94PSIwIDAgNTYwIDczMCI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyYWluIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0wIDZIMjRNMCAyMUgyNCIgc3Ryb2tlPSIjNzE1YzU0IiBvcGFjaXR5PSIuMDc1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTTM4IDBIMFYzOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzE1YzU0IiBzdHJva2Utb3BhY2l0eT0iLjEzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiBmaWxsPSIjZGRjNGIyIi8+PHJlY3Qgd2lkdGg9IjU2MCIgaGVpZ2h0PSI3MzAiIGZpbGw9InVybCgjZ3JhaW4pIi8+PHJlY3QgeD0iNDkiIHk9IjYyIiB3aWR0aD0iNDYzIiBoZWlnaHQ9IjYxMCIgcng9IjkiIGZpbGw9IiNlZWU4ZDgiLz48cmVjdCB4PSI3NSIgeT0iOTAiIHdpZHRoPSI0MTAiIGhlaWdodD0iNTQwIiBmaWxsPSIjYTViYWEwIi8+PHBhdGggZD0iTTEwMCAxNTBRMTgwIDEwMCAyNDIgMTgwVDQzMCAxNjBNMTEwIDI0MFEyMjAgMTgwIDMwMCAyNjBUNDY2IDI0ME0xMDAgMzUwUTIxMCAzMDAgMjY1IDM3M1Q0NTQgMzYwTTEwMCA0OTBRMTgwIDQ1MCAyNDIgNTE5VDQ0NSA1MTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzcxNWM1NCIgc3Ryb2tlLW9wYWNpdHk9Ii4yOCIgc3Ryb2tlLXdpZHRoPSIxMSIvPjxwYXRoIGQ9Ik05OSAxNTNRMTc1IDExOCAyMjYgMTc3VDQzMSAxNjNNMTEwIDI1OFEyMTUgMjA0IDMwMCAyNzRUNDY1IDI1OU0xMDIgMzY4UTIxNSAzMTIgMjcyIDM5MFQ0NTggMzc5IiBmaWxsPSJub25lIiBzdHJva2U9IiNlZWU4ZDgiIHN0cm9rZS1vcGFjaXR5PSIuNTUiIHN0cm9rZS13aWR0aD0iNCIvPjxjaXJjbGUgY3g9IjM3NiIgY3k9IjUxMCIgcj0iODgiIGZpbGw9IiNkZGM0YjIiIG9wYWNpdHk9Ii45MyIvPjxjaXJjbGUgY3g9IjM3NiIgY3k9IjUxMCIgcj0iNjEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzcxNWM1NCIgc3Ryb2tlLXdpZHRoPSIxMCIgb3BhY2l0eT0iLjU1Ii8+PGNpcmNsZSBjeD0iMzc2IiBjeT0iNTEwIiByPSIyMyIgZmlsbD0iIzcxNWM1NCIgb3BhY2l0eT0iLjY1Ii8+PHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTEwIiBoZWlnaHQ9IjY4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzE1YzU0IiBzdHJva2Utb3BhY2l0eT0iLjI1IiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSI0OTAiIGN5PSI2MCIgcj0iNyIgZmlsbD0iIzcxNWM1NCIvPjwvc3ZnPg==")}.im3{background-image:url('https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=700&q=80'),url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiB2aWV3Qm94PSIwIDAgNTYwIDczMCI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyYWluIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0wIDZIMjRNMCAyMUgyNCIgc3Ryb2tlPSIjMzg1ZTViIiBvcGFjaXR5PSIuMDc1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTTM4IDBIMFYzOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzg1ZTViIiBzdHJva2Utb3BhY2l0eT0iLjEzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiBmaWxsPSIjYmFjN2I3Ii8+PHJlY3Qgd2lkdGg9IjU2MCIgaGVpZ2h0PSI3MzAiIGZpbGw9InVybCgjZ3JhaW4pIi8+PHJlY3QgeD0iNTYiIHk9IjU0IiB3aWR0aD0iNDUwIiBoZWlnaHQ9IjYxNyIgZmlsbD0iI2Y0ZTRkMiIvPjxjaXJjbGUgY3g9IjM0MCIgY3k9IjIzNyIgcj0iMTUyIiBmaWxsPSIjZTRhODhlIi8+PHBhdGggZD0iTTc4IDQ5MEMxMjkgMzc3IDE4MCAzNjUgMjQ2IDQ0M0MzMTAgNTIyIDQyMiA1MDQgNDkxIDQwNFY2NTVINzhaIiBmaWxsPSIjMzg1ZTViIi8+PHBhdGggZD0iTTc3IDUxM0MxNDggNDQ1IDE5NSA0NDcgMjUzIDUxMSIgc3Ryb2tlPSIjZjRlNGQyIiBzdHJva2Utd2lkdGg9IjciIGZpbGw9Im5vbmUiLz48cmVjdCB4PSIxMTQiIHk9IjEzMCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjkwIiBmaWxsPSIjYmFjN2I3IiB0cmFuc2Zvcm09InJvdGF0ZSgxMiAxNTkgMTc1KSIvPjxyZWN0IHg9IjIxNiIgeT0iMzM2IiB3aWR0aD0iOTQiIGhlaWdodD0iNjQiIGZpbGw9IiNmNGU0ZDIiIHRyYW5zZm9ybT0icm90YXRlKC0xMSAyNjAgMzUwKSIvPjxyZWN0IHg9IjM1MCIgeT0iNTI2IiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjY1IiBmaWxsPSIjZTRhODhlIi8+PHBhdGggZD0iTTExNiA2MDBINDQ3IiBzdHJva2U9IiNmNGU0ZDIiIHN0cm9rZS13aWR0aD0iNSIvPjxyZWN0IHg9IjI1IiB5PSIyNSIgd2lkdGg9IjUxMCIgaGVpZ2h0PSI2ODAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzM4NWU1YiIgc3Ryb2tlLW9wYWNpdHk9Ii4yNSIgc3Ryb2tlLXdpZHRoPSIyIi8+PGNpcmNsZSBjeD0iNDkwIiBjeT0iNjAiIHI9IjciIGZpbGw9IiMzODVlNWIiLz48L3N2Zz4=")}.himage small{position:absolute;bottom:12px;left:12px;color:white;text-transform:uppercase;font:9px 'DM Mono',monospace;letter-spacing:1.5px;z-index:1}.hero-stamp{position:absolute;background:#f4d9af;border-radius:50%;width:128px;height:128px;right:-28px;bottom:-24px;transform:rotate(-15deg);display:grid;place-items:center;text-align:center;font:11px/1.5 'DM Mono',monospace;letter-spacing:1px;color:var(--ink);box-shadow:0 12px 40px #362e2333}.hero-number{position:absolute;right:30px;top:25px;font:10px 'DM Mono',monospace;color:#fff;letter-spacing:1px}.statbar{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:22px 5px;border-bottom:1px solid var(--line)}.stat{font:11px 'DM Mono',monospace;color:#7e857c;text-transform:uppercase}.stat b{font:600 19px 'Instrument Serif',serif;color:var(--ink);margin-right:7px}
+.news-grid{display:grid;grid-template-columns:1.25fr repeat(3,1fr);gap:14px}.news-feature{border-radius:12px;padding:26px;background:#c7d1b3;min-height:249px;display:flex;flex-direction:column;position:relative;overflow:hidden}.news-feature h3{font:500 34px/1.03 'Instrument Serif',serif;max-width:280px;margin:14px 0 12px;letter-spacing:-1px}.news-feature p{font-size:12px;max-width:245px;line-height:1.65}.news-feature .ornament{position:absolute;width:178px;height:178px;border:20px solid #6c886f;border-radius:50%;right:-50px;bottom:-62px}.news-feature .ornament:after{content:'';position:absolute;width:90px;height:90px;background:#dfab87;border-radius:50%;top:-38px;right:85px}.news-link{background:#fffdf7;padding:19px;min-height:249px;border:1px solid #e4e5db;border-radius:12px;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}.news-link:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.news-link .nicon{font-size:23px;margin-bottom:auto}.news-link .news-tag{font:10px 'DM Mono',monospace;letter-spacing:.6px;color:#889387;margin:13px 0}.news-link strong{font:500 22px/1.18 'Instrument Serif',serif;letter-spacing:-.4px}.news-link small{color:#667467;margin-top:12px;font-size:11px;line-height:1.5}.news-link .arrow{align-self:flex-end;margin-top:15px;font-size:18px}
+.mood-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.mood{overflow:hidden;border-radius:12px;background:var(--paper);border:1px solid var(--line)}.mood-art{height:305px;padding:14px;display:grid;grid-template-columns:1.17fr .83fr;grid-template-rows:1.3fr .7fr;gap:9px;background:#ede8e0}.mood-art .tile{background-size:cover;background-position:center;position:relative;overflow:hidden}.mood-art .tile:nth-child(1){grid-row:span 2}.mood-art .tile:after{content:'';position:absolute;inset:0;background:linear-gradient(to top,#143d2b22,transparent)}.mood-body{padding:23px}.mood-body h3{font:500 28px 'Instrument Serif',serif;margin:5px 0 10px;letter-spacing:-.8px}.mood-body p{font-size:12px;line-height:1.7;color:#66756a;min-height:42px;margin:0}.swatches{display:flex;gap:6px;margin:22px 0 16px}.swatches span{height:33px;flex:1;border-radius:4px;cursor:pointer;position:relative}.swatches span:hover:after{content:attr(title);position:absolute;background:#162f28;color:white;bottom:40px;left:0;padding:6px 8px;font:10px 'DM Mono',monospace;border-radius:5px}.mood-actions{display:flex;justify-content:space-between;align-items:center;gap:12px}.mood-actions a{font-size:11px;border-bottom:1px solid var(--ink);padding-bottom:4px}.mood-actions button{background:#eff0e8;border:none;border-radius:50%;width:32px;height:32px;font-size:17px;color:var(--ink)}.mood-actions button.saved{background:#d7dcbb}
+.ritual{margin-top:30px;background:#e0b7a4;display:grid;grid-template-columns:1fr .7fr;border-radius:12px;overflow:hidden;min-height:265px}.ritual-info{padding:33px 38px;z-index:2}.ritual h3{font:500 40px/1.1 'Instrument Serif',serif;letter-spacing:-1px;margin:10px 0 18px}.ritual p{font-size:13px;max-width:490px;line-height:1.65}.ritual button{background:var(--ink);border:0;border-radius:999px;color:#fff;padding:11px 17px;font-size:11px;margin-top:10px}.ritual-art{position:relative;overflow:hidden;display:grid;place-items:center}.ritual-art svg{width:100%;height:100%;min-height:240px}
+.library-controls{padding:22px;background:#e9eee4;border-radius:12px;margin-bottom:22px}.filter-line{display:flex;gap:11px;align-items:center;justify-content:space-between;flex-wrap:wrap}.search-box{display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #d5dbcf;border-radius:999px;padding:0 18px;flex:1;min-width:220px;max-width:510px}.search-box input{height:45px;border:0;outline:none;background:transparent;flex:1;min-width:0;font-size:13px;color:var(--ink)}.filter-stats{font:10px 'DM Mono',monospace;color:#657c70}.filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:17px}.filter{border:1px solid #ced9cb;background:transparent;border-radius:999px;padding:9px 13px;color:#52685a;font:11px 'Hanken Grotesk',sans-serif}.filter:hover,.filter.active{background:var(--ink);color:#fff;border-color:var(--ink)}.custom-link-toggle{margin-top:16px;background:transparent;border:0;border-bottom:1px solid #73907d;color:#315846;padding:5px 0;font-size:12px;font-weight:700}.custom-form{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px;padding:19px;border-radius:10px;background:#f8faf4;border:1px solid #dce4d7}.custom-form[hidden]{display:none}.custom-form input,.custom-form select{background:#fff;border:1px solid #cddccc;border-radius:7px;padding:12px;color:#244438;min-width:0;width:100%;font-size:12px}.custom-form button{background:#17392e;color:#fff;border-radius:7px;padding:12px;border:0;font-size:12px}.custom-form small{grid-column:1/-1;color:#708075;font-size:11px}@media(max-width:590px){.custom-form{grid-template-columns:1fr}}.resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.resource{background:#fffdf8;border:1px solid #e4e6dc;border-radius:11px;padding:21px;min-height:202px;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s,border-color .2s}.resource:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#b9cbb9}.resource-top{display:flex;justify-content:space-between;align-items:start;gap:9px}.resource-cat{font:10px 'DM Mono',monospace;color:#7a8b7a;letter-spacing:.7px}.save{border:1px solid #e2e5da;background:#f6f5ef;color:#435f4d;width:33px;height:33px;border-radius:50%;font-size:16px;flex-shrink:0}.save.saved{color:#b45c45;border-color:#f0c1ae;background:#ffede4}.resource h3{font:500 21px/1.17 'Instrument Serif',serif;letter-spacing:-.4px;margin:17px 0 9px}.resource p{font-size:12px;color:#6b786b;line-height:1.6;margin:0 0 18px}.resource-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto}.fmt{font:10px 'DM Mono',monospace;color:#9a9a8d}.resource-bottom a{font-size:11px;color:#24483d;border-bottom:1px solid #24483d;padding:5px 0;font-weight:700}.resource-bottom a:hover{color:#bd755c}.more{display:block;border:1px solid #a7b5a6;border-radius:999px;background:transparent;padding:14px 30px;font-size:12px;margin:27px auto;color:var(--ink)}.empty{padding:40px;text-align:center;background:var(--paper);border-radius:12px;color:#7a887b}
+.study-section{background:#263f38;color:#f4f3ea;border-radius:12px;padding:40px;display:grid;grid-template-columns:1fr .8fr;gap:35px}.study-section .eyebrow{color:#aec6b3}.study-section h2{font:500 clamp(33px,4.2vw,54px)/1.05 'Instrument Serif',serif;letter-spacing:-2px;margin:14px 0}.study-section p{color:#c5d1c8;font-size:13px;line-height:1.7;max-width:480px}.study-list{display:grid;gap:10px}.study-item{border-bottom:1px solid #51685c;padding:12px 0;display:flex;gap:12px;align-items:center}.study-item input{accent-color:#d4ddb7;width:17px;height:17px}.study-item span{font-size:12px;color:#e5ebdf}.study-sub{font:10px 'DM Mono',monospace;color:#a9bdab}.progress-track{height:8px;border-radius:10px;background:#566c5f;margin:24px 0 8px;overflow:hidden}.progress-fill{background:#dcaf88;height:100%;width:0%;transition:width .2s}.notes-wrap{display:grid;grid-template-columns:1fr 1fr;gap:17px}.notes-pad{border-radius:12px;background:#e7d6bb;padding:30px}.notes-pad h3{font:500 33px 'Instrument Serif',serif;margin:10px 0}.notes-pad textarea{width:100%;height:160px;resize:vertical;border:1px solid #c4ae8f;padding:15px;border-radius:8px;background:#faf3e7;color:#354e43;line-height:1.5;font-size:13px}.notes-pad button{background:#234538;border:0;color:#fff;border-radius:999px;padding:11px 18px;margin-top:13px;font-size:12px}.notes-list{background:#fffdf7;border:1px solid var(--line);padding:30px;border-radius:12px;max-height:420px;overflow:auto}.notes-list h3{font:500 33px 'Instrument Serif',serif;margin:10px 0 14px}.note{border-top:1px solid #e5e7dd;padding:13px 0}.note p{font-size:12px;color:#4e6557;line-height:1.6;white-space:pre-wrap;margin:8px 0}.note small{font:9px 'DM Mono',monospace;color:#9ba498}.note button{float:right;border:0;background:none;font-size:11px;color:#ae715b}.footer{margin-top:92px;border-top:1px solid #d5ddcf;padding-top:35px;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.footer h2{font:500 45px 'Instrument Serif',serif;margin:0;letter-spacing:-2px}.footer p{max-width:500px;color:#6a7a6c;font-size:12px;line-height:1.8}.footer button{background:transparent;border:1px solid #a8b7a7;padding:11px 16px;border-radius:50px;font-size:11px;color:var(--ink)}.small-tag{font:10px 'DM Mono',monospace;color:#a2a69c}.status-toast{position:fixed;bottom:20px;right:24px;z-index:50;background:#17392e;color:white;border-radius:9px;padding:13px 19px;font-size:12px;transform:translateY(100px);transition:.25s;box-shadow:var(--shadow);pointer-events:none}.status-toast.show{transform:translateY(0)}
+@media(max-width:1150px){.shell{grid-template-columns:205px 1fr}.rail{padding:25px 16px}.news-grid{grid-template-columns:repeat(2,1fr)}.resource-grid{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:clamp(54px,6vw,80px)}.hero-card{min-height:480px}}
+@media(max-width:830px){.shell{display:block}.rail{position:relative;height:auto;padding:16px 22px;display:block}.brandmark{font-size:21px}.brand-label{margin-bottom:4px}.rail-line,.rail-caption,.rail-bottom{display:none}.nav{margin-top:15px;display:flex;overflow-x:auto;white-space:nowrap;flex-direction:row;padding-bottom:5px}.nav a{padding:8px;font-size:11px;white-space:nowrap}.nav-number{display:none}.topbar{height:58px;padding:0 22px;position:sticky}.today{display:none}.top-search{min-width:0}.content{padding:0 22px 50px}.hero-card{grid-template-columns:1fr}.hero-left{padding:38px 32px}.hero h1{font-size:clamp(58px,10vw,90px);margin:23px 0 16px}.hero-right{min-height:320px}.section{margin-top:54px}.mood-grid{grid-template-columns:repeat(2,1fr)}.study-section{grid-template-columns:1fr}}
+@media(max-width:590px){.top-search{min-width:0;padding:9px 11px}.top-title{font-size:10px}.kbd{display:none}.hero-left{padding:30px 24px}.hero h1{font-size:56px;letter-spacing:-2px}.hero p{font-size:12px}.hero-right{min-height:270px}.hero-frame{inset:6% 9%}.section-head{display:block}.section-head h2{font-size:41px}.section-head p{margin-top:11px}.news-grid,.mood-grid,.resource-grid,.notes-wrap{grid-template-columns:1fr}.news-feature,.news-link{min-height:182px}.mood-art{height:280px}.ritual{grid-template-columns:1fr}.ritual-art{display:none}.ritual h3{font-size:31px}.study-section{padding:26px}.top-right{gap:7px}.footer h2{font-size:36px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Edition 02: live design reading room */
+.live-shell{background:#17392e;color:#eaf1e7;border-radius:15px;padding:clamp(22px,3.2vw,46px);box-shadow:0 20px 50px rgba(23,57,46,.12)}
+.live-toolbar{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-bottom:25px;border-bottom:1px solid rgba(255,255,255,.2)}.live-toolbar .eyebrow{color:#d9d9a8;letter-spacing:2.2px}.live-toolbar p{font-size:12px;line-height:1.6;color:#cedccf;margin:10px 0 0}.signal-dot{display:inline-block;width:9px;height:9px;background:#d6ac8f;border-radius:50%;margin-right:11px;box-shadow:0 0 0 5px rgba(219,171,138,.13)}.signal-dot.ok{background:#9dc5a0}.signal-dot.warn{background:#d6ac8f}.refresh-btn{color:#143f33;background:#e8e6cc;border:0;border-radius:100px;font-size:12px;padding:12px 17px;white-space:nowrap}.refresh-btn:disabled{opacity:.55;cursor:progress}.live-filters{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;margin:22px 0}.live-filter-group{display:flex;gap:6px;flex-wrap:wrap}.live-filter-group button{font-size:11px;border:1px solid rgba(242,247,237,.25);background:transparent;color:#cbd9cf;border-radius:100px;padding:9px 12px}.live-filter-group button.active{background:#e8d8bf;color:#193b32;border-color:#e8d8bf;font-weight:700}.live-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;min-height:170px}.live-card{background:#f4f3e9;color:#1b3a31;padding:22px;border-radius:10px;min-height:227px;display:flex;flex-direction:column}.live-card:nth-child(6n+2){background:#e5e9d5}.live-card:nth-child(6n+4){background:#e9ded4}.live-card:nth-child(6n+5){background:#d6e0d2}.live-card:nth-child(6n+6){background:#e7e4e7}.live-card .live-meta{font:10px 'DM Mono',monospace;color:#657668;letter-spacing:.3px}.live-card h3{font:500 23px/1.2 'Instrument Serif',serif;margin:19px 0 10px;letter-spacing:-.4px}.live-card p{font-size:11.5px;line-height:1.5;color:#637064;margin:0 0 14px}.live-card a{margin-top:auto;align-self:start;font-size:11px;border-bottom:1px solid #365f4b;padding:6px 0;font-weight:700}.live-wait,.live-empty{grid-column:1/-1;min-height:170px;border:1px dashed rgba(243,247,240,.37);border-radius:10px;padding:35px;display:flex;flex-direction:column;justify-content:center;gap:13px;color:#e3eee4;font-size:13px;line-height:1.65}.live-empty a{color:#fff;text-decoration:underline}.live-foot{font:10px/1.6 'DM Mono',monospace;color:#abc2b3;display:flex;justify-content:space-between;gap:15px;margin-top:22px;flex-wrap:wrap}.live-foot span{max-width:440px}
+.edition-masthead{background:#e6d9c8;border-radius:13px;padding:26px clamp(25px,4vw,53px);display:flex;flex-direction:column;gap:20px;min-height:260px;overflow:hidden;position:relative;margin-bottom:16px}.edition-masthead>span{position:relative;z-index:1;font:10px 'DM Mono',monospace;letter-spacing:2px;color:#637866}.edition-masthead strong{position:relative;z-index:1;font:500 clamp(42px,4.5vw,69px)/1.06 'Instrument Serif',serif;letter-spacing:-2px;max-width:650px}.edition-masthead em{color:#bd7f64;font-weight:400}.edition-shape{position:absolute;width:370px;height:370px;border-radius:50%;right:-72px;top:-65px;background:#7f9b8b}.edition-shape span{position:absolute;width:190px;height:250px;left:65px;top:80px;background:#b2bf9a;border-radius:90% 10% 80% 22%;transform:rotate(-23deg)}.edition-shape i{position:absolute;width:80px;height:230px;background:#d7ab91;left:150px;top:45px;border-radius:80% 12% 80% 12%;transform:rotate(25deg)}.edition-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.edit-card{border:1px solid #e3e6d9;background:#fffef9;border-radius:12px;overflow:hidden;display:flex;min-height:220px}.edit-card .edit-color{width:18%;min-width:77px;background:#ced9bc;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.edit-card .edit-color span{font:400 58px 'Instrument Serif',serif;color:rgba(31,72,54,.65)}.edit-card:nth-child(4n+2) .edit-color{background:#edc3ab}.edit-card:nth-child(4n+3) .edit-color{background:#becbd1}.edit-card:nth-child(4n) .edit-color{background:#d3c7d8}.edit-card .edit-content{padding:22px;flex:1;display:flex;flex-direction:column;align-items:start}.edit-card .edit-meta{font:10px 'DM Mono',monospace;color:#758477;letter-spacing:.2px}.edit-card h3{font:500 23px/1.15 'Instrument Serif',serif;letter-spacing:-.4px;margin:12px 0}.edit-card p{font-size:11.5px;color:#63756a;line-height:1.6;margin:0 0 13px}.edit-card a{margin-top:auto;font-size:11px;font-weight:700;border-bottom:1px solid #1d4536;padding:5px 0}.edit-card .norvid-note{font-size:11px;color:#7f5b4a;margin-bottom:13px}.letters-intro{display:flex;align-items:center;gap:18px;padding:21px 25px;border-radius:12px;background:#eadbcf;margin-bottom:17px}.letter-icon{font:65px 'Instrument Serif',serif;color:#a46f60;line-height:1}.letters-intro strong{font:500 24px 'Instrument Serif',serif}.letters-intro p{font-size:12px;color:#695d54;line-height:1.55;margin:6px 0 0}.letters-intro a{font-size:11px;font-weight:700;border-bottom:1px solid #4d594a;white-space:nowrap;margin-left:auto;padding:5px 0}.letters-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.letter-card{padding:22px;min-height:246px;border-radius:11px;background:#e7e9d8;display:flex;flex-direction:column;transition:transform .2s}.letter-card:hover{transform:translateY(-3px)}.letter-card:nth-child(4n+2){background:#e7c8ba}.letter-card:nth-child(4n+3){background:#d2ded8}.letter-card:nth-child(4n){background:#e4dfe7}.letter-card .letter-top{display:flex;justify-content:space-between;font:10px 'DM Mono',monospace;color:#597064}.letter-card .letter-symbol{font:52px 'Instrument Serif',serif;line-height:1;color:#355748;margin:20px 0 10px}.letter-card h3{font:500 23px/1.1 'Instrument Serif',serif;margin:0 0 10px}.letter-card p{font-size:11px;line-height:1.56;color:#627164;margin:0 0 12px}.letter-card a{margin-top:auto;font-size:11px;font-weight:700;align-self:start;border-bottom:1px solid #315d49;padding:5px 0}
+@media(max-width:1150px){.live-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.letters-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:830px){.letters-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.edition-shape{right:-160px;opacity:.65}}
+@media(max-width:590px){.live-grid,.edition-grid,.letters-grid{grid-template-columns:1fr}.live-shell{padding:22px}.live-toolbar{align-items:start;flex-wrap:wrap}.live-filters{gap:15px}.edition-masthead strong{font-size:43px}.edition-shape{opacity:.2}.edit-card .edit-color{min-width:55px}.edit-card .edit-color span{font-size:42px}.letters-intro{flex-wrap:wrap}.letters-intro a{margin-left:0}.letter-card{min-height:200px}}
+
+
+/* Reading shelf · Edition 03 */
+.reading-section{--s-ink:#1e4034}.shelf-banner{background:#e7c6b2;border-radius:13px;padding:35px 42px;min-height:215px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative;overflow:hidden}.shelf-banner>div:first-child{position:relative;z-index:2}.shelf-banner .eyebrow{color:#785d51}.shelf-banner h3{font:500 clamp(38px,4vw,64px)/1.03 'Instrument Serif',Georgia,serif;letter-spacing:-2px;margin:13px 0}.shelf-banner h3 em{font-weight:400;color:#945f4d}.shelf-banner>p{position:relative;z-index:2;font:11px/1.8 'DM Mono',monospace;max-width:230px;align-self:flex-end;color:#5a574b}.shelf-shapes{position:absolute;inset:0;pointer-events:none}.shelf-sun{position:absolute;right:23%;top:-35%;width:260px;height:260px;border-radius:50%;background:#f7e0c0}.shelf-form{position:absolute;right:13%;bottom:-50%;width:180px;height:240px;border:32px solid #567b63;border-radius:100px 100px 0 0;transform:rotate(-20deg)}.shelf-circle{position:absolute;right:34%;bottom:-36%;width:155px;height:155px;border-radius:50%;border:30px solid #d39176}.shelf-note{background:#e8ece3;padding:16px 21px;border-radius:10px;display:flex;gap:15px;align-items:start;margin:18px 0 26px}.shelf-note>span{font:36px 'Instrument Serif',serif;color:#b87a5e;line-height:1}.shelf-note strong{font-size:13px}.shelf-note p{font-size:11px;line-height:1.7;color:#53695c;margin:4px 0 0}.shelf-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.shelf-book{background:#fffdf8;border:1px solid #dcded4;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;min-width:0}.shelf-cover{height:310px;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:26px;color:#fbf5e8}.shelf-cover strong{font:500 clamp(26px,2.4vw,40px)/.96 'Instrument Serif',Georgia,serif;letter-spacing:-1px;position:relative;z-index:2;margin:14px 0}.shelf-cover>span:last-child{font:9px 'DM Mono',monospace;letter-spacing:1px;position:relative;z-index:2}.shelf-cover .cover-series{position:absolute;top:20px;left:25px;font:9px 'DM Mono',monospace;letter-spacing:1.4px;color:inherit;opacity:.9}.cover-lawson{background:#244e43}.cover-biophilic{background:#d08e64}.cover-norman{background:#e5cf5b;color:#30463b}.cover-illustration{position:absolute;right:7%;top:50px;width:170px;height:180px}.cover-chair i{position:absolute;width:104px;height:98px;right:15px;top:5px;border:18px solid #bdcfae;border-radius:55% 55% 8px 8px;transform:skew(5deg)}.cover-chair b{position:absolute;right:38px;top:97px;width:84px;height:15px;background:#f2bb94;transform:skew(-20deg)}.cover-chair em{position:absolute;right:45px;top:110px;width:10px;height:83px;background:#a1bfa8;transform:rotate(-13deg);box-shadow:73px -12px 0 #a1bfa8}.cover-biostruct i{position:absolute;width:145px;height:145px;border:12px solid #ecd8ad;border-radius:70% 20% 75% 20%;transform:rotate(-22deg)}.cover-biostruct b{position:absolute;width:87px;height:120px;border-right:12px solid #346750;border-radius:55%;top:23px;right:37px;transform:rotate(-35deg)}.cover-biostruct em{position:absolute;width:110px;height:14px;background:#e6b9a1;transform:rotate(-36deg);top:75px;right:14px;border-radius:99px}.cover-teapot i{position:absolute;width:120px;height:82px;background:#ac5945;top:60px;right:35px;border-radius:12px 12px 50px 50px;transform:rotate(-12deg)}.cover-teapot b{position:absolute;width:58px;height:56px;border:15px solid #8e463d;border-radius:50%;top:65px;right:-4px}.cover-teapot em{position:absolute;width:85px;height:16px;background:#9e5444;top:42px;right:52px;border-radius:14px;transform:rotate(-10deg)}.shelf-copy{padding:23px;display:flex;flex-direction:column;flex:1}.shelf-tag{font:9px 'DM Mono',monospace;letter-spacing:1.2px;color:#b17761}.shelf-copy h3{font:500 27px/1.11 'Instrument Serif',Georgia,serif;letter-spacing:-.7px;margin:10px 0 4px}.shelf-copy .shelf-author{font-size:10px;color:#728073}.shelf-copy>p:not(.shelf-author){font-size:12px;line-height:1.66;color:#5b6d60;margin:10px 0 20px}.shelf-chapters{border-top:1px solid #e0e1d6;border-bottom:1px solid #e0e1d6;margin-bottom:17px}.shelf-chapters summary{cursor:pointer;display:flex;justify-content:space-between;gap:5px;padding:13px 0;font-size:12px;font-weight:700;list-style:none}.shelf-chapters summary::-webkit-details-marker{display:none}.shelf-chapters summary span{font:10px 'DM Mono',monospace;color:#8b9a8b}.chapter-list{padding-bottom:12px;display:grid;gap:8px}.chapter-list label{display:flex;align-items:flex-start;gap:9px;font-size:11px;line-height:1.5;cursor:pointer}.chapter-list input{accent-color:#365d46;flex-shrink:0;margin:3px 0 0}.chapter-list span{display:flex;flex-direction:column;gap:2px}.chapter-list small{font:10px/1.4 'DM Mono',monospace;color:#788779}.shelf-prompt{background:#e5eada;padding:13px;border-radius:8px;display:grid;gap:6px;margin-top:auto}.shelf-prompt b{font:10px 'DM Mono',monospace;color:#3d6c54;letter-spacing:1px}.shelf-prompt span{font-size:11px;line-height:1.5}.shelf-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}.shelf-actions a,.shelf-actions button{border:1px solid #c5cec3;background:#fffdf8;color:#284b3a;border-radius:7px;padding:8px 10px;font-size:10px;font-weight:700;transition:background .2s}.shelf-actions a:hover,.shelf-actions button:hover:not(:disabled){background:#e6eadd}.shelf-actions button[data-open]{background:#234a3b;color:#fff}.shelf-actions button:disabled{opacity:.38;cursor:default}.shelf-actions button.shelf-delete{font-weight:400}.shelf-status{font-size:10px;color:#718073;line-height:1.4;margin-top:10px;min-height:30px}.shelf-disclaimer{font-size:11px;line-height:1.7;color:#758277;max-width:930px;margin:18px auto 0;text-align:center}
+@media(max-width:1200px){.shelf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.shelf-book:last-child{grid-column:span 2}.shelf-cover{height:270px}}
+@media(max-width:810px){.shelf-grid{grid-template-columns:1fr}.shelf-book:last-child{grid-column:span 1}.shelf-banner{padding:26px;min-height:195px}.shelf-banner>p{display:none}.shelf-cover{height:280px}.shelf-cover strong{font-size:36px}}
+
+
+/* ==========================================================
+   ATELIER EDITION — editorial redesign layer
+   Warm paper, forest ink, terracotta accents, grain & motion
+   ========================================================== */
+:root{--ink:#1d2b25;--ink2:#2a3d35;--forest:#1f3a30;--cream:#f2ece1;--paper:#faf6ee;--muted:#6f6a5f;--line:#d9d0bf;--terra:#b65a3c;--terra-soft:#e8c4b0;--sage:#a8b49a;--butter:#ecd9a6;--blush:#ecd6cb;--shadow:0 1px 0 rgba(29,43,37,.04),0 24px 48px -18px rgba(44,38,28,.22);--ease:cubic-bezier(.2,.75,.2,1)}
+html{background:var(--cream)}
+body{background:var(--cream);font-family:'Hanken Grotesk',system-ui,sans-serif;color:var(--ink);font-synthesis:none;text-rendering:optimizeLegibility}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.33;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .22 0 0 0 .32 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+::selection{background:var(--terra);color:#fbf3e7}
+h1,h2,h3,strong{font-synthesis:none}
+
+/* ---------- Rail ---------- */
+.rail{background:var(--forest);background-image:radial-gradient(120% 60% at 0% 0%,rgba(236,217,166,.08),transparent 60%),radial-gradient(90% 50% at 100% 100%,rgba(182,90,60,.16),transparent 60%);padding:34px 24px;border-right:1px solid rgba(0,0,0,.15)}
+.brandmark{font-family:'Instrument Serif',Georgia,serif;font-size:38px;letter-spacing:-1px;line-height:.92}
+.brandmark em{color:var(--butter)}
+.brand-label{color:#b9c7b8;opacity:.8}
+.rail-line{background:rgba(236,217,166,.18)}
+.nav{gap:1px}
+.nav a{position:relative;border-radius:0;padding:10px 10px 10px 14px;color:#cbd5c9;font-size:13px;letter-spacing:.1px;transition:color .3s var(--ease),background .3s var(--ease),padding .35s var(--ease)}
+.nav a:before{content:'';position:absolute;left:0;top:50%;width:2px;height:0;background:var(--butter);transform:translateY(-50%);transition:height .35s var(--ease)}
+.nav a:hover,.nav a.active{background:rgba(255,255,255,.05);color:#fff;padding-left:20px}
+.nav a:hover:before,.nav a.active:before{height:60%}
+.nav .nav-number{color:var(--terra-soft);opacity:.85}
+.nav{flex:1 1 auto;min-height:0;overflow-y:auto;scrollbar-width:thin;scrollbar-color:rgba(236,217,166,.25) transparent;margin-right:-8px;padding-right:8px}
+.nav a{align-items:center}.nav .nav-number{flex:0 0 24px;font:10px 'DM Mono',monospace;font-variant-numeric:tabular-nums;letter-spacing:.5px;text-align:left}
+.nav .nav-text{flex:1;min-width:0}.nav a i{font-style:normal;font-size:11px;opacity:.6}
+.nav a.active .nav-number{color:var(--butter);opacity:1}
+.nav-caption{font:10px 'DM Mono',monospace;color:#a4b8ad;letter-spacing:1.9px;margin:16px 0 6px 14px}
+.rail-bottom{flex:0 0 auto;padding-top:16px}
+@media(max-height:820px){.rail-deco{display:none}}
+@media(max-width:830px){.nav{margin-right:0;padding-right:0;overflow-y:hidden}.nav-caption{display:none}.nav .nav-number{display:none}}
+.rail-deco{border-radius:999px 999px 6px 6px;background:#2e5145}
+.rail-deco .sun{background:var(--terra);animation:atelierFloat 9s ease-in-out infinite}
+.rail-deco .arch{border-color:var(--butter)}
+.rail-bottom span{color:var(--butter)}
+
+/* ---------- Top bar ---------- */
+.topbar{background:rgba(242,236,225,.82);backdrop-filter:blur(14px) saturate(1.2);border-bottom:1px solid var(--line)}
+.top-title{color:var(--ink);opacity:.7}
+.top-search{background:transparent;border:1px solid var(--line);transition:border-color .3s,background .3s}
+.top-search:hover{border-color:var(--ink);background:var(--paper)}
+
+/* ---------- Type system ---------- */
+.eyebrow{color:var(--terra);letter-spacing:2.6px}
+.section{margin-top:clamp(90px,10vw,150px)}
+.section-head{position:relative;padding-top:26px;border-top:1px solid var(--ink);margin-bottom:38px;align-items:flex-end}
+.section-head h2{font:400 clamp(48px,6.4vw,104px)/.92 'Instrument Serif',Georgia,serif;letter-spacing:-2.5px;margin-top:16px}
+.section-head h2 span{color:var(--terra)!important;font-style:italic}
+.section-head p{font-size:14px;line-height:1.7;max-width:360px;color:var(--muted)}
+.section-head p:first-letter{font:400 2.9em/0.8 'Instrument Serif',serif;float:left;margin:6px 8px 0 0;color:var(--terra)}
+
+/* ---------- Hero ---------- */
+.hero{padding-top:48px}
+.hero-card{min-height:640px;background:var(--paper);border:1px solid var(--line);border-radius:4px;grid-template-columns:1.15fr .85fr;box-shadow:var(--shadow)}
+.hero-card:before{content:'';position:absolute;width:520px;height:520px;border-radius:50%;left:-180px;bottom:-260px;background:radial-gradient(circle,rgba(232,196,176,.55),transparent 68%);pointer-events:none}
+.hero-left{justify-content:center}
+.hero-mini{border-color:var(--ink);color:var(--ink);background:transparent}
+.hero h1{font:400 clamp(64px,8.6vw,148px)/.86 'Instrument Serif',Georgia,serif;letter-spacing:-.04em;margin:38px 0 30px}
+.hero h1 em{color:var(--terra);font-style:italic;display:inline-block;padding-left:.55em}
+.hero p{font-size:15.5px;line-height:1.75;color:var(--muted);max-width:440px}
+.pill-btn{background:var(--ink);padding:18px 26px;letter-spacing:.3px;position:relative;overflow:hidden;isolation:isolate}
+.pill-btn:after{content:'';position:absolute;inset:0;background:var(--terra);transform:translateY(101%);transition:transform .45s var(--ease);z-index:-1}
+.pill-btn:hover{background:var(--ink);transform:translateY(-2px)}
+.pill-btn:hover:after{transform:translateY(0)}
+.pill-btn span{transition:transform .45s var(--ease)}.pill-btn:hover span{transform:rotate(45deg)}
+.hero-right{background:var(--forest)}
+.hero-right:before{background:radial-gradient(80% 70% at 70% 20%,rgba(236,217,166,.35),transparent 60%),linear-gradient(160deg,#2c4a3f,#1b3229);opacity:1}
+.hero-frame{inset:11% 12% 11% 10%;transform:rotate(-2.5deg);background:var(--paper);border:0;padding:14px;gap:14px;box-shadow:0 40px 80px -20px rgba(0,0,0,.45);transition:transform 1.2s var(--ease)}
+.hero-card:hover .hero-frame{transform:rotate(0deg) scale(1.015)}
+.himage{border-radius:2px}
+.himage:hover{filter:saturate(1.1)}
+.hero-stamp{background:var(--butter);width:142px;height:142px;animation:atelierSpin 28s linear infinite;font-size:10.5px}
+.hero-number{color:var(--butter)}
+.statbar{padding:28px 4px;border-bottom:1px solid var(--line)}
+.stat b{font:400 34px 'Instrument Serif',serif;letter-spacing:-.5px;vertical-align:-4px}
+
+/* ---------- Marquee ---------- */
+.atelier-marquee{margin:34px calc(-1*clamp(22px,4.5vw,76px)) 0;border-block:1px solid var(--ink);overflow:hidden;background:var(--ink);color:var(--cream)}
+.atelier-marquee-track{display:flex;width:max-content;animation:atelierMarquee 48s linear infinite;padding:14px 0}
+.atelier-marquee span{font:italic 400 30px/1 'Instrument Serif',serif;white-space:nowrap;padding:0 26px;display:inline-flex;align-items:center;gap:52px}
+.atelier-marquee span:after{content:'✳';font:normal 14px 'DM Mono',monospace;color:var(--butter)}
+.atelier-marquee:hover .atelier-marquee-track{animation-play-state:paused}
+
+/* ---------- Radar ---------- */
+.news-grid{gap:0;border:1px solid var(--ink);border-radius:4px;overflow:hidden;background:var(--paper)}
+.news-feature{border-radius:0;background:var(--terra);color:#fbf1e6;min-height:300px}
+.news-feature .eyebrow{color:var(--butter)}
+.news-feature h3{font:400 46px/.95 'Instrument Serif',serif;letter-spacing:-1px}
+.news-feature .ornament{border-color:rgba(251,241,230,.25)}.news-feature .ornament:after{background:var(--butter)}
+.news-link{border:0;border-left:1px solid var(--line);border-radius:0;background:transparent;min-height:300px;padding:26px;position:relative;transition:background .4s var(--ease),color .4s var(--ease)}
+.news-link:hover{transform:none;box-shadow:none;background:var(--forest);color:var(--cream)}
+.news-link:hover small,.news-link:hover .news-tag{color:#c9d3c5}
+.news-link strong{font:400 32px/1 'Instrument Serif',serif}
+.news-link .nicon{font-size:28px;color:var(--terra);transition:transform .6s var(--ease)}
+.news-link:hover .nicon{transform:rotate(90deg);color:var(--butter)}
+.news-link .arrow{transition:transform .4s var(--ease)}.news-link:hover .arrow{transform:translate(4px,-4px)}
+.ritual{background:var(--blush);border-radius:4px;margin-top:22px;border:1px solid #dcbfb0}
+.ritual h3{font:400 clamp(40px,4.4vw,62px)/1 'Instrument Serif',serif;letter-spacing:-1px}
+.ritual button,.notes-pad button{transition:background .3s,transform .3s var(--ease)}
+.ritual button:hover,.notes-pad button:hover{background:var(--terra);transform:translateY(-2px)}
+
+/* ---------- Live wire ---------- */
+.live-shell{background:var(--forest);border-radius:4px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.live-shell:before{content:'';position:absolute;right:-120px;top:-120px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(182,90,60,.35),transparent 70%);pointer-events:none}
+.signal-dot.ok{animation:atelierPulse 2.4s ease-out infinite}
+.refresh-btn{background:var(--butter);transition:transform .3s var(--ease)}.refresh-btn:hover{transform:translateY(-2px)}
+.live-filter-group button{transition:all .25s}
+.live-filter-group button:hover{border-color:var(--butter);color:#fff}
+.live-filter-group button.active{background:var(--butter);border-color:var(--butter)}
+.live-card{border-radius:3px;transition:transform .45s var(--ease),box-shadow .45s var(--ease)}
+.live-card:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 26px 40px -20px rgba(0,0,0,.5)}
+.live-card h3{font:400 28px/1.05 'Instrument Serif',serif}
+
+/* ---------- Edition ---------- */
+.edition-masthead{background:var(--butter);border-radius:4px;min-height:320px;justify-content:space-between}
+.edition-masthead strong{font:400 clamp(52px,6vw,96px)/.9 'Instrument Serif',serif;letter-spacing:-2px}
+.edition-masthead em{color:var(--terra)}
+.edition-shape{background:var(--forest);animation:atelierFloat 14s ease-in-out infinite}
+.edition-shape span{background:var(--sage)}.edition-shape i{background:var(--terra)}
+.edition-grid{gap:0;border-top:1px solid var(--ink)}
+.edit-card{border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;transition:background .4s var(--ease)}
+.edition-grid .edit-card:nth-child(odd){border-right:1px solid var(--line)}
+.edit-card:hover{background:var(--paper)}
+.edit-card .edit-color{transition:min-width .5s var(--ease)}
+.edit-card:hover .edit-color{min-width:110px}
+.edit-card .edit-color span{font:italic 400 70px 'Instrument Serif',serif}
+.edit-card h3{font:400 30px/1.02 'Instrument Serif',serif}
+
+/* ---------- Letters ---------- */
+.letters-intro{background:transparent;border:1px solid var(--ink);border-radius:4px}
+.letter-icon{color:var(--terra)}
+.letters-intro strong{font:400 32px 'Instrument Serif',serif}
+.letter-card{border-radius:3px;transition:transform .45s var(--ease),box-shadow .45s var(--ease)}
+.letter-card:hover{transform:translateY(-6px) rotate(.6deg);box-shadow:var(--shadow)}
+.letter-card:nth-child(4n+2){background:var(--blush)}
+
+/* ---------- Shelf ---------- */
+.shelf-banner{background:var(--terra-soft);border-radius:4px;min-height:260px}
+.shelf-banner h3{font:400 clamp(48px,5.4vw,88px)/.92 'Instrument Serif',serif}
+.shelf-banner h3 em{color:var(--terra)}
+.shelf-note{border-radius:3px;background:var(--paper);border:1px solid var(--line)}
+.shelf-book{border-radius:3px;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.shelf-book:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.shelf-cover{box-shadow:inset 14px 0 18px -10px rgba(0,0,0,.35)}
+.shelf-cover strong{font:400 clamp(32px,2.9vw,48px)/.9 'Instrument Serif',serif;letter-spacing:-.5px}
+.cover-illustration{transition:transform .9s var(--ease)}
+.shelf-book:hover .cover-illustration{transform:translateY(-6px) rotate(-4deg)}
+
+/* ---------- Moodboards ---------- */
+.mood{border-radius:3px;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.mood:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.mood-grid .mood:nth-child(2){margin-top:56px}
+.mood-art .tile{transition:transform 1.1s var(--ease)}
+.mood:hover .mood-art .tile{transform:scale(1.06)}
+.mood-body h3{font:400 36px 'Instrument Serif',serif}
+.swatches span{border-radius:0;transition:transform .3s var(--ease)}
+.swatches span:hover{transform:translateY(-5px)}
+
+/* ---------- Archive ---------- */
+.library-controls{background:var(--paper);border:1px solid var(--line);border-radius:4px}
+.search-box{border-color:var(--ink);background:transparent}
+.filter{border-color:var(--line);transition:all .25s}
+.filter:hover,.filter.active{background:var(--terra);border-color:var(--terra)}
+.resource-grid{gap:0;border-top:1px solid var(--ink);border-left:1px solid var(--line)}
+.resource{border:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line);border-radius:0;background:transparent;transition:background .35s var(--ease)}
+.resource:hover{transform:none;box-shadow:none;background:var(--paper)}
+.resource h3{font:400 27px/1.03 'Instrument Serif',serif;transition:color .3s}
+.resource:hover h3{color:var(--terra)}
+.save.saved{color:var(--terra);background:var(--blush);border-color:var(--terra-soft)}
+.more{border-color:var(--ink);transition:all .3s}.more:hover{background:var(--ink);color:var(--cream)}
+
+/* ---------- Study & notes ---------- */
+.study-section{background:var(--forest);border-radius:4px;padding:clamp(32px,4.5vw,64px);position:relative;overflow:hidden}
+.study-section h2{font:400 clamp(48px,5.4vw,90px)/.9 'Instrument Serif',serif}
+.study-section h2 em{color:var(--butter)}
+.progress-fill{background:linear-gradient(90deg,var(--terra),var(--butter))}
+.notes-pad{background:var(--butter);border-radius:4px;background-image:repeating-linear-gradient(transparent 0 31px,rgba(29,43,37,.08) 31px 32px)}
+.notes-pad h3,.notes-list h3{font:400 42px 'Instrument Serif',serif}
+.notes-pad textarea{background:rgba(250,246,238,.85);border-color:rgba(29,43,37,.25);border-radius:2px}
+.notes-list{background:var(--paper);border-radius:4px}
+
+/* ---------- Footer ---------- */
+.footer{border-top:1px solid var(--ink);padding-top:48px;margin-top:140px}
+.footer h2{font:400 clamp(64px,9vw,150px)/.85 'Instrument Serif',serif;letter-spacing:-.04em}
+.footer button{border-color:var(--ink);transition:all .3s}.footer button:hover{background:var(--ink);color:var(--cream)}
+.status-toast{background:var(--ink);border-radius:2px;border-left:3px solid var(--terra)}
+
+/* ---------- Motion ---------- */
+@keyframes atelierMarquee{to{transform:translateX(-50%)}}
+@keyframes atelierSpin{to{transform:rotate(345deg)}}
+@keyframes atelierFloat{0%,100%{transform:translate(0,0)}50%{transform:translate(-10px,12px)}}
+@keyframes atelierPulse{0%{box-shadow:0 0 0 0 rgba(157,197,160,.55)}100%{box-shadow:0 0 0 12px rgba(157,197,160,0)}}
+@keyframes atelierRise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.hero-mini,.hero h1,.hero p,.hero .pill-btn,.hero-frame{animation:atelierRise 1s var(--ease) both}
+.hero h1{animation-delay:.12s}.hero p{animation-delay:.26s}.hero .pill-btn{animation-delay:.38s}.hero-frame{animation-delay:.3s;animation-duration:1.4s}
+.js-reveal .section{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.js-reveal .section.is-in{opacity:1;transform:none}
+
+@media(max-width:830px){.brandmark{font-size:28px}.nav a:before{display:none}.nav a:hover,.nav a.active{padding-left:10px}.hero-card{min-height:0}.news-grid{grid-template-columns:1fr 1fr}.news-feature{grid-column:1/-1}.mood-grid .mood:nth-child(2){margin-top:0}.edition-grid .edit-card:nth-child(odd){border-right:0}}
+@media(max-width:590px){.hero h1{font-size:64px;letter-spacing:-2px}.hero h1 em{padding-left:0}.section-head h2{font-size:52px}.news-grid{grid-template-columns:1fr}.news-link{border-left:0;border-top:1px solid var(--line);min-height:200px}.atelier-marquee span{font-size:22px}.footer h2{font-size:58px}}
+@media(prefers-reduced-motion:reduce){.atelier-marquee-track,.hero-stamp,.rail-deco .sun,.edition-shape,.signal-dot.ok{animation:none!important}.hero-mini,.hero h1,.hero p,.hero .pill-btn,.hero-frame{animation:none}.js-reveal .section{opacity:1;transform:none}}
+.mt{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;background:var(--paper);border:1px solid var(--line);padding:22px}.mt-back{grid-column:1/-1;display:flex;justify-content:space-between;font-size:12px}.mt-collage{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.mt-tile{margin:0;aspect-ratio:1;overflow:hidden;position:relative}.mt-tile svg,.mt-photo{width:100%;height:100%;display:block;background-size:cover;background-position:center}.mt-tile figcaption{position:absolute;left:6px;bottom:6px;font:9px 'DM Mono',monospace;background:var(--paper);padding:2px 5px}.mt-hand{position:absolute;right:8px;top:-14px;font:italic 20px 'Instrument Serif',serif;color:var(--terra)}.mt-issue{display:flex;justify-content:space-between;font:10px 'DM Mono',monospace;letter-spacing:1.5px;text-transform:uppercase}.mt h3{font:400 clamp(40px,4.5vw,68px)/.95 'Instrument Serif',serif;margin:14px 0}.mt-story,.mt-apply p,.mt-specs dd{font-size:13px;line-height:1.6;color:var(--muted)}.mt-palette{display:flex;gap:6px;margin:16px 0}.mt-palette button{border:0;background:none;padding:0;font:9px 'DM Mono',monospace}.mt-palette span{display:block;width:52px;height:52px;background:var(--c);margin-bottom:4px}.mt-specs dt,.mt-apply span{font:10px 'DM Mono',monospace;color:var(--terra);letter-spacing:1.5px;text-transform:uppercase}.mt-specs dd{margin:3px 0 10px}.mt-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.mt-actions>*{border:1px solid var(--ink);background:none;padding:8px 12px;font-size:12px}.mt-save.saved{background:var(--terra);color:#fff;border-color:var(--terra)}.mood-archive-head{display:flex;justify-content:space-between;margin:34px 0 12px;font-size:12px}.mood-archive{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}.ma{border:1px solid var(--line);background:var(--paper);padding:6px;text-align:left;position:relative}.ma.active{border-color:var(--terra)}.ma-thumb svg{width:100%;aspect-ratio:1;display:block}.ma-bar{display:flex;height:6px}.ma-bar i{flex:1}.ma-meta{display:block;font:9px 'DM Mono',monospace;margin-top:6px}.ma strong{font:400 18px 'Instrument Serif',serif}.ma-heart{position:absolute;top:8px;right:10px;color:var(--terra)}.notebook-teaser{display:grid;grid-template-columns:.7fr 1fr 1fr;gap:16px}.nb-cover{background:var(--forest);color:var(--cream);padding:28px;display:flex;flex-direction:column;gap:12px;position:relative;min-height:320px}.nb-cover strong{font:400 52px/.9 'Instrument Serif',serif}.nb-cover em{color:var(--butter)}.nb-label,.nb-meta,.nb-open{font:10px 'DM Mono',monospace;letter-spacing:1.5px}.nb-open{margin-top:auto;color:var(--butter)}.nb-elastic{position:absolute;right:22px;top:0;bottom:0;width:8px;background:var(--terra)}.nb-all{display:inline-block;margin-top:12px;font-size:12px;color:var(--terra)}
+@media(max-width:900px){.mt,.notebook-teaser{grid-template-columns:1fr}}
+</style>
+<link rel="stylesheet" href="/daily.css">
+<link rel="stylesheet" href="/lab.css">
+<link rel="stylesheet" href="/gym.css">
+<link rel="stylesheet" href="/atlas.css">
+<link rel="stylesheet" href="/explora.css">
+<link rel="stylesheet" href="/mesa.css">
+<script src="/cloud.js"></script>
+</head>
+<body>
+<div class="shell">
+<aside class="rail" aria-label="Navegación de biblioteca">
+  <div class="brand-label">Personal design archive / 001</div><a href="#inicio" class="brandmark">the design<br><em>library.</em></a>
+  <div data-cloud-slot></div><div class="rail-line"></div><div class="rail-caption">EXPLORE THE INDEX</div>
+  <nav class="nav" aria-label="Secciones de esta página">
+    <a href="#inicio" class="active" aria-current="true"><span class="nav-number">01</span><span class="nav-text">Inicio / inspiración</span></a>
+    <a href="#hoy"><span class="nav-number">02</span><span class="nav-text">El periódico de hoy</span></a>
+    <a href="#radar"><span class="nav-number">03</span><span class="nav-text">Radar diario</span></a>
+    <a href="#en-vivo"><span class="nav-number">04</span><span class="nav-text">Noticias en vivo</span></a>
+    <a href="#seleccion"><span class="nav-number">05</span><span class="nav-text">Lecturas de la semana</span></a>
+    <a href="#cartas"><span class="nav-number">06</span><span class="nav-text">Newsletters / Substack</span></a>
+    <a href="#estanteria"><span class="nav-number">07</span><span class="nav-text">Mi estantería</span></a>
+    <a href="#moodboards"><span class="nav-number">08</span><span class="nav-text">Moodboard del día</span></a>
+    <a href="#mesa"><span class="nav-number">09</span><span class="nav-text">Mesa de trabajo</span></a>
+    <a href="#atlas"><span class="nav-number">10</span><span class="nav-text">Paletas y materiales</span></a>
+    <a href="#biblioteca"><span class="nav-number">11</span><span class="nav-text">Biblioteca completa</span></a>
+    <a href="#gym"><span class="nav-number">12</span><span class="nav-text">Creative Gym</span></a>
+    <a href="#estudio"><span class="nav-number">13</span><span class="nav-text">Mi plan de estudio</span></a>
+    <a href="#guardados"><span class="nav-number">14</span><span class="nav-text">Mis guardados · DNA</span></a>
+    <div class="nav-caption">OTRAS PÁGINAS</div>
+    <a href="/color" class="nav-own"><span class="nav-number">15</span><span class="nav-text">Color · Citas · Bio</span><i aria-hidden="true">↗</i></a>
+    <a href="/cuaderno" class="nav-own"><span class="nav-number">16</span><span class="nav-text">Cuaderno de ideas</span><i aria-hidden="true">↗</i></a>
+  </nav>
+  <div class="rail-bottom"><div class="rail-deco"><span class="sun"></span><span class="arch"></span><span class="wave"></span></div><p>COLLECT WHAT INSPIRES YOU.<br>STUDY WHAT YOU LOVE.<br><span>DESIGN WHAT DOESN'T EXIST.</span></p></div>
+</aside>
+<main class="main" id="inicio">
+<div class="topbar"><span class="top-title">ATELIER / NORVID &nbsp; ✳ &nbsp; DESIGN INTELLIGENCE</span><div class="top-right"><span id="today" class="today">TU ESTUDIO DIARIO</span><button class="top-search" id="quickSearch" aria-label="Buscar en la biblioteca">⌕ &nbsp; Buscar en la biblioteca <span class="kbd">⌘ K</span></button></div></div>
+<div class="content">
+  <section class="hero" aria-label="Bienvenida"><div class="hero-card"><div class="hero-left"><span class="hero-mini" id="heroIssue">✳ 01 / Portada</span><h1>Stay curious.<br><em>Design better.</em></h1><p>Tu archivo vivo para leer tendencias, estudiar materiales y analizar muebles. Cada día se publica un moodboard nuevo y tu cuaderno tiene ahora su propia página para escribir y dibujar.</p><div class="hero-ctas"><a class="pill-btn" href="#hoy">Leer el periódico de hoy <span>↓</span></a><a class="pill-btn pill-ghost" href="#biblioteca">Explorar mi biblioteca <span>↗</span></a></div></div><div class="hero-right"><div class="hero-number">VISUAL JOURNAL / VOL. 01</div><div class="hero-frame"><div class="himage im1"><small>spaces / objects</small></div><div class="himage im2"><small>materials</small></div><div class="himage im3"><small>details</small></div></div><div class="hero-stamp">GOOD DESIGN<br>IS A DAILY<br>PRACTICE ✳</div></div></div>
+  <div class="statbar"><span class="stat"><b id="resourceCount">145</b> recursos curatoriales</span><span class="stat"><b id="catCount">09</b> universos de aprendizaje</span><span class="stat"><b id="favoriteCount">0</b> favoritos guardados</span><span class="stat"><b id="noteCount">0</b> ideas en tu cuaderno</span></div><div class="atelier-marquee" aria-hidden="true"><div class="atelier-marquee-track"><span>Muebles con intención</span><span>Materiales honestos</span><span>Color & CMF</span><span>Biofilia</span><span>Ergonomía</span><span>Read slowly</span><span>Look differently</span><span>Design what doesn’t exist</span><span>Muebles con intención</span><span>Materiales honestos</span><span>Color & CMF</span><span>Biofilia</span><span>Ergonomía</span><span>Read slowly</span><span>Look differently</span><span>Design what doesn’t exist</span></div></div></section>
+  <section class="section daily-section" id="hoy" aria-labelledby="hoyTitle"><div class="section-head"><div><div class="eyebrow">★ HOY / The Design Daily</div><h2 id="hoyTitle">El periódico de hoy<span style="color:#b67b62">.</span></h2></div><p>Cada mañana a las 6:00 (Ciudad de México) se imprime una edición nueva con noticias reales de diseño, una paleta, un objeto icónico y un reto. Lee de arriba abajo: primero la historia principal, luego las noticias cortas y al final tu reto del día.</p></div><div id="dailyPaper" class="dd-host" aria-live="polite"></div></section>
+  <section class="section" id="radar"><div class="section-head"><div><div class="eyebrow">02 / A morning ritual</div><h2>Tu radar de diseño<span style="color:#b67b62">.</span></h2></div><p>Abre estas publicaciones al empezar el día. Lee las fuentes cada mañana y explora el nuevo feed de noticias. Los titulares de terceros se muestran con su fuente y fecha originales.</p></div>
+    <div class="news-grid"><div class="news-feature"><div class="eyebrow">GOOD MORNING, DESIGNER</div><h3>Una idea nueva, cada día.</h3><p>10 minutos de exploración + 1 descubrimiento + 1 pregunta de diseño.</p><span class="ornament"></span></div>
+    <a class="news-link" href="https://www.dezeen.com/design/" target="_blank" rel="noopener noreferrer"><span class="nicon">✺</span><span class="news-tag">GLOBAL / DESIGN NEWS</span><strong>Dezeen<br>Design</strong><small>Últimas ideas y lanzamientos de mobiliario.</small><span class="arrow">↗</span></a>
+    <a class="news-link" href="https://www.designboom.com/design/" target="_blank" rel="noopener noreferrer"><span class="nicon">◒</span><span class="news-tag">CONCEPTS / EXPERIMENTS</span><strong>Designboom<br>News</strong><small>Innovación, exposiciones y proyectos inesperados.</small><span class="arrow">↗</span></a>
+    <a class="news-link" href="https://www.workdesign.com/" target="_blank" rel="noopener noreferrer"><span class="nicon">⌁</span><span class="news-tag">OFFICE / WORKPLACE</span><strong>Work Design<br>Magazine</strong><small>Espacios de trabajo y bienestar corporativo.</small><span class="arrow">↗</span></a></div>
+    <div class="ritual"><div class="ritual-info"><div class="eyebrow" style="color:#784d43">DESIGN GYM / EJERCICIO DE HOY</div><h3 id="ritualTitle">La pregunta que cambia todo.</h3><p id="ritualText">Elige un escritorio. ¿Qué pasaría si su estructura tuviera que servir también para una mesa de juntas?</p><button id="newRitual">↻ &nbsp; Dame otro reto creativo</button></div><div class="ritual-art" aria-hidden="true"><svg viewBox="0 0 430 270" xmlns="http://www.w3.org/2000/svg"><rect width="430" height="270" fill="#e0b7a4"/><circle cx="300" cy="135" r="110" fill="#c7a3ad"/><path d="M188 240 Q210 165 261 144 Q334 108 357 16" fill="none" stroke="#2c5047" stroke-width="13" stroke-linecap="round"/><path d="M255 160 Q214 90 160 98 Q191 160 255 160Z" fill="#739383"/><path d="M283 118 Q298 70 367 71 Q339 119 283 118Z" fill="#78968c"/><path d="M318 75 Q278 48 270 7 Q318 19 318 75Z" fill="#395b4c"/><path d="M190 240 H390 M220 240 V172 M365 240 V172 M207 172 H379" fill="none" stroke="#263e39" stroke-width="7" stroke-linecap="round"/><circle cx="84" cy="63" r="44" fill="#e8d5b4"/><path d="M70 60 l14 14 30 -35" stroke="#b5846e" fill="none" stroke-width="4"/></svg></div></div>
+  </section>
+
+<section class="section live-section" id="en-vivo">
+  <div class="section-head"><div><div class="eyebrow">03 / Fresh signals · RSS</div><h2>Lo que está pasando<span style="color:#c0846a">.</span></h2></div><p>Lecturas recientes de publicaciones originales. Al abrir la página intentamos consultar sus RSS; las noticias llevan fecha y enlace a la fuente.</p></div>
+  <div class="live-shell">
+    <div class="live-toolbar"><div><span class="signal-dot" id="signalDot"></span><span class="eyebrow live-txt">LIVE DESIGN WIRE</span><p id="liveStatus" role="status" aria-live="polite">Preparando selección de noticias…</p></div><button class="refresh-btn" id="refreshNews" type="button">↻ &nbsp; Buscar novedades</button></div>
+    <div class="live-filters"><div class="live-filter-group" id="timeFilters" aria-label="Periodo"><button data-time="day">Últimas 24 h</button><button data-time="week" class="active">7 días</button><button data-time="month">30 días</button></div><div class="live-filter-group" id="topicFilters" aria-label="Tema"><button data-topic="Todo" class="active">Todo</button><button data-topic="Mobiliario">Mobiliario</button><button data-topic="Materiales">Materiales</button><button data-topic="Biofilia">Biofilia</button><button data-topic="Substack">Substack</button></div></div>
+    <div id="liveGrid" class="live-grid"><div class="live-wait">✳ &nbsp; Consultando las publicaciones…</div></div>
+    <div class="live-foot"><span>Fuentes RSS: Dezeen · Designboom · Design Milk · SNAKE · WEARSTLERWORLD</span><span>Si una fuente bloquea la consulta, abre su sitio desde el radar o la biblioteca.</span></div>
+  </div>
+</section>
+<section class="section" id="seleccion">
+ <div class="section-head"><div><div class="eyebrow">04 / Human-curated reading list</div><h2>La edición de la semana<span style="color:#a4b18b">.</span></h2></div><p>Selección editorial verificada el 5 de noviembre de 2026. Las fechas son de publicación, no un feed automático. Incluyo una pregunta para llevar cada lectura a NORVID.</p></div>
+ <div class="edition-masthead"><span>SELECCIÓN VERIFICADA / 05 NOV 2026</span><strong>Objects, materials<br><em>& tomorrow's spaces.</em></strong><span>7 IDEAS QUE MERECEN TU ATENCIÓN ✳</span><div class="edition-shape" aria-hidden="true"><span></span><i></i></div></div>
+ <div class="edition-grid" id="editionGrid"></div>
+</section>
+<section class="section" id="cartas">
+ <div class="section-head"><div><div class="eyebrow">05 / Letters worth opening</div><h2>Inbox de inspiración<span style="color:#c1846e">.</span></h2></div><p>Newsletters y Substacks de diseño real: mobiliario, materiales, estudios creativos, color, ferias, objetos y cultura visual. Algunas ofrecen contenido exclusivo de pago.</p></div>
+ <div class="letters-intro"><div class="letter-icon">✉</div><div><strong>Tu ritual de lectura</strong><p>Elige dos autores para leer cada semana. No te suscribas a todos: busca voces que te hagan mirar los objetos de otra manera.</p></div><a href="https://substack.com/top/design" target="_blank" rel="noopener noreferrer">Explorar Substack ↗</a></div>
+ <div class="letters-grid" id="lettersGrid"></div>
+</section>
+
+<section class="section reading-section" id="estanteria" aria-label="Mi estantería de diseño">
+ <div class="section-head"><div><div class="eyebrow">06 / Private reading shelf</div><h2>La estantería<span style="color:#b77c67">.</span></h2></div><p>Tres lecturas fundamentales que tú seleccionaste. Explora sus capítulos y conviértelos en propuestas reales de mobiliario.</p></div>
+ <div class="shelf-banner"><div><span class="eyebrow">A SPACE FOR IDEAS TO GROW</span><h3>Read slowly.<br><em>Look differently.</em></h3></div><div class="shelf-shapes" aria-hidden="true"><span class="shelf-sun"></span><span class="shelf-form"></span><span class="shelf-circle"></span></div><p>Un capítulo · una observación · un boceto.<br>El conocimiento se convierte en diseño cuando lo aplicas.</p></div>
+ <div class="shelf-note"><span>✳</span><div><strong>Tu biblioteca privada, incluso en un sitio público</strong><p>Puedes vincular tus PDFs desde tu propio dispositivo. Se guardan en este navegador y, si inicias sesión, también en tu nube privada para abrirlos desde cualquiera de tus dispositivos. Solo tú puedes verlos: nunca se comparten con visitantes ni con otras cuentas. Cada compañero debe usar sus propias copias autorizadas. Los enlaces externos llevan a editoriales o a fuentes oficiales.</p></div></div>
+ <div class="shelf-grid">
+  <article class="shelf-book" data-book="lawson">
+    <div class="shelf-cover cover-lawson" aria-label="Portada ilustrada para Furniture Design"><span class="cover-series">ATELIER READING / 01</span><div class="cover-illustration cover-chair"><i></i><b></b><em></em></div><strong>FURNITURE<br>DESIGN</strong><span>STUART LAWSON · 2013</span></div>
+    <div class="shelf-copy"><span class="shelf-tag">MOBILIARIO · FABRICACIÓN</span><h3>Furniture Design</h3><p class="shelf-author">Stuart Lawson · 2013 · 225 páginas en tu PDF</p><p>Una guía para conectar historia, ergonomía, investigación de usuario, materiales y procesos reales de manufactura.</p>
+      <details class="shelf-chapters" open><summary>Tu ruta de capítulos <span>5 temas</span></summary><div class="chapter-list">
+        <label><input type="checkbox" data-read="lawson-1"><span><b>1. Historia e innovación</b><small>Cap. 1a–1c · pp. 14, 38 y 60 (numeración impresa)</small></span></label>
+        <label><input type="checkbox" data-read="lawson-2"><span><b>2. Investigación para diseñar</b><small>Cap. 2a · p. 86</small></span></label>
+        <label><input type="checkbox" data-read="lawson-3"><span><b>3. Ergonomía y antropometría</b><small>Cap. 2b · p. 94</small></span></label>
+        <label><input type="checkbox" data-read="lawson-4"><span><b>4. Desarrollo y pruebas</b><small>Cap. 2c · p. 104</small></span></label>
+        <label><input type="checkbox" data-read="lawson-5"><span><b>5. Materiales y ensamble</b><small>Cap. 3c · p. 154</small></span></label>
+      </div></details>
+      <div class="shelf-prompt"><b>Reto NORVID</b><span>Analiza tres uniones de escritorio y propone cuál se puede simplificar para producirse en serie.</span></div>
+      <div class="shelf-actions"><a class="shelf-link" href="https://www.laurenceking.com/products/furniture-design" target="_blank" rel="noopener noreferrer">Editorial ↗</a><button type="button" data-choose="lawson">+ Mi PDF privado</button><button type="button" data-open="lawson" disabled>Leer mi copia ↗</button><button class="shelf-delete" type="button" data-remove="lawson" disabled>Quitar PDF</button></div><div class="shelf-status" data-status="lawson">Sin copia vinculada.</div>
+    </div>
+  </article>
+  <article class="shelf-book" data-book="biophilic">
+    <div class="shelf-cover cover-biophilic" aria-label="Portada ilustrada de 14 Patterns of Biophilic Design"><span class="cover-series">ATELIER READING / 02</span><div class="cover-illustration cover-biostruct"><i></i><b></b><em></em></div><strong>14 PATTERNS<br>OF BIOPHILIC<br>DESIGN</strong><span>TERRAPIN BRIGHT GREEN · 2014</span></div>
+    <div class="shelf-copy"><span class="shelf-tag">BIOFILIA · EXPERIENCIA</span><h3>14 Patterns of Biophilic Design</h3><p class="shelf-author">Browning, Ryan y Clancy · 2014 · 64 páginas</p><p>Los 14 patrones agrupados en naturaleza en el espacio, analogías naturales y naturaleza del espacio. La edición oficial actualizada incorpora el patrón <i>Awe</i>.</p>
+      <details class="shelf-chapters" open><summary>Tu ruta de capítulos <span>5 temas</span></summary><div class="chapter-list">
+        <label><input type="checkbox" data-read="biophilic-1"><span><b>1. Contexto de la biofilia</b><small>Introducción y Biophilia in Context</small></span></label>
+        <label><input type="checkbox" data-read="biophilic-2"><span><b>2. Consideraciones de diseño</b><small>Design Considerations · p. 13 (impresa)</small></span></label>
+        <label><input type="checkbox" data-read="biophilic-3"><span><b>3. Nature in the Space</b><small>Patrones 1–7 · desde p. 24</small></span></label>
+        <label><input type="checkbox" data-read="biophilic-4"><span><b>4. Natural Analogues</b><small>Patrones 8–10 · desde p. 38</small></span></label>
+        <label><input type="checkbox" data-read="biophilic-5"><span><b>5. Nature of the Space</b><small>Patrones 11–14 · desde p. 44</small></span></label>
+      </div></details>
+      <div class="shelf-prompt"><b>Reto NORVID</b><span>Diseña un puesto de trabajo que aplique dos patrones sin depender de macetas o vegetación artificial.</span></div>
+      <div class="shelf-actions"><a class="shelf-link" href="https://www.terrapinbrightgreen.com/report/14-patterns/" target="_blank" rel="noopener noreferrer">Fuente oficial ↗</a><a class="shelf-link" href="https://www.terrapinbrightgreen.com/wp-content/uploads/2014/04/14-Patterns-of-Biophilic-Design-Terrapin-2014e.pdf" target="_blank" rel="noopener noreferrer">PDF oficial 2014 ↗</a><button type="button" data-choose="biophilic">+ Mi PDF privado</button><button type="button" data-open="biophilic" disabled>Leer mi copia ↗</button><button class="shelf-delete" type="button" data-remove="biophilic" disabled>Quitar PDF</button></div><div class="shelf-status" data-status="biophilic">Sin copia vinculada.</div>
+    </div>
+  </article>
+  <article class="shelf-book" data-book="norman">
+    <div class="shelf-cover cover-norman" aria-label="Portada ilustrada The Design of Everyday Things"><span class="cover-series">ATELIER READING / 03</span><div class="cover-illustration cover-teapot"><i></i><b></b><em></em></div><strong>THE DESIGN<br>OF EVERYDAY<br>THINGS</strong><span>DON NORMAN · 2013</span></div>
+    <div class="shelf-copy"><span class="shelf-tag">DISEÑO CENTRADO EN PERSONAS</span><h3>The Design of Everyday Things</h3><p class="shelf-author">Don Norman · Edición revisada 2013 · 369 páginas</p><p>Descubre por qué fallan los objetos, cómo comunicamos su funcionamiento y cómo resolver correctamente los problemas de los usuarios.</p>
+      <details class="shelf-chapters" open><summary>Tu ruta de capítulos <span>5 temas</span></summary><div class="chapter-list">
+        <label><input type="checkbox" data-read="norman-1"><span><b>1. Psychopathology of Everyday Things</b><small>Cap. 1 · p. 1 (impresa)</small></span></label>
+        <label><input type="checkbox" data-read="norman-2"><span><b>2. The Psychology of Everyday Actions</b><small>Cap. 2 · p. 37</small></span></label>
+        <label><input type="checkbox" data-read="norman-3"><span><b>3. Discoverability y limitaciones</b><small>Cap. 4 · p. 123</small></span></label>
+        <label><input type="checkbox" data-read="norman-4"><span><b>4. Design Thinking</b><small>Cap. 6 · p. 217</small></span></label>
+        <label><input type="checkbox" data-read="norman-5"><span><b>5. Design in the World of Business</b><small>Cap. 7 · p. 258</small></span></label>
+      </div></details>
+      <div class="shelf-prompt"><b>Reto NORVID</b><span>Observa cinco errores de uso de mobiliario y rediseña un detalle para hacerlo más intuitivo.</span></div>
+      <div class="shelf-actions"><a class="shelf-link" href="https://www.hachettebookgroup.com/titles/don-norman/the-design-of-everyday-things/9780465050659/" target="_blank" rel="noopener noreferrer">Editorial ↗</a><button type="button" data-choose="norman">+ Mi PDF privado</button><button type="button" data-open="norman" disabled>Leer mi copia ↗</button><button class="shelf-delete" type="button" data-remove="norman" disabled>Quitar PDF</button></div><div class="shelf-status" data-status="norman">Sin copia vinculada.</div>
+    </div>
+  </article>
+ </div>
+ <input id="shelfFileInput" type="file" accept="application/pdf,.pdf" hidden aria-label="Seleccionar PDF privado">
+ <p class="shelf-disclaimer">Nota editorial: esta web enlaza a páginas oficiales y registra tu lectura de forma privada. No distribuye libros comerciales: los PDFs que vinculas solo se guardan en tu navegador y en tu nube personal, visibles únicamente para ti. La publicación de Terrapin permite lectura personal y académica; verifica sus condiciones antes de realizar usos comerciales.</p>
+</section>
+  <section class="section mood-section" id="moodboards"><div class="section-head"><div><div class="eyebrow">07 / Visual diaries · daily</div><h2>El moodboard del día<span>.</span></h2></div><p>Cada día se publica una dirección visual nueva, con su propia paleta, materiales, texturas y lenguaje formal. Cambia a medianoche (hora de Ciudad de México) y las ediciones anteriores quedan en el archivo. Haz clic en un color para copiar su HEX.</p></div>
+    <div class="mood-today" id="moodToday" aria-live="polite"></div>
+    <div class="mood-archive-head"><span class="eyebrow">Archivo de moodboards</span><span id="moodArchiveNote"></span></div>
+    <div class="mood-archive" id="moodArchive"></div>
+  </section>
+  <section class="section" id="mesa" aria-labelledby="mesaTitle"><div class="section-head"><div><div class="eyebrow">▦ WORKBENCH / This week</div><h2 id="mesaTitle">Mesa de trabajo<span style="color:#b67b62">.</span></h2></div><p>Tus objetivos de la semana en un tablero, tu agenda día por día, una reflexión semanal y botones para pasarlo todo a Google Calendar sin conectar tu cuenta.</p></div><div id="mesaRoot"></div></section>
+  <section class="section atlas-section" id="atlas" aria-labelledby="atlasTitle"><div class="section-head"><div><div class="eyebrow">✦ VISUAL ATLAS / Color & matter</div><h2 id="atlasTitle">Paletas y materiales<span style="color:#b67b62">.</span></h2></div><p>Dos herramientas para tu atlas visual: saca la paleta de cualquier foto tuya y consulta fichas de materiales con sus propiedades, procesos, sostenibilidad y costo aproximado.</p></div>
+  <nav class="gym-tabs" aria-label="Herramientas del atlas"><a href="#atlas-palette"><b>1</b>Paleta desde mis fotos</a><a href="#atlas-materials"><b>2</b>Biblioteca de materiales</a></nav>
+  <div id="atlasRoot"></div></section>
+  <section class="section" id="biblioteca"><div class="section-head"><div><div class="eyebrow">08 / The complete index</div><h2>El gran archivo<span style="color:#bc8b78">.</span></h2></div><p>Catálogos, revistas, color, libros, documentales, herrajes, biomímesis y museos. Filtra según lo que quieras aprender.</p></div>
+  <div class="library-controls"><div class="filter-line"><label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Buscar: tableros, metal, color, office, biofilia…" aria-label="Buscar recurso"></label><div class="filter-stats" id="filterStats">145 recursos disponibles</div></div><div class="filters" id="filters"></div><button class="custom-link-toggle" id="toggleCustom">＋ Añadir un recurso a mi biblioteca</button><form class="custom-form" id="customForm" hidden><input required id="customTitle" placeholder="Nombre del recurso" maxlength="110" aria-label="Nombre del recurso"><input required id="customURL" type="url" placeholder="https://…" aria-label="Enlace del recurso"><input id="customDesc" placeholder="¿Por qué vale la pena?" maxlength="220" aria-label="Descripción"><select id="customCat" aria-label="Categoría"><option>Catálogos</option><option>Noticias</option><option>Color & CMF</option><option>Biofilia</option><option>Materiales</option><option>Libros</option><option>Ver & aprender</option><option>Ferias & museos</option><option>Substack</option></select><button type="submit">Guardar recurso ↗</button><small>Los recursos que agregues se guardan en este navegador y se incluyen en tu copia de seguridad.</small></form></div>
+  <div class="resource-grid" id="resourceGrid"></div><button id="loadMore" class="more">Mostrar más recursos &nbsp; ↓</button></section>
+  <section class="section gym-section" id="gym" aria-labelledby="gymTitle"><div class="section-head"><div><div class="eyebrow">✦ CREATIVE GYM / Train your eye</div><h2 id="gymTitle">Creative Gym<span style="color:#b67b62">.</span></h2></div><p>Explora el color, sal a pequeñas aventuras y hojea la naturaleza; luego entrena la mirada con cuatro ejercicios. Empieza por el que quieras: descubrir → experimentar → dibujar → guardar.</p></div>
+  <div id="gymExplore"></div>
+  <nav class="gym-tabs" aria-label="Ejercicios del Creative Gym"><a href="/color"><b>◐</b>Laboratorio de color</a><a href="/citas"><b>✦</b>Citas creativas</a><a href="/bio"><b>❦</b>Bitácora silvestre</a><a href="#gym-connections"><b>1</b>Creative Connections</a><a href="#gym-detective"><b>2</b>Design Detective</a><a href="#gym-weekly"><b>3</b>Reto semanal</a><a href="#gym-streak"><b>4</b>Racha creativa</a></nav>
+  <div id="gymRoot"></div></section>
+  <section class="section" id="estudio"><div class="study-section"><div><div class="eyebrow">09 / Little by little, every day</div><h2>Your design<br><em>education.</em></h2><p>Una biblioteca es útil cuando cambia la manera en que diseñas. Marca tu recorrido de iniciación: del ojo creativo a una propuesta de mobiliario defendible.</p><div class="progress-track"><div class="progress-fill" id="studyProgress"></div></div><span class="study-sub" id="progressLabel">0 DE 8 MISIONES COMPLETADAS</span></div><div class="study-list" id="studyList"></div></div></section>
+  <section class="section saved-section" id="guardados" aria-labelledby="savedTitle"><div class="section-head"><div><div class="eyebrow">♥ SAVED / Inspiration DNA</div><h2 id="savedTitle">Mis guardados<span style="color:#b67b62">.</span></h2></div><p>Un retrato de lo que más guardas: colores, materiales, temas y fuentes. Cuanto más guardes (♡ en recursos, moodboards, materiales y paletas), más preciso será tu ADN de inspiración.</p></div><div id="dnaRoot"></div></section>
+  <section class="section" id="cuaderno"><div class="section-head"><div><div class="eyebrow">10 / Creative notes</div><h2>Cuaderno de ideas<span>.</span></h2></div><p>El cuaderno tiene ahora su propia página: notas con etiquetas, referencias, bocetos a mano alzada y una galería de dibujos. Aquí puedes anotar algo rápido sin salir de la biblioteca.</p></div>
+    <div class="notebook-teaser">
+      <a class="nb-cover" href="/cuaderno" aria-label="Abrir el cuaderno de ideas"><span class="nb-elastic" aria-hidden="true"></span><span class="nb-label">ATELIER NORVID · SKETCHBOOK</span><strong>Cuaderno<br><em>de ideas.</em></strong><span class="nb-meta" id="nbMeta">0 notas</span><span class="nb-open">Abrir cuaderno ↗</span></a>
+      <div class="notes-pad"><div class="eyebrow">Nota rápida</div><h3>¿Qué observaste hoy?</h3><textarea id="ideaInput" placeholder="Vi una unión metálica interesante... / ¿Y si el recorte de tablero se convierte en...? / Quiero investigar..." aria-label="Escribe una idea"></textarea><button id="saveIdea">Guardar en mi cuaderno ↗</button></div>
+      <div class="notes-list"><div class="eyebrow">Últimas notas</div><h3>Ideas en proceso</h3><div id="ideasList"></div><a class="nb-all" href="/cuaderno">Ver todo el cuaderno →</a></div>
+    </div>
+  </section>
+  <footer class="footer"><div><div class="eyebrow">DESIGN IS A WAY OF SEEING</div><h2>Keep making things.</h2><p>Una biblioteca personal para investigar, observar, experimentar y diseñar mobiliario con intención. Recursos externos seleccionados; algunos libros, plataformas y videos requieren compra, cuenta o suscripción.</p><span class="small-tag">ATELIER NORVID · THE DESIGN LIBRARY · 2026</span></div><div style="display:flex;flex-direction:column;align-items:start;justify-content:center;gap:12px"><button id="exportData">↓ Exportar mi biblioteca personal</button><button id="importData">↑ Restaurar copia de seguridad</button><input id="importFile" hidden type="file" accept="application/json,.json"><button id="resetFilters">↻ Ver toda la biblioteca</button></div></footer>
+</div></main></div><div class="status-toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/sketchpad.js"></script>
+<script src="/lab.js"></script>
+<script>
+const RESOURCES=[
+  {
+    "title": "Dezeen — Design",
+    "url": "https://www.dezeen.com/design/",
+    "cat": "Noticias",
+    "desc": "Novedades de objetos, mobiliario, materiales y estudios internacionales.",
+    "fmt": "Revista · Diario",
+    "icon": "↗"
+  },
+  {
+    "title": "Designboom — Design",
+    "url": "https://www.designboom.com/design/",
+    "cat": "Noticias",
+    "desc": "Conceptos experimentales, colaboraciones y lanzamientos visuales.",
+    "fmt": "Revista · Diario",
+    "icon": "↗"
+  },
+  {
+    "title": "Wallpaper* — Design",
+    "url": "https://www.wallpaper.com/design",
+    "cat": "Noticias",
+    "desc": "Lectura editorial sobre diseño contemporáneo y cultura material.",
+    "fmt": "Revista",
+    "icon": "↗"
+  },
+  {
+    "title": "Design Milk",
+    "url": "https://design-milk.com/",
+    "cat": "Noticias",
+    "desc": "Diseño de objetos, iluminación, mobiliario e interiores.",
+    "fmt": "Revista",
+    "icon": "↗"
+  },
+  {
+    "title": "Domus",
+    "url": "https://www.domusweb.it/en/design.html",
+    "cat": "Noticias",
+    "desc": "Diseño y arquitectura con una mirada histórica y cultural.",
+    "fmt": "Revista",
+    "icon": "↗"
+  },
+  {
+    "title": "FRAME",
+    "url": "https://frameweb.com/",
+    "cat": "Noticias",
+    "desc": "Interiorismo comercial, experiencias y retail.",
+    "fmt": "Revista",
+    "icon": "↗"
+  },
+  {
+    "title": "Surface Magazine",
+    "url": "https://www.surfacemag.com/",
+    "cat": "Noticias",
+    "desc": "Conversaciones con diseñadores, objetos y ferias.",
+    "fmt": "Revista",
+    "icon": "↗"
+  },
+  {
+    "title": "Interior Design",
+    "url": "https://interiordesign.net/",
+    "cat": "Noticias",
+    "desc": "Diseño de espacios, productos y especificaciones comerciales.",
+    "fmt": "Revista",
+    "icon": "↗"
+  },
+  {
+    "title": "Work Design Magazine",
+    "url": "https://www.workdesign.com/",
+    "cat": "Noticias",
+    "desc": "Investigación y tendencias de entornos de trabajo.",
+    "fmt": "Workplace",
+    "icon": "↗"
+  },
+  {
+    "title": "Office Snapshots",
+    "url": "https://officesnapshots.com/",
+    "cat": "Noticias",
+    "desc": "Proyectos de oficinas reales para estudiar uso y distribución.",
+    "fmt": "Inspiración",
+    "icon": "↗"
+  },
+  {
+    "title": "Business of Furniture",
+    "url": "https://bof.press/",
+    "cat": "Noticias",
+    "desc": "Actualidad de la industria de mobiliario corporativo.",
+    "fmt": "Industria",
+    "icon": "↗"
+  },
+  {
+    "title": "ArchDaily — Products",
+    "url": "https://www.archdaily.com/search/projects/categories/interiors",
+    "cat": "Noticias",
+    "desc": "Interiores y proyectos para analizar soluciones espaciales.",
+    "fmt": "Proyectos",
+    "icon": "↗"
+  },
+  {
+    "title": "AD México",
+    "url": "https://www.admagazine.com/",
+    "cat": "Noticias",
+    "desc": "Diseño y talento en México y Latinoamérica.",
+    "fmt": "En español",
+    "icon": "↗"
+  },
+  {
+    "title": "México Design",
+    "url": "https://mexicodesign.com/",
+    "cat": "Noticias",
+    "desc": "Cultura y proyectos mexicanos de arquitectura y diseño.",
+    "fmt": "En español",
+    "icon": "↗"
+  },
+  {
+    "title": "Woodworking Network",
+    "url": "https://www.woodworkingnetwork.com/",
+    "cat": "Noticias",
+    "desc": "Noticias de fabricación y sector del mueble.",
+    "fmt": "Industria",
+    "icon": "↗"
+  },
+  {
+    "title": "Kimball — Workplace Trends 2026",
+    "url": "https://www.kimballinternational.com/newsroom/kimball-international-unveils-2026-workplace-trends-report.html",
+    "cat": "Noticias",
+    "desc": "Informe reciente sobre flexibilidad, bienestar y nuevas formas de trabajar.",
+    "fmt": "Informe 2026",
+    "icon": "↗"
+  },
+  {
+    "title": "Blum — Tendencias Milán 2026",
+    "url": "https://www.blum.com/explores/es/salone-del-mobile/trendreport-2026",
+    "cat": "Noticias",
+    "desc": "Colores, texturas, materiales, soluciones e iluminación de muebles.",
+    "fmt": "Informe 2026 · ES",
+    "icon": "↗"
+  },
+  {
+    "title": "Best of NeoCon — Winners 2026",
+    "url": "https://neocon.com/awards/best-of-neocon/winners-2026",
+    "cat": "Noticias",
+    "desc": "Premios por innovación, sostenibilidad y mobiliario de oficina.",
+    "fmt": "Premios 2026",
+    "icon": "↗"
+  },
+  {
+    "title": "RAL — Colour Feeling 2027+",
+    "url": "https://www.ral-farben.de/en/trend-report-2027",
+    "cat": "Noticias",
+    "desc": "Predicción profesional de colores y aplicaciones en producto.",
+    "fmt": "Pronóstico 2027",
+    "icon": "↗"
+  },
+  {
+    "title": "WGSN — Luminous Blue 2027",
+    "url": "https://www.wgsn.com/es/blog/color-del-ano-2027-luminous-blue",
+    "cat": "Noticias",
+    "desc": "Color del año según WGSN × Coloro y aplicaciones en diseño.",
+    "fmt": "Pronóstico 2027 · ES",
+    "icon": "↗"
+  },
+  {
+    "title": "Vitra — Products",
+    "url": "https://www.vitra.com/en-us/product",
+    "cat": "Catálogos",
+    "desc": "Sistemas de oficina, sillas y detalles de diseño de autor.",
+    "fmt": "Marca · Catálogo",
+    "icon": "↗"
+  },
+  {
+    "title": "USM — Modular Furniture",
+    "url": "https://www.usm.com/",
+    "cat": "Catálogos",
+    "desc": "Modelo de referencia para arquitectura modular de producto.",
+    "fmt": "Marca · Sistema",
+    "icon": "↗"
+  },
+  {
+    "title": "Steelcase — Products",
+    "url": "https://www.steelcase.com/products/",
+    "cat": "Catálogos",
+    "desc": "Escritorios, estaciones, divisores, ergonomía y accesorios.",
+    "fmt": "Oficina",
+    "icon": "↗"
+  },
+  {
+    "title": "Herman Miller — Products",
+    "url": "https://www.hermanmiller.com/products/",
+    "cat": "Catálogos",
+    "desc": "Iconos de mobiliario, componentes y lógica de producto.",
+    "fmt": "Oficina",
+    "icon": "↗"
+  },
+  {
+    "title": "Haworth — Products",
+    "url": "https://www.haworth.com/na/en/products.html",
+    "cat": "Catálogos",
+    "desc": "Workstations, ambientes de colaboración y configuraciones.",
+    "fmt": "Oficina",
+    "icon": "↗"
+  },
+  {
+    "title": "Bene",
+    "url": "https://www.bene.com/en/",
+    "cat": "Catálogos",
+    "desc": "Sistemas de oficina, microarquitectura y soluciones flexibles.",
+    "fmt": "Oficina",
+    "icon": "↗"
+  },
+  {
+    "title": "Actiu",
+    "url": "https://www.actiu.com/en/",
+    "cat": "Catálogos",
+    "desc": "Mobiliario corporativo, investigación y ergonomía.",
+    "fmt": "Oficina",
+    "icon": "↗"
+  },
+  {
+    "title": "Arper",
+    "url": "https://www.arper.com/",
+    "cat": "Catálogos",
+    "desc": "Familias de productos coherentes y lenguaje formal contemporáneo.",
+    "fmt": "Colección",
+    "icon": "↗"
+  },
+  {
+    "title": "Andreu World",
+    "url": "https://www.andreuworld.com/",
+    "cat": "Catálogos",
+    "desc": "Asientos, mesas, materialidad y diseño contract.",
+    "fmt": "Colección",
+    "icon": "↗"
+  },
+  {
+    "title": "Muuto",
+    "url": "https://www.muuto.com/",
+    "cat": "Catálogos",
+    "desc": "Color, madera, textiles y calidez escandinava.",
+    "fmt": "Estética",
+    "icon": "↗"
+  },
+  {
+    "title": "String Furniture",
+    "url": "https://stringfurniture.com/",
+    "cat": "Catálogos",
+    "desc": "Sistemas de almacenamiento y modularidad espacial.",
+    "fmt": "Modularidad",
+    "icon": "↗"
+  },
+  {
+    "title": "Fantoni",
+    "url": "https://www.fantoni.it/",
+    "cat": "Catálogos",
+    "desc": "Mobiliario de oficina, paneles y sistemas de trabajo.",
+    "fmt": "Industria",
+    "icon": "↗"
+  },
+  {
+    "title": "Lapalma",
+    "url": "https://www.lapalma.it/en/",
+    "cat": "Catálogos",
+    "desc": "Sillas y mesas con carácter industrial refinado.",
+    "fmt": "Diseño italiano",
+    "icon": "↗"
+  },
+  {
+    "title": "Emeco",
+    "url": "https://www.emeco.net/",
+    "cat": "Catálogos",
+    "desc": "Metal, durabilidad, material reciclado y asientos icónicos.",
+    "fmt": "Metal",
+    "icon": "↗"
+  },
+  {
+    "title": "Magis",
+    "url": "https://www.magisdesign.com/",
+    "cat": "Catálogos",
+    "desc": "Experimentación estructural y fabricación de objetos.",
+    "fmt": "Experimental",
+    "icon": "↗"
+  },
+  {
+    "title": "MDF Italia",
+    "url": "https://www.mdfitalia.com/",
+    "cat": "Catálogos",
+    "desc": "Minimalismo técnico y sistemas de mobiliario.",
+    "fmt": "Sistemas",
+    "icon": "↗"
+  },
+  {
+    "title": "Cassina",
+    "url": "https://www.cassina.com/",
+    "cat": "Catálogos",
+    "desc": "Historia y reediciones de mobiliario moderno.",
+    "fmt": "Historia",
+    "icon": "↗"
+  },
+  {
+    "title": "Moroso",
+    "url": "https://moroso.it/",
+    "cat": "Catálogos",
+    "desc": "Formas audaces, tapicería y colaboraciones de autor.",
+    "fmt": "Experimental",
+    "icon": "↗"
+  },
+  {
+    "title": "Kartell",
+    "url": "https://www.kartell.com/",
+    "cat": "Catálogos",
+    "desc": "Tecnología del plástico, color y producción industrial.",
+    "fmt": "Materiales",
+    "icon": "↗"
+  },
+  {
+    "title": "Archiproducts — Catálogos",
+    "url": "https://www.archiproducts.com/es",
+    "cat": "Catálogos",
+    "desc": "Miles de productos, catálogos y recursos técnicos descargables.",
+    "fmt": "Base de datos",
+    "icon": "↗"
+  },
+  {
+    "title": "Architonic",
+    "url": "https://www.architonic.com/",
+    "cat": "Catálogos",
+    "desc": "Búsqueda de productos profesionales, configuraciones y marcas.",
+    "fmt": "Base de datos",
+    "icon": "↗"
+  },
+  {
+    "title": "Material Bank",
+    "url": "https://www.materialbank.com/",
+    "cat": "Catálogos",
+    "desc": "Muestras y especificación de materiales para diseño profesional.",
+    "fmt": "Muestras",
+    "icon": "↗"
+  },
+  {
+    "title": "NCS Colour",
+    "url": "https://ncscolour.com/",
+    "cat": "Color & CMF",
+    "desc": "Sistema para comunicar y especificar colores.",
+    "fmt": "Sistema",
+    "icon": "↗"
+  },
+  {
+    "title": "RAL — Colour Feeling",
+    "url": "https://www.ral-farben.de/en/colour-feeling",
+    "cat": "Color & CMF",
+    "desc": "Biblioteca de tendencias con reportes y recursos para descargar.",
+    "fmt": "Informes",
+    "icon": "↗"
+  },
+  {
+    "title": "WGSN — Colour",
+    "url": "https://www.wgsn.com/en/topics/colour",
+    "cat": "Color & CMF",
+    "desc": "Pronósticos de color y lectura de señales de mercado.",
+    "fmt": "Pronóstico · Mixto",
+    "icon": "↗"
+  },
+  {
+    "title": "Coloro",
+    "url": "https://coloro.com/",
+    "cat": "Color & CMF",
+    "desc": "Color aplicado a producto y predicción de tendencias.",
+    "fmt": "Profesional",
+    "icon": "↗"
+  },
+  {
+    "title": "Pantone — Color of the Year",
+    "url": "https://www.pantone.com/color-of-the-year",
+    "cat": "Color & CMF",
+    "desc": "Narrativas de color y combinaciones del año.",
+    "fmt": "Pronóstico",
+    "icon": "↗"
+  },
+  {
+    "title": "Adobe Color",
+    "url": "https://color.adobe.com/",
+    "cat": "Color & CMF",
+    "desc": "Explora armonías y crea paletas.",
+    "fmt": "Herramienta · Gratis",
+    "icon": "↗"
+  },
+  {
+    "title": "Coolors",
+    "url": "https://coolors.co/",
+    "cat": "Color & CMF",
+    "desc": "Experimenta con paletas e inspiración cromática.",
+    "fmt": "Herramienta",
+    "icon": "↗"
+  },
+  {
+    "title": "Color Marketing Group",
+    "url": "https://colormarketing.org/",
+    "cat": "Color & CMF",
+    "desc": "Comunidad especializada en pronósticos de color.",
+    "fmt": "Industria",
+    "icon": "↗"
+  },
+  {
+    "title": "EGGER",
+    "url": "https://www.egger.com/",
+    "cat": "Color & CMF",
+    "desc": "Tableros, decorativos, texturas y superficies.",
+    "fmt": "Tableros",
+    "icon": "↗"
+  },
+  {
+    "title": "FENIX",
+    "url": "https://www.fenixforinteriors.com/",
+    "cat": "Color & CMF",
+    "desc": "Acabados supermates y superficies para mobiliario.",
+    "fmt": "Superficies",
+    "icon": "↗"
+  },
+  {
+    "title": "Formica",
+    "url": "https://www.formica.com/",
+    "cat": "Color & CMF",
+    "desc": "Laminados decorativos y colecciones de acabados.",
+    "fmt": "Laminados",
+    "icon": "↗"
+  },
+  {
+    "title": "Wilsonart",
+    "url": "https://www.wilsonart.com/",
+    "cat": "Color & CMF",
+    "desc": "Superficies y acabados de alta presión.",
+    "fmt": "Laminados",
+    "icon": "↗"
+  },
+  {
+    "title": "MaterialDistrict",
+    "url": "https://materialdistrict.com/",
+    "cat": "Color & CMF",
+    "desc": "Innovación material, casos y tendencias.",
+    "fmt": "Materiales",
+    "icon": "↗"
+  },
+  {
+    "title": "Material ConneXion",
+    "url": "https://materialconnexion.com/",
+    "cat": "Color & CMF",
+    "desc": "Investigación de materiales y servicios especializados.",
+    "fmt": "Suscripción",
+    "icon": "↗"
+  },
+  {
+    "title": "14+ Patterns of Biophilic Design",
+    "url": "https://www.terrapinbrightgreen.com/report/14-patterns/",
+    "cat": "Biofilia",
+    "desc": "Guía esencial de patrones biofílicos para espacios.",
+    "fmt": "Informe · Gratis",
+    "icon": "↗"
+  },
+  {
+    "title": "14+ Patterns — edición aniversario 2026",
+    "url": "https://www.terrapinbrightgreen.com/wp-content/uploads/2026/04/14-Patterns-10th-anniv-ed-2026-04-23.pdf",
+    "cat": "Biofilia",
+    "desc": "Lee patrones, evidencia y estrategias de aplicación.",
+    "fmt": "PDF · Gratis",
+    "icon": "↗"
+  },
+  {
+    "title": "AskNature",
+    "url": "https://asknature.org/",
+    "cat": "Biofilia",
+    "desc": "Estrategias biológicas para aprender de la naturaleza.",
+    "fmt": "Biblioteca · Gratis",
+    "icon": "↗"
+  },
+  {
+    "title": "The Biomimicry Institute",
+    "url": "https://biomimicry.org/",
+    "cat": "Biofilia",
+    "desc": "Casos y metodologías para inspirarse en organismos y sistemas.",
+    "fmt": "Investigación",
+    "icon": "↗"
+  },
+  {
+    "title": "Biophilic Cities",
+    "url": "https://www.biophiliccities.org/",
+    "cat": "Biofilia",
+    "desc": "Ciudades y entornos que integran naturaleza.",
+    "fmt": "Investigación",
+    "icon": "↗"
+  },
+  {
+    "title": "Living Future",
+    "url": "https://living-future.org/",
+    "cat": "Biofilia",
+    "desc": "Criterios regenerativos y ecología de materiales.",
+    "fmt": "Sustentabilidad",
+    "icon": "↗"
+  },
+  {
+    "title": "Biomimicry 3.8",
+    "url": "https://biomimicry.net/",
+    "cat": "Biofilia",
+    "desc": "Enfoques y recursos para innovación bioinspirada.",
+    "fmt": "Método",
+    "icon": "↗"
+  },
+  {
+    "title": "Nature of Cities",
+    "url": "https://www.thenatureofcities.com/",
+    "cat": "Biofilia",
+    "desc": "Ensayos e investigaciones sobre ambientes naturales urbanos.",
+    "fmt": "Lecturas",
+    "icon": "↗"
+  },
+  {
+    "title": "Dezeen — Biomaterials",
+    "url": "https://www.dezeen.com/tag/biomaterials/",
+    "cat": "Biofilia",
+    "desc": "Materiales biobasados y experimentos contemporáneos.",
+    "fmt": "Revista",
+    "icon": "↗"
+  },
+  {
+    "title": "MaterialDriven",
+    "url": "https://www.materialdriven.com/",
+    "cat": "Biofilia",
+    "desc": "Materiales emergentes, diseño y circularidad.",
+    "fmt": "Materiales",
+    "icon": "↗"
+  },
+  {
+    "title": "Blum — Herrajes",
+    "url": "https://www.blum.com/",
+    "cat": "Materiales",
+    "desc": "Bisagras, mecanismos, sistemas de montaje y catálogos.",
+    "fmt": "Herrajes",
+    "icon": "↗"
+  },
+  {
+    "title": "Häfele — Furniture Fittings",
+    "url": "https://www.hafele.com/",
+    "cat": "Materiales",
+    "desc": "Conectores, cierres, accesorios y soluciones de ensamble.",
+    "fmt": "Herrajes",
+    "icon": "↗"
+  },
+  {
+    "title": "Hettich",
+    "url": "https://www.hettich.com/",
+    "cat": "Materiales",
+    "desc": "Sistemas, guías y tecnología de mobiliario.",
+    "fmt": "Herrajes",
+    "icon": "↗"
+  },
+  {
+    "title": "HOMAG",
+    "url": "https://www.homag.com/",
+    "cat": "Materiales",
+    "desc": "Maquinaria y procesos de corte, CNC y canteado.",
+    "fmt": "Madera · CNC",
+    "icon": "↗"
+  },
+  {
+    "title": "Biesse",
+    "url": "https://biesse.com/",
+    "cat": "Materiales",
+    "desc": "Manufactura industrial, mecanizado y automatización.",
+    "fmt": "CNC",
+    "icon": "↗"
+  },
+  {
+    "title": "TRUMPF",
+    "url": "https://www.trumpf.com/",
+    "cat": "Materiales",
+    "desc": "Procesamiento de metal, láser y doblado.",
+    "fmt": "Metal",
+    "icon": "↗"
+  },
+  {
+    "title": "Bystronic",
+    "url": "https://www.bystronic.com/",
+    "cat": "Materiales",
+    "desc": "Corte y transformación industrial de metales.",
+    "fmt": "Metal",
+    "icon": "↗"
+  },
+  {
+    "title": "Festool",
+    "url": "https://www.festool.com/",
+    "cat": "Materiales",
+    "desc": "Herramientas y sistemas de trabajo en madera.",
+    "fmt": "Herramientas",
+    "icon": "↗"
+  },
+  {
+    "title": "Fine Woodworking",
+    "url": "https://www.finewoodworking.com/",
+    "cat": "Materiales",
+    "desc": "Uniones, proceso artesanal, comportamiento de la madera.",
+    "fmt": "Tutoriales",
+    "icon": "↗"
+  },
+  {
+    "title": "WOOD Magazine",
+    "url": "https://www.woodmagazine.com/",
+    "cat": "Materiales",
+    "desc": "Carpintería, proyectos y técnicas explicadas.",
+    "fmt": "Tutoriales",
+    "icon": "↗"
+  },
+  {
+    "title": "Cabinet Vision",
+    "url": "https://www.cabinetvision.com/",
+    "cat": "Materiales",
+    "desc": "Del diseño de gabinete al listado de corte y nesting.",
+    "fmt": "Software",
+    "icon": "↗"
+  },
+  {
+    "title": "Autodesk Fusion — Learning",
+    "url": "https://www.autodesk.com/learn/ondemand/collection/fusion",
+    "cat": "Materiales",
+    "desc": "Modelado 3D, piezas, ensambles y manufactura.",
+    "fmt": "Curso · Gratis",
+    "icon": "↗"
+  },
+  {
+    "title": "OpenLearn — Design",
+    "url": "https://www.open.edu/openlearn/science-maths-technology/design-innovation",
+    "cat": "Materiales",
+    "desc": "Aprendizaje abierto sobre diseño y tecnología.",
+    "fmt": "Curso · Gratis",
+    "icon": "↗"
+  },
+  {
+    "title": "Furniture Design — Stuart Lawson",
+    "url": "https://www.laurenceking.com/products/furniture-design",
+    "cat": "Libros",
+    "desc": "Edición 2013 enviada a tu estantería: historia, investigación, ergonomía, fabricación y sostenibilidad. Incluye ruta por capítulos.",
+    "fmt": "Libro · Compra",
+    "icon": "↗"
+  },
+  {
+    "title": "Atlas of Furniture Design",
+    "url": "https://www.vitra.com/es-un/product/details/atlas-of-furniture-design",
+    "cat": "Libros",
+    "desc": "Enciclopedia visual de la historia del mueble moderno.",
+    "fmt": "Libro · Referencia",
+    "icon": "↗"
+  },
+  {
+    "title": "The Design of Everyday Things — Don Norman",
+    "url": "https://www.hachettebookgroup.com/titles/don-norman/the-design-of-everyday-things/9780465050659/",
+    "cat": "Libros",
+    "desc": "Edición revisada 2013: diseño centrado en las personas, limitaciones, interacción, design thinking y desarrollo de productos.",
+    "fmt": "Libro · Buscar",
+    "icon": "↗"
+  },
+  {
+    "title": "Manufacturing Processes for Design Professionals",
+    "url": "https://books.google.com/books?q=Manufacturing+Processes+for+Design+Professionals+Rob+Thompson",
+    "cat": "Libros",
+    "desc": "Procesos industriales ilustrados para diseñadores.",
+    "fmt": "Libro · Buscar",
+    "icon": "↗"
+  },
+  {
+    "title": "Creative Confidence — Tom y David Kelley",
+    "url": "https://books.google.com/books?q=Creative+Confidence+Tom+David+Kelley",
+    "cat": "Libros",
+    "desc": "Mentalidad creativa, prototipos y experimentación.",
+    "fmt": "Libro · Buscar",
+    "icon": "↗"
+  },
+  {
+    "title": "Sketching: Drawing Techniques for Product Designers",
+    "url": "https://books.google.com/books?q=Sketching+Drawing+Techniques+for+Product+Designers",
+    "cat": "Libros",
+    "desc": "Bocetaje de producto, perspectivas y comunicación.",
+    "fmt": "Libro · Buscar",
+    "icon": "↗"
+  },
+  {
+    "title": "Making It — Chris Lefteri",
+    "url": "https://books.google.com/books?q=Making+It+Chris+Lefteri+product+design",
+    "cat": "Libros",
+    "desc": "Técnicas de fabricación en diseño de producto.",
+    "fmt": "Libro · Buscar",
+    "icon": "↗"
+  },
+  {
+    "title": "Materials and Design — Ashby & Johnson",
+    "url": "https://books.google.com/books?q=Materials+and+Design+Ashby+Johnson",
+    "cat": "Libros",
+    "desc": "Selección de materiales y propiedades.",
+    "fmt": "Libro · Buscar",
+    "icon": "↗"
+  },
+  {
+    "title": "Biomimicry — Janine Benyus",
+    "url": "https://books.google.com/books?q=Biomimicry+Innovation+Inspired+by+Nature+Benyus",
+    "cat": "Libros",
+    "desc": "Estrategias naturales para diseño e innovación.",
+    "fmt": "Libro · Buscar",
+    "icon": "↗"
+  },
+  {
+    "title": "Biophilic Design — Kellert et al.",
+    "url": "https://books.google.com/books?q=Biophilic+Design+Kellert+Heerwagen+Mador",
+    "cat": "Libros",
+    "desc": "Teoría y práctica de diseño biofílico.",
+    "fmt": "Libro · Buscar",
+    "icon": "↗"
+  },
+  {
+    "title": "Biomimicry in Architecture — Michael Pawlyn",
+    "url": "https://books.google.com/books?q=Biomimicry+in+Architecture+Michael+Pawlyn",
+    "cat": "Libros",
+    "desc": "Estructuras eficientes e inspiración natural.",
+    "fmt": "Libro · Buscar",
+    "icon": "↗"
+  },
+  {
+    "title": "The Laws of Simplicity — John Maeda",
+    "url": "https://books.google.com/books?q=The+Laws+of+Simplicity+John+Maeda",
+    "cat": "Libros",
+    "desc": "Reducir, clarificar y diseñar con intención.",
+    "fmt": "Libro · Buscar",
+    "icon": "↗"
+  },
+  {
+    "title": "Emotional Design — Don Norman",
+    "url": "https://books.google.com/books?q=Emotional+Design+Don+Norman",
+    "cat": "Libros",
+    "desc": "Cómo los objetos generan experiencias emocionales.",
+    "fmt": "Libro · Buscar",
+    "icon": "↗"
+  },
+  {
+    "title": "Designing Design — Kenya Hara",
+    "url": "https://books.google.com/books?q=Designing+Design+Kenya+Hara",
+    "cat": "Libros",
+    "desc": "Pensamiento visual, sensibilidad y comunicación.",
+    "fmt": "Libro · Buscar",
+    "icon": "↗"
+  },
+  {
+    "title": "Universal Principles of Design",
+    "url": "https://books.google.com/books?q=Universal+Principles+of+Design",
+    "cat": "Libros",
+    "desc": "Principios aplicables a productos y comunicación.",
+    "fmt": "Libro · Buscar",
+    "icon": "↗"
+  },
+  {
+    "title": "Cradle to Cradle",
+    "url": "https://books.google.com/books?q=Cradle+to+Cradle+McDonough+Braungart",
+    "cat": "Libros",
+    "desc": "Circularidad y diseño para ciclos de materiales.",
+    "fmt": "Libro · Buscar",
+    "icon": "↗"
+  },
+  {
+    "title": "Product Design and Development — Ulrich",
+    "url": "https://books.google.com/books?q=Product+Design+and+Development+Ulrich+Eppinger",
+    "cat": "Libros",
+    "desc": "Proceso de desarrollo de producto completo.",
+    "fmt": "Libro · Buscar",
+    "icon": "↗"
+  },
+  {
+    "title": "Interaction of Color — Josef Albers",
+    "url": "https://books.google.com/books?q=Interaction+of+Color+Josef+Albers",
+    "cat": "Libros",
+    "desc": "Percepción y experimentación cromática.",
+    "fmt": "Libro · Buscar",
+    "icon": "↗"
+  },
+  {
+    "title": "1000 Chairs — Taschen",
+    "url": "https://www.taschen.com/en/search/?q=1000%20Chairs",
+    "cat": "Libros",
+    "desc": "Historia visual de estructuras y tipologías de sillas.",
+    "fmt": "Libro · Buscar",
+    "icon": "↗"
+  },
+  {
+    "title": "The Measure of Man and Woman — Tilley",
+    "url": "https://books.google.com/books?q=The+Measure+of+Man+and+Woman+Tilley",
+    "cat": "Libros",
+    "desc": "Dimensiones humanas y ergonomía.",
+    "fmt": "Libro · Buscar",
+    "icon": "↗"
+  },
+  {
+    "title": "Abstract — Ilse Crawford T1 E8",
+    "url": "https://www.netflix.com/title/80057883",
+    "cat": "Ver & aprender",
+    "desc": "Diseño de interiores desde la experiencia humana.",
+    "fmt": "Serie · Netflix",
+    "icon": "↗"
+  },
+  {
+    "title": "Abstract — Neri Oxman T2 E2",
+    "url": "https://www.netflix.com/title/80057883",
+    "cat": "Ver & aprender",
+    "desc": "Bioarquitectura y materiales experimentales.",
+    "fmt": "Serie · Netflix",
+    "icon": "↗"
+  },
+  {
+    "title": "Abstract — Es Devlin T1 E3",
+    "url": "https://www.netflix.com/title/80057883",
+    "cat": "Ver & aprender",
+    "desc": "Escenografía y narrativa de experiencias inmersivas.",
+    "fmt": "Serie · Netflix",
+    "icon": "↗"
+  },
+  {
+    "title": "Abstract — Olafur Eliasson T2 E1",
+    "url": "https://www.netflix.com/title/80057883",
+    "cat": "Ver & aprender",
+    "desc": "Luz, color, percepción e instalaciones.",
+    "fmt": "Serie · Netflix",
+    "icon": "↗"
+  },
+  {
+    "title": "Abstract — Tinker Hatfield T1 E2",
+    "url": "https://www.netflix.com/title/80057883",
+    "cat": "Ver & aprender",
+    "desc": "Diseño de producto, innovación e identidad.",
+    "fmt": "Serie · Netflix",
+    "icon": "↗"
+  },
+  {
+    "title": "Objectified — Gary Hustwit",
+    "url": "https://www.hustwit.com/objectified",
+    "cat": "Ver & aprender",
+    "desc": "El proceso de los diseñadores detrás de objetos cotidianos.",
+    "fmt": "Documental",
+    "icon": "↗"
+  },
+  {
+    "title": "Rams — Gary Hustwit",
+    "url": "https://www.hustwit.com/rams",
+    "cat": "Ver & aprender",
+    "desc": "Dieter Rams, durabilidad y principios del buen diseño.",
+    "fmt": "Documental",
+    "icon": "↗"
+  },
+  {
+    "title": "TED — Neri Oxman",
+    "url": "https://www.ted.com/talks/neri_oxman_design_at_the_intersection_of_technology_and_biology",
+    "cat": "Ver & aprender",
+    "desc": "Tecnología, biología, fabricación y materiales.",
+    "fmt": "Conferencia · Gratis",
+    "icon": "↗"
+  },
+  {
+    "title": "TED — Janine Benyus",
+    "url": "https://www.ted.com/talks/janine_benyus_biomimicry_in_action",
+    "cat": "Ver & aprender",
+    "desc": "Biomímesis aplicada a problemas humanos.",
+    "fmt": "Conferencia · Gratis",
+    "icon": "↗"
+  },
+  {
+    "title": "TED — Michael Pawlyn",
+    "url": "https://www.ted.com/talks/michael_pawlyn_using_nature_s_genius_in_architecture",
+    "cat": "Ver & aprender",
+    "desc": "Arquitectura inspirada en soluciones naturales.",
+    "fmt": "Conferencia · Gratis",
+    "icon": "↗"
+  },
+  {
+    "title": "Sketch A Day — Spencer Nugent",
+    "url": "https://www.youtube.com/@sketchadaydotcom",
+    "cat": "Ver & aprender",
+    "desc": "Sketching diario de productos y representación de ideas.",
+    "fmt": "Canal · Gratis",
+    "icon": "↗"
+  },
+  {
+    "title": "The Futur",
+    "url": "https://www.youtube.com/@thefutur",
+    "cat": "Ver & aprender",
+    "desc": "Estrategia, diseño y presentación creativa.",
+    "fmt": "Canal · Gratis",
+    "icon": "↗"
+  },
+  {
+    "title": "Product Design Online",
+    "url": "https://www.youtube.com/@ProductDesignOnline",
+    "cat": "Ver & aprender",
+    "desc": "Fusion y modelado práctico.",
+    "fmt": "Canal · Gratis",
+    "icon": "↗"
+  },
+  {
+    "title": "Autodesk Fusion — YouTube",
+    "url": "https://www.youtube.com/@AutodeskFusion",
+    "cat": "Ver & aprender",
+    "desc": "Modelado y diseño mecánico asistido.",
+    "fmt": "Canal · Gratis",
+    "icon": "↗"
+  },
+  {
+    "title": "Dezeen — YouTube",
+    "url": "https://www.youtube.com/@dezeen",
+    "cat": "Ver & aprender",
+    "desc": "Entrevistas, procesos y exposiciones de diseño.",
+    "fmt": "Canal · Gratis",
+    "icon": "↗"
+  },
+  {
+    "title": "Salone del Mobile.Milano",
+    "url": "https://www.salonemilano.it/en",
+    "cat": "Ferias & museos",
+    "desc": "Novedades globales de mobiliario, shows y colecciones.",
+    "fmt": "Feria",
+    "icon": "↗"
+  },
+  {
+    "title": "Fuorisalone",
+    "url": "https://www.fuorisalone.it/en",
+    "cat": "Ferias & museos",
+    "desc": "Instalaciones y marcas durante Milan Design Week.",
+    "fmt": "Exposiciones",
+    "icon": "↗"
+  },
+  {
+    "title": "ORGATEC",
+    "url": "https://www.orgatec.com/",
+    "cat": "Ferias & museos",
+    "desc": "Feria internacional de entornos de trabajo.",
+    "fmt": "Oficinas",
+    "icon": "↗"
+  },
+  {
+    "title": "NeoCon",
+    "url": "https://neocon.com/",
+    "cat": "Ferias & museos",
+    "desc": "Diseño comercial, materiales y workplace.",
+    "fmt": "Oficinas",
+    "icon": "↗"
+  },
+  {
+    "title": "Interzum",
+    "url": "https://www.interzum.com/",
+    "cat": "Ferias & museos",
+    "desc": "Proveedores de materiales y herrajes industriales.",
+    "fmt": "Industria",
+    "icon": "↗"
+  },
+  {
+    "title": "Dutch Design Week",
+    "url": "https://ddw.nl/",
+    "cat": "Ferias & museos",
+    "desc": "Diseño experimental, biomateriales e innovación.",
+    "fmt": "Experimental",
+    "icon": "↗"
+  },
+  {
+    "title": "ICFF",
+    "url": "https://www.icff.com/",
+    "cat": "Ferias & museos",
+    "desc": "Mobiliario contemporáneo y diseño contract.",
+    "fmt": "Feria",
+    "icon": "↗"
+  },
+  {
+    "title": "Maison&Objet",
+    "url": "https://www.maison-objet.com/en/paris",
+    "cat": "Ferias & museos",
+    "desc": "Decoración, colecciones y pronósticos de diseño.",
+    "fmt": "Feria",
+    "icon": "↗"
+  },
+  {
+    "title": "Vitra Design Museum",
+    "url": "https://www.design-museum.de/en/information.html",
+    "cat": "Ferias & museos",
+    "desc": "Historia del mobiliario y exposiciones.",
+    "fmt": "Museo",
+    "icon": "↗"
+  },
+  {
+    "title": "MoMA — Collection",
+    "url": "https://www.moma.org/collection/",
+    "cat": "Ferias & museos",
+    "desc": "Acervo de diseño industrial y objetos icónicos.",
+    "fmt": "Museo",
+    "icon": "↗"
+  },
+  {
+    "title": "Cooper Hewitt",
+    "url": "https://www.cooperhewitt.org/",
+    "cat": "Ferias & museos",
+    "desc": "Museo de diseño con colecciones y publicaciones.",
+    "fmt": "Museo",
+    "icon": "↗"
+  },
+  {
+    "title": "Design Week México",
+    "url": "https://designweekmexico.com/",
+    "cat": "Ferias & museos",
+    "desc": "Diseño y exposiciones en México.",
+    "fmt": "México",
+    "icon": "↗"
+  },
+  {
+    "title": "Habitat Expo México",
+    "url": "https://habitatexpo.com/",
+    "cat": "Ferias & museos",
+    "desc": "Materiales, interiorismo y empresas del sector.",
+    "fmt": "México",
+    "icon": "↗"
+  }
+,
+  {"title": "SNAKE — Sami Reiss", "url": "https://snake.substack.com/", "cat": "Substack", "desc": "Historia, contexto, mercado y cultura del mobiliario de todas las épocas.", "fmt": "Newsletter · Mobiliario", "icon": "✦"},
+  {"title": "Standard Practice — Utility Design", "url": "https://standardpractice.substack.com/", "cat": "Substack", "desc": "Diseñadores, objetos, interiores y arquitectura con curaduría rigurosa.", "fmt": "Newsletter · Quincenal", "icon": "✦"},
+  {"title": "WEARSTLERWORLD", "url": "https://wearstlerworld.substack.com/", "cat": "Substack", "desc": "Color, materiales, referentes y el proceso creativo de Kelly Wearstler.", "fmt": "Newsletter · Semanal", "icon": "✦"},
+  {"title": "The Design Release", "url": "https://thedesignrelease.substack.com/", "cat": "Substack", "desc": "Calendario cultural de ferias, exhibiciones y diseñadores emergentes.", "fmt": "Newsletter · Ferias", "icon": "✦"},
+  {"title": "Ground Condition — Kelsey Keith", "url": "https://kelseykeith.substack.com/", "cat": "Substack", "desc": "Reflexiones críticas sobre diseño, objetos, cultura visual y espacio.", "fmt": "Newsletter · Ensayos", "icon": "✦"},
+  {"title": "COLA STUDIOS", "url": "https://colastudios.substack.com/", "cat": "Substack", "desc": "Curaduría de productos, noticias, estudios y fuentes de diseño.", "fmt": "Newsletter · Inspiración", "icon": "✦"},
+  {"title": "Design Lobster — Ben Strak", "url": "https://substack.com/@designlobster", "cat": "Substack", "desc": "Historias sorprendentes y curiosidades de diseño.", "fmt": "Newsletter · Cultura", "icon": "✦"},
+  {"title": "Untold Spaces — Cate St Hill", "url": "https://catesthill.substack.com/", "cat": "Substack", "desc": "Lanzamientos de mobiliario, Japandi, iluminación y materiales táctiles.", "fmt": "Newsletter · Interiores", "icon": "✦"},
+  {"title": "FOR SCALE", "url": "https://forscale.substack.com/", "cat": "Substack", "desc": "Pensamiento crítico y referencias visuales sobre espacios domésticos.", "fmt": "Newsletter · Ensayo", "icon": "✦"},
+  {"title": "there_y0u_are — Talia Mayden", "url": "https://therey0uare.substack.com/", "cat": "Substack", "desc": "Vocabulario estético, selección visual, iluminación, arte y color.", "fmt": "Newsletter · Curaduría", "icon": "✦"},
+  {"title": "The Culture Creative Papers", "url": "https://theculturecreative.substack.com/", "cat": "Substack", "desc": "Ensayos sobre diseño de interiores, cultura y atmósferas.", "fmt": "Newsletter · Investigación", "icon": "✦"},
+  {"title": "design again — Eliza Teixeira", "url": "https://designagain.substack.com/", "cat": "Substack", "desc": "Mobiliario, piezas vintage y principios de materialidad, luz y escala.", "fmt": "Newsletter · Objetos", "icon": "✦"},
+  {"title": "Swike", "url": "https://swike.substack.com/", "cat": "Substack", "desc": "Noticias culturales y perfiles de diseñadores.", "fmt": "Newsletter · Dos veces por semana", "icon": "✦"},
+  {"title": "D5 MAG — Furniture Design", "url": "https://d5mag.com/category/furniture-design/", "cat": "Noticias", "desc": "Noticias de piezas, prototipos y decisiones constructivas de mobiliario.", "fmt": "Revista · Diario", "icon": "✦"},
+  {"title": "TDC Studio — Product Design Wire", "url": "https://tdc.studio/news?desk=product", "cat": "Noticias", "desc": "Radar con titulares de varias publicaciones y enlaces originales.", "fmt": "Agregador · Actualizado", "icon": "✦"},
+  {"title": "Feeder — Design RSS", "url": "https://feeder.co/discover/design", "cat": "Noticias", "desc": "Colección de feeds RSS de revistas de diseño.", "fmt": "Herramienta · RSS", "icon": "✦"},
+  {"title": "El diseño reparable empieza en el desmontaje", "url": "https://d5mag.com/furniture-designed-to-be-repaired-starts-with-the-way-it-comes-apart/", "cat": "Materiales", "desc": "Caso real de uniones desmontables para facilitar reparación.", "fmt": "Artículo · Oct 2026", "icon": "✦"},
+  {"title": "Brunner × Doshi Levien — Session", "url": "https://www.wallpaper.com/design-interiors/furniture/brunner-group-doshi-levien-session-collection-office-furniture", "cat": "Catálogos", "desc": "Colección flexible de 23 piezas para espacios de trabajo contemporáneos.", "fmt": "Caso · Oct 2026", "icon": "✦"}
+];
+const CATS=['Todos','Noticias','Catálogos','Color & CMF','Biofilia','Materiales','Libros','Ver & aprender','Ferias & museos','Substack','♡ Guardados'];
+const missions=['Leer una investigación sobre tendencias de oficinas','Analizar un sistema modular de USM o Vitra','Ver un episodio de Abstract y tomar notas','Investigar cinco tipos de uniones para muebles','Hacer un moodboard CMF para una línea NORVID','Estudiar tres estrategias en AskNature','Dibujar 20 alternativas para una base metálica','Presentar una idea para optimizar tableros'];
+const rituals=[['Desarma con la mirada','Elige una mesa. ¿Cómo se une cada pieza? Dibuja su despiece sin consultar una ficha técnica.'],['La regla de tres','Crea tres siluetas para el mismo escritorio: racional, orgánica y experimental.'],['Diseña desde el residuo','Busca un recorte de tablero. ¿Qué objeto útil podrías fabricar a partir de su forma?'],['Forma que trabaja','Estudia una hoja o una rama. ¿Qué principio estructural puedes llevar al metal?'],['Una unión, cinco productos','Imagina un conector capaz de unir componentes de cinco muebles distintos.'],['Menos es más','Elige un mueble de oficina e intenta eliminar una pieza sin perder funcionalidad.'],['Cambio de escala','Transforma un detalle de herraje en la inspiración para una colección completa.'],['Biofilia sin plantas','Mejora una estación de trabajo usando textura, luz, patrón natural o vista, sin añadir macetas.'],['Diseña una experiencia','Crea un stand que explique la historia de un escritorio a través de materiales y montaje.'],['El reto circular','Diseña un escritorio para que cada componente pueda ser reemplazado o separado al final de su vida.'],['El mismo tablero','¿Cómo obtendrías dos superficies funcionales de un solo formato comercial de tablero?'],['Observación silenciosa','Observa cómo una persona organiza cables, libreta, vaso y mochila. Boceta tres oportunidades.']];
+const moodboards=[{id:'raiz',name:'01 / Soft Nature',title:'Organic calm',subtitle:'Madera cálida, curvas, tactilidad y luz que respira.',colors:['#2F5645','#C7C6A5','#B88F6A','#E8DDCB','#D1A17C'],imgs:['https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=700&q=80','https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?w=500&q=75','https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=500&q=75'],fallback:['data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiB2aWV3Qm94PSIwIDAgNTYwIDczMCI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyYWluIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0wIDZIMjRNMCAyMUgyNCIgc3Ryb2tlPSIjMzE1ZTQ3IiBvcGFjaXR5PSIuMDc1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTTM4IDBIMFYzOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzE1ZTQ3IiBzdHJva2Utb3BhY2l0eT0iLjEzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiBmaWxsPSIjZDdkOWJkIi8+PHJlY3Qgd2lkdGg9IjU2MCIgaGVpZ2h0PSI3MzAiIGZpbGw9InVybCgjZ3JhaW4pIi8+PHJlY3QgeD0iMzYiIHk9IjU4IiB3aWR0aD0iNDkwIiBoZWlnaHQ9IjYxMCIgZmlsbD0iI2YzZTlkMiIgb3BhY2l0eT0iLjY1Ii8+PHBhdGggZD0iTTg0IDUwMEg0OTAiIHN0cm9rZT0iIzMxNWU0NyIgb3BhY2l0eT0iLjI1IiBzdHJva2Utd2lkdGg9IjMiLz48cmVjdCB4PSIxMjAiIHk9IjMyMCIgd2lkdGg9IjM0NSIgaGVpZ2h0PSIyNSIgcng9IjQiIGZpbGw9IiNkOGEwODEiIHN0cm9rZT0iIzMxNWU0NyIgc3Ryb2tlLXdpZHRoPSIzIi8+PHBhdGggZD0iTTE0MyAzNDVMMTE1IDYxME00NDQgMzQ1TDQ2NSA2MTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzMxNWU0NyIgc3Ryb2tlLXdpZHRoPSIxNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHJlY3QgeD0iMTUwIiB5PSIyNjQiIHdpZHRoPSIxNDUiIGhlaWdodD0iNTYiIHJ4PSI1IiBmaWxsPSIjMzE1ZTQ3IiBvcGFjaXR5PSIuNzUiLz48cGF0aCBkPSJNMTc1IDI2NHYtMTJoOTV2MTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzMxNWU0NyIgc3Ryb2tlLXdpZHRoPSI1Ii8+PGVsbGlwc2UgY3g9IjQ0MCIgY3k9IjI5NSIgcng9IjMxIiByeT0iMTMiIGZpbGw9IiMzMTVlNDciIG9wYWNpdHk9Ii43Ii8+PHBhdGggZD0iTTQzOSAyODJDNDIxIDI0MSAzOTMgMjI2IDM3MyAyMTFNNDM4IDI4MUM0NDggMjIxIDQ3MiAxOTAgNDkxIDE4NE00NDAgMjcwQzQzOCAyMTYgNDI2IDE3OSA0MTUgMTU4IiBzdHJva2U9IiMzMTVlNDciIHN0cm9rZS13aWR0aD0iNyIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTQwOCAyMjhRMzczIDE4NSAzNDcgMjA3UTM2OSAyNDYgNDA4IDIyOFpNNDU3IDIzNVE0ODIgMTkwIDUxOSAyMTZRNDkzIDI1NCA0NTcgMjM1Wk00MjggMTk1UTQwMyAxNTcgNDI2IDEyNlE0NDUgMTYyIDQyOCAxOTVaIiBmaWxsPSIjMzE1ZTQ3IiBvcGFjaXR5PSIuNzgiLz48cmVjdCB4PSI0MTAiIHk9IjI4NiIgd2lkdGg9IjYxIiBoZWlnaHQ9IjQ4IiByeD0iNSIgZmlsbD0iI2Q4YTA4MSIvPjxjaXJjbGUgY3g9Ijk2IiBjeT0iMTUwIiByPSI1MCIgZmlsbD0iI2Q4YTA4MSIgb3BhY2l0eT0iLjgiLz48cGF0aCBkPSJNNzAgMTUwSDEyMk05NiAxMjRWMTc2IiBzdHJva2U9IiNmM2U5ZDIiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjgiLz48cmVjdCB4PSIyNSIgeT0iMjUiIHdpZHRoPSI1MTAiIGhlaWdodD0iNjgwIiBmaWxsPSJub25lIiBzdHJva2U9IiMzMTVlNDciIHN0cm9rZS1vcGFjaXR5PSIuMjUiIHN0cm9rZS13aWR0aD0iMiIvPjxjaXJjbGUgY3g9IjQ5MCIgY3k9IjYwIiByPSI3IiBmaWxsPSIjMzE1ZTQ3Ii8+PC9zdmc+','data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiB2aWV3Qm94PSIwIDAgNTYwIDczMCI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyYWluIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0wIDZIMjRNMCAyMUgyNCIgc3Ryb2tlPSIjODA1ZDQ2IiBvcGFjaXR5PSIuMDc1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTTM4IDBIMFYzOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjODA1ZDQ2IiBzdHJva2Utb3BhY2l0eT0iLjEzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiBmaWxsPSIjZDhiYmExIi8+PHJlY3Qgd2lkdGg9IjU2MCIgaGVpZ2h0PSI3MzAiIGZpbGw9InVybCgjZ3JhaW4pIi8+PHJlY3QgeD0iNDkiIHk9IjYyIiB3aWR0aD0iNDYzIiBoZWlnaHQ9IjYxMCIgcng9IjkiIGZpbGw9IiNmNGRjYzMiLz48cmVjdCB4PSI3NSIgeT0iOTAiIHdpZHRoPSI0MTAiIGhlaWdodD0iNTQwIiBmaWxsPSIjZDVhMTdmIi8+PHBhdGggZD0iTTEwMCAxNTBRMTgwIDEwMCAyNDIgMTgwVDQzMCAxNjBNMTEwIDI0MFEyMjAgMTgwIDMwMCAyNjBUNDY2IDI0ME0xMDAgMzUwUTIxMCAzMDAgMjY1IDM3M1Q0NTQgMzYwTTEwMCA0OTBRMTgwIDQ1MCAyNDIgNTE5VDQ0NSA1MTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzgwNWQ0NiIgc3Ryb2tlLW9wYWNpdHk9Ii4yOCIgc3Ryb2tlLXdpZHRoPSIxMSIvPjxwYXRoIGQ9Ik05OSAxNTNRMTc1IDExOCAyMjYgMTc3VDQzMSAxNjNNMTEwIDI1OFEyMTUgMjA0IDMwMCAyNzRUNDY1IDI1OU0xMDIgMzY4UTIxNSAzMTIgMjcyIDM5MFQ0NTggMzc5IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNGRjYzMiIHN0cm9rZS1vcGFjaXR5PSIuNTUiIHN0cm9rZS13aWR0aD0iNCIvPjxjaXJjbGUgY3g9IjM3NiIgY3k9IjUxMCIgcj0iODgiIGZpbGw9IiNkOGJiYTEiIG9wYWNpdHk9Ii45MyIvPjxjaXJjbGUgY3g9IjM3NiIgY3k9IjUxMCIgcj0iNjEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzgwNWQ0NiIgc3Ryb2tlLXdpZHRoPSIxMCIgb3BhY2l0eT0iLjU1Ii8+PGNpcmNsZSBjeD0iMzc2IiBjeT0iNTEwIiByPSIyMyIgZmlsbD0iIzgwNWQ0NiIgb3BhY2l0eT0iLjY1Ii8+PHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTEwIiBoZWlnaHQ9IjY4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjODA1ZDQ2IiBzdHJva2Utb3BhY2l0eT0iLjI1IiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSI0OTAiIGN5PSI2MCIgcj0iNyIgZmlsbD0iIzgwNWQ0NiIvPjwvc3ZnPg==','data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiB2aWV3Qm94PSIwIDAgNTYwIDczMCI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyYWluIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0wIDZIMjRNMCAyMUgyNCIgc3Ryb2tlPSIjM2M3OTVhIiBvcGFjaXR5PSIuMDc1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTTM4IDBIMFYzOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjM2M3OTVhIiBzdHJva2Utb3BhY2l0eT0iLjEzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiBmaWxsPSIjZGJkZmJlIi8+PHJlY3Qgd2lkdGg9IjU2MCIgaGVpZ2h0PSI3MzAiIGZpbGw9InVybCgjZ3JhaW4pIi8+PGNpcmNsZSBjeD0iMjkwIiBjeT0iMjYwIiByPSIxOTQiIGZpbGw9IiNmNWViZDAiLz48cGF0aCBkPSJNMjc0IDYzMEMyNjAgNTAwIDI4NCAzMzkgMzIxIDkyIiBmaWxsPSJub25lIiBzdHJva2U9IiMzYzc5NWEiIHN0cm9rZS13aWR0aD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0yODggNDQwQzE4MyA0MjUgMTMyIDM1MSAxMTEgMjgxUTI0OCAzMDMgMjg4IDQ0MFpNMjk4IDM3MVEzNTggMjYzIDQ2OSAyNTFRNDI2IDM3MCAyOTggMzcxWk0zMDcgMjgwUTIxMyAyMjQgMjMzIDEzMlEzMzUgMTg1IDMwNyAyODBaTTI3OCA1MjlRMTc4IDQ5OCAxMTkgNTIwUTE4MyA2MDUgMjc4IDUyOVoiIGZpbGw9IiMzYzc5NWEiIG9wYWNpdHk9Ii45Ii8+PHBhdGggZD0iTTEyOCAyOTZRMjAwIDM0MCAyODYgNDMyTTQ1NCAyNjJRMzg0IDI5MCAzMDQgMzY3TTIzOSAxNDZRMjc4IDIyMCAzMDUgMjc1IiBzdHJva2U9IiNmNWViZDAiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIvPjxjaXJjbGUgY3g9IjQyOSIgY3k9IjU3MSIgcj0iNjUiIGZpbGw9IiM5YmIyOTIiIG9wYWNpdHk9Ii44Ii8+PHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTEwIiBoZWlnaHQ9IjY4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjM2M3OTVhIiBzdHJva2Utb3BhY2l0eT0iLjI1IiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSI0OTAiIGN5PSI2MCIgcj0iNyIgZmlsbD0iIzNjNzk1YSIvPjwvc3ZnPg=='],link:'https://www.terrapinbrightgreen.com/report/14-patterns/'},{id:'modular',name:'02 / Future Workplace',title:'Soft industrial',subtitle:'Acero, modularidad inteligente, azul profundo y terracota.',colors:['#253E44','#68808D','#C98668','#E4D7CB','#A3B4A1'],imgs:['https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=700&q=80','https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=500&q=75','https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&q=75'],fallback:['data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiB2aWV3Qm94PSIwIDAgNTYwIDczMCI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyYWluIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0wIDZIMjRNMCAyMUgyNCIgc3Ryb2tlPSIjNDI1ZDY2IiBvcGFjaXR5PSIuMDc1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTTM4IDBIMFYzOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNDI1ZDY2IiBzdHJva2Utb3BhY2l0eT0iLjEzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiBmaWxsPSIjYzZjZmNkIi8+PHJlY3Qgd2lkdGg9IjU2MCIgaGVpZ2h0PSI3MzAiIGZpbGw9InVybCgjZ3JhaW4pIi8+PHJlY3QgeD0iMzYiIHk9IjU4IiB3aWR0aD0iNDkwIiBoZWlnaHQ9IjYxMCIgZmlsbD0iI2U2ZGVkMCIgb3BhY2l0eT0iLjY1Ii8+PHBhdGggZD0iTTg0IDUwMEg0OTAiIHN0cm9rZT0iIzQyNWQ2NiIgb3BhY2l0eT0iLjI1IiBzdHJva2Utd2lkdGg9IjMiLz48cmVjdCB4PSIxMjAiIHk9IjMyMCIgd2lkdGg9IjM0NSIgaGVpZ2h0PSIyNSIgcng9IjQiIGZpbGw9IiNiNThjNmQiIHN0cm9rZT0iIzQyNWQ2NiIgc3Ryb2tlLXdpZHRoPSIzIi8+PHBhdGggZD0iTTE0MyAzNDVMMTE1IDYxME00NDQgMzQ1TDQ2NSA2MTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzQyNWQ2NiIgc3Ryb2tlLXdpZHRoPSIxNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHJlY3QgeD0iMTUwIiB5PSIyNjQiIHdpZHRoPSIxNDUiIGhlaWdodD0iNTYiIHJ4PSI1IiBmaWxsPSIjNDI1ZDY2IiBvcGFjaXR5PSIuNzUiLz48cGF0aCBkPSJNMTc1IDI2NHYtMTJoOTV2MTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzQyNWQ2NiIgc3Ryb2tlLXdpZHRoPSI1Ii8+PGVsbGlwc2UgY3g9IjQ0MCIgY3k9IjI5NSIgcng9IjMxIiByeT0iMTMiIGZpbGw9IiM0MjVkNjYiIG9wYWNpdHk9Ii43Ii8+PHBhdGggZD0iTTQzOSAyODJDNDIxIDI0MSAzOTMgMjI2IDM3MyAyMTFNNDM4IDI4MUM0NDggMjIxIDQ3MiAxOTAgNDkxIDE4NE00NDAgMjcwQzQzOCAyMTYgNDI2IDE3OSA0MTUgMTU4IiBzdHJva2U9IiM0MjVkNjYiIHN0cm9rZS13aWR0aD0iNyIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTQwOCAyMjhRMzczIDE4NSAzNDcgMjA3UTM2OSAyNDYgNDA4IDIyOFpNNDU3IDIzNVE0ODIgMTkwIDUxOSAyMTZRNDkzIDI1NCA0NTcgMjM1Wk00MjggMTk1UTQwMyAxNTcgNDI2IDEyNlE0NDUgMTYyIDQyOCAxOTVaIiBmaWxsPSIjNDI1ZDY2IiBvcGFjaXR5PSIuNzgiLz48cmVjdCB4PSI0MTAiIHk9IjI4NiIgd2lkdGg9IjYxIiBoZWlnaHQ9IjQ4IiByeD0iNSIgZmlsbD0iI2I1OGM2ZCIvPjxjaXJjbGUgY3g9Ijk2IiBjeT0iMTUwIiByPSI1MCIgZmlsbD0iI2I1OGM2ZCIgb3BhY2l0eT0iLjgiLz48cGF0aCBkPSJNNzAgMTUwSDEyMk05NiAxMjRWMTc2IiBzdHJva2U9IiNlNmRlZDAiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iLjgiLz48cmVjdCB4PSIyNSIgeT0iMjUiIHdpZHRoPSI1MTAiIGhlaWdodD0iNjgwIiBmaWxsPSJub25lIiBzdHJva2U9IiM0MjVkNjYiIHN0cm9rZS1vcGFjaXR5PSIuMjUiIHN0cm9rZS13aWR0aD0iMiIvPjxjaXJjbGUgY3g9IjQ5MCIgY3k9IjYwIiByPSI3IiBmaWxsPSIjNDI1ZDY2Ii8+PC9zdmc+','data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiB2aWV3Qm94PSIwIDAgNTYwIDczMCI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyYWluIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0wIDZIMjRNMCAyMUgyNCIgc3Ryb2tlPSIjMzA0ZTUxIiBvcGFjaXR5PSIuMDc1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTTM4IDBIMFYzOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzA0ZTUxIiBzdHJva2Utb3BhY2l0eT0iLjEzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiBmaWxsPSIjYTRiMGFkIi8+PHJlY3Qgd2lkdGg9IjU2MCIgaGVpZ2h0PSI3MzAiIGZpbGw9InVybCgjZ3JhaW4pIi8+PHJlY3QgeD0iMzUiIHk9IjQwIiB3aWR0aD0iNDkwIiBoZWlnaHQ9IjY1MCIgZmlsbD0iI2U0ZTFkYiIvPjxyZWN0IHg9IjM1IiB5PSI0MCIgd2lkdGg9IjQ5MCIgaGVpZ2h0PSI2NTAiIGZpbGw9InVybCgjZ3JpZCkiLz48cGF0aCBkPSJNMTA2IDI2OUwzNDAgMTc1TDQ3NSAyNjNMMjM3IDM2MloiIGZpbGw9IiNkY2FhOTEiIG9wYWNpdHk9Ii44NSIgc3Ryb2tlPSIjMzA0ZTUxIiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNMTA2IDI2OVYyOTJMMjM3IDM4NVYzNjJNNDc1IDI2M1YyODVMMjM3IDM4NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzA0ZTUxIiBzdHJva2Utd2lkdGg9IjciLz48cGF0aCBkPSJNMTQ0IDMwN1Y2MTBNNDI3IDMwOFY2MDlNMjM3IDM4NVY2NzUiIHN0cm9rZT0iIzMwNGU1MSIgc3Ryb2tlLXdpZHRoPSIxNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTE0NCA0ODBMMjM3IDUzMEw0MjcgNDQxIiBmaWxsPSJub25lIiBzdHJva2U9IiMzMDRlNTEiIHN0cm9rZS13aWR0aD0iOCIvPjxjaXJjbGUgY3g9IjIzNyIgY3k9IjUzMCIgcj0iMjAiIGZpbGw9IiNlNGUxZGIiIHN0cm9rZT0iIzMwNGU1MSIgc3Ryb2tlLXdpZHRoPSI3Ii8+PHBhdGggZD0iTTcwIDQ1MEg0NzVNNzAgNDcwSDQ3NSIgc3Ryb2tlPSIjMzA0ZTUxIiBzdHJva2Utb3BhY2l0eT0iLjE2IiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSI3NSIgY3k9IjExMiIgcj0iMzYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzMwNGU1MSIgc3Ryb2tlLXdpZHRoPSI0Ii8+PHBhdGggZD0iTTc1IDcxVjE1ME0zNSAxMTJIMTE1IiBzdHJva2U9IiMzMDRlNTEiIHN0cm9rZS13aWR0aD0iMiIvPjxyZWN0IHg9IjI1IiB5PSIyNSIgd2lkdGg9IjUxMCIgaGVpZ2h0PSI2ODAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzMwNGU1MSIgc3Ryb2tlLW9wYWNpdHk9Ii4yNSIgc3Ryb2tlLXdpZHRoPSIyIi8+PGNpcmNsZSBjeD0iNDkwIiBjeT0iNjAiIHI9IjciIGZpbGw9IiMzMDRlNTEiLz48L3N2Zz4=','data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiB2aWV3Qm94PSIwIDAgNTYwIDczMCI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyYWluIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0wIDZIMjRNMCAyMUgyNCIgc3Ryb2tlPSIjNDE1YjVmIiBvcGFjaXR5PSIuMDc1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTTM4IDBIMFYzOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNDE1YjVmIiBzdHJva2Utb3BhY2l0eT0iLjEzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiBmaWxsPSIjZTllMGNlIi8+PHJlY3Qgd2lkdGg9IjU2MCIgaGVpZ2h0PSI3MzAiIGZpbGw9InVybCgjZ3JhaW4pIi8+PHJlY3QgeD0iMzUiIHk9IjQwIiB3aWR0aD0iNDkwIiBoZWlnaHQ9IjY1MCIgZmlsbD0iI2ZmZjZlNiIvPjxyZWN0IHg9IjM1IiB5PSI0MCIgd2lkdGg9IjQ5MCIgaGVpZ2h0PSI2NTAiIGZpbGw9InVybCgjZ3JpZCkiLz48cGF0aCBkPSJNMTA2IDI2OUwzNDAgMTc1TDQ3NSAyNjNMMjM3IDM2MloiIGZpbGw9IiNhN2FiOWUiIG9wYWNpdHk9Ii44NSIgc3Ryb2tlPSIjNDE1YjVmIiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNMTA2IDI2OVYyOTJMMjM3IDM4NVYzNjJNNDc1IDI2M1YyODVMMjM3IDM4NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNDE1YjVmIiBzdHJva2Utd2lkdGg9IjciLz48cGF0aCBkPSJNMTQ0IDMwN1Y2MTBNNDI3IDMwOFY2MDlNMjM3IDM4NVY2NzUiIHN0cm9rZT0iIzQxNWI1ZiIgc3Ryb2tlLXdpZHRoPSIxNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTE0NCA0ODBMMjM3IDUzMEw0MjcgNDQxIiBmaWxsPSJub25lIiBzdHJva2U9IiM0MTViNWYiIHN0cm9rZS13aWR0aD0iOCIvPjxjaXJjbGUgY3g9IjIzNyIgY3k9IjUzMCIgcj0iMjAiIGZpbGw9IiNmZmY2ZTYiIHN0cm9rZT0iIzQxNWI1ZiIgc3Ryb2tlLXdpZHRoPSI3Ii8+PHBhdGggZD0iTTcwIDQ1MEg0NzVNNzAgNDcwSDQ3NSIgc3Ryb2tlPSIjNDE1YjVmIiBzdHJva2Utb3BhY2l0eT0iLjE2IiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSI3NSIgY3k9IjExMiIgcj0iMzYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzQxNWI1ZiIgc3Ryb2tlLXdpZHRoPSI0Ii8+PHBhdGggZD0iTTc1IDcxVjE1ME0zNSAxMTJIMTE1IiBzdHJva2U9IiM0MTViNWYiIHN0cm9rZS13aWR0aD0iMiIvPjxyZWN0IHg9IjI1IiB5PSIyNSIgd2lkdGg9IjUxMCIgaGVpZ2h0PSI2ODAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzQxNWI1ZiIgc3Ryb2tlLW9wYWNpdHk9Ii4yNSIgc3Ryb2tlLXdpZHRoPSIyIi8+PGNpcmNsZSBjeD0iNDkwIiBjeT0iNjAiIHI9IjciIGZpbGw9IiM0MTViNWYiLz48L3N2Zz4='],link:'https://www.steelcase.com/products/'},{id:'material',name:'03 / Material Stories',title:'Playful matter',subtitle:'Cromo, pigmentos intensos, laminados y acabados inesperados.',colors:['#445F9A','#CF776C','#DDC15C','#84688A','#EEE8D7'],imgs:['https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=700&q=80','https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=500&q=75','https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=500&q=75'],fallback:['data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiB2aWV3Qm94PSIwIDAgNTYwIDczMCI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyYWluIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0wIDZIMjRNMCAyMUgyNCIgc3Ryb2tlPSIjNmI1NzkyIiBvcGFjaXR5PSIuMDc1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTTM4IDBIMFYzOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNmI1NzkyIiBzdHJva2Utb3BhY2l0eT0iLjEzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiBmaWxsPSIjZGJiOGFiIi8+PHJlY3Qgd2lkdGg9IjU2MCIgaGVpZ2h0PSI3MzAiIGZpbGw9InVybCgjZ3JhaW4pIi8+PHJlY3QgeD0iNTYiIHk9IjU0IiB3aWR0aD0iNDUwIiBoZWlnaHQ9IjYxNyIgZmlsbD0iI2Y0Y2JhZSIvPjxjaXJjbGUgY3g9IjM0MCIgY3k9IjIzNyIgcj0iMTUyIiBmaWxsPSIjYmI2YTU2Ii8+PHBhdGggZD0iTTc4IDQ5MEMxMjkgMzc3IDE4MCAzNjUgMjQ2IDQ0M0MzMTAgNTIyIDQyMiA1MDQgNDkxIDQwNFY2NTVINzhaIiBmaWxsPSIjNmI1NzkyIi8+PHBhdGggZD0iTTc3IDUxM0MxNDggNDQ1IDE5NSA0NDcgMjUzIDUxMSIgc3Ryb2tlPSIjZjRjYmFlIiBzdHJva2Utd2lkdGg9IjciIGZpbGw9Im5vbmUiLz48cmVjdCB4PSIxMTQiIHk9IjEzMCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjkwIiBmaWxsPSIjZGJiOGFiIiB0cmFuc2Zvcm09InJvdGF0ZSgxMiAxNTkgMTc1KSIvPjxyZWN0IHg9IjIxNiIgeT0iMzM2IiB3aWR0aD0iOTQiIGhlaWdodD0iNjQiIGZpbGw9IiNmNGNiYWUiIHRyYW5zZm9ybT0icm90YXRlKC0xMSAyNjAgMzUwKSIvPjxyZWN0IHg9IjM1MCIgeT0iNTI2IiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjY1IiBmaWxsPSIjYmI2YTU2Ii8+PHBhdGggZD0iTTExNiA2MDBINDQ3IiBzdHJva2U9IiNmNGNiYWUiIHN0cm9rZS13aWR0aD0iNSIvPjxyZWN0IHg9IjI1IiB5PSIyNSIgd2lkdGg9IjUxMCIgaGVpZ2h0PSI2ODAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzZiNTc5MiIgc3Ryb2tlLW9wYWNpdHk9Ii4yNSIgc3Ryb2tlLXdpZHRoPSIyIi8+PGNpcmNsZSBjeD0iNDkwIiBjeT0iNjAiIHI9IjciIGZpbGw9IiM2YjU3OTIiLz48L3N2Zz4=','data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiB2aWV3Qm94PSIwIDAgNTYwIDczMCI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyYWluIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0wIDZIMjRNMCAyMUgyNCIgc3Ryb2tlPSIjNzg1NjczIiBvcGFjaXR5PSIuMDc1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTTM4IDBIMFYzOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzg1NjczIiBzdHJva2Utb3BhY2l0eT0iLjEzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiBmaWxsPSIjZDljNmI1Ii8+PHJlY3Qgd2lkdGg9IjU2MCIgaGVpZ2h0PSI3MzAiIGZpbGw9InVybCgjZ3JhaW4pIi8+PHJlY3QgeD0iNTYiIHk9IjU0IiB3aWR0aD0iNDUwIiBoZWlnaHQ9IjYxNyIgZmlsbD0iI2Y0ZGVkNCIvPjxjaXJjbGUgY3g9IjM0MCIgY3k9IjIzNyIgcj0iMTUyIiBmaWxsPSIjZTdiYTdhIi8+PHBhdGggZD0iTTc4IDQ5MEMxMjkgMzc3IDE4MCAzNjUgMjQ2IDQ0M0MzMTAgNTIyIDQyMiA1MDQgNDkxIDQwNFY2NTVINzhaIiBmaWxsPSIjNzg1NjczIi8+PHBhdGggZD0iTTc3IDUxM0MxNDggNDQ1IDE5NSA0NDcgMjUzIDUxMSIgc3Ryb2tlPSIjZjRkZWQ0IiBzdHJva2Utd2lkdGg9IjciIGZpbGw9Im5vbmUiLz48cmVjdCB4PSIxMTQiIHk9IjEzMCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjkwIiBmaWxsPSIjZDljNmI1IiB0cmFuc2Zvcm09InJvdGF0ZSgxMiAxNTkgMTc1KSIvPjxyZWN0IHg9IjIxNiIgeT0iMzM2IiB3aWR0aD0iOTQiIGhlaWdodD0iNjQiIGZpbGw9IiNmNGRlZDQiIHRyYW5zZm9ybT0icm90YXRlKC0xMSAyNjAgMzUwKSIvPjxyZWN0IHg9IjM1MCIgeT0iNTI2IiB3aWR0aD0iMTEyIiBoZWlnaHQ9IjY1IiBmaWxsPSIjZTdiYTdhIi8+PHBhdGggZD0iTTExNiA2MDBINDQ3IiBzdHJva2U9IiNmNGRlZDQiIHN0cm9rZS13aWR0aD0iNSIvPjxyZWN0IHg9IjI1IiB5PSIyNSIgd2lkdGg9IjUxMCIgaGVpZ2h0PSI2ODAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzc4NTY3MyIgc3Ryb2tlLW9wYWNpdHk9Ii4yNSIgc3Ryb2tlLXdpZHRoPSIyIi8+PGNpcmNsZSBjeD0iNDkwIiBjeT0iNjAiIHI9IjciIGZpbGw9IiM3ODU2NzMiLz48L3N2Zz4=','data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiB2aWV3Qm94PSIwIDAgNTYwIDczMCI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyYWluIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0wIDZIMjRNMCAyMUgyNCIgc3Ryb2tlPSIjNDI1YzlmIiBvcGFjaXR5PSIuMDc1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTTM4IDBIMFYzOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNDI1YzlmIiBzdHJva2Utb3BhY2l0eT0iLjEzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSI1NjAiIGhlaWdodD0iNzMwIiBmaWxsPSIjYzJiZWM1Ii8+PHJlY3Qgd2lkdGg9IjU2MCIgaGVpZ2h0PSI3MzAiIGZpbGw9InVybCgjZ3JhaW4pIi8+PHJlY3QgeD0iNDkiIHk9IjYyIiB3aWR0aD0iNDYzIiBoZWlnaHQ9IjYxMCIgcng9IjkiIGZpbGw9IiNlOWQ2YjAiLz48cmVjdCB4PSI3NSIgeT0iOTAiIHdpZHRoPSI0MTAiIGhlaWdodD0iNTQwIiBmaWxsPSIjZDY5MjdmIi8+PHBhdGggZD0iTTEwMCAxNTBRMTgwIDEwMCAyNDIgMTgwVDQzMCAxNjBNMTEwIDI0MFEyMjAgMTgwIDMwMCAyNjBUNDY2IDI0ME0xMDAgMzUwUTIxMCAzMDAgMjY1IDM3M1Q0NTQgMzYwTTEwMCA0OTBRMTgwIDQ1MCAyNDIgNTE5VDQ0NSA1MTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzQyNWM5ZiIgc3Ryb2tlLW9wYWNpdHk9Ii4yOCIgc3Ryb2tlLXdpZHRoPSIxMSIvPjxwYXRoIGQ9Ik05OSAxNTNRMTc1IDExOCAyMjYgMTc3VDQzMSAxNjNNMTEwIDI1OFEyMTUgMjA0IDMwMCAyNzRUNDY1IDI1OU0xMDIgMzY4UTIxNSAzMTIgMjcyIDM5MFQ0NTggMzc5IiBmaWxsPSJub25lIiBzdHJva2U9IiNlOWQ2YjAiIHN0cm9rZS1vcGFjaXR5PSIuNTUiIHN0cm9rZS13aWR0aD0iNCIvPjxjaXJjbGUgY3g9IjM3NiIgY3k9IjUxMCIgcj0iODgiIGZpbGw9IiNjMmJlYzUiIG9wYWNpdHk9Ii45MyIvPjxjaXJjbGUgY3g9IjM3NiIgY3k9IjUxMCIgcj0iNjEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzQyNWM5ZiIgc3Ryb2tlLXdpZHRoPSIxMCIgb3BhY2l0eT0iLjU1Ii8+PGNpcmNsZSBjeD0iMzc2IiBjeT0iNTEwIiByPSIyMyIgZmlsbD0iIzQyNWM5ZiIgb3BhY2l0eT0iLjY1Ii8+PHJlY3QgeD0iMjUiIHk9IjI1IiB3aWR0aD0iNTEwIiBoZWlnaHQ9IjY4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNDI1YzlmIiBzdHJva2Utb3BhY2l0eT0iLjI1IiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSI0OTAiIGN5PSI2MCIgcj0iNyIgZmlsbD0iIzQyNWM5ZiIvPjwvc3ZnPg=='],link:'https://www.ral-farben.de/en/trend-report-2027'}];
+const safeGet=(k,f)=>{try{const v=localStorage.getItem(k);return v?JSON.parse(v):f}catch(e){return f}};
+const safeSet=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){toast('No se pudo guardar: revisa permisos de almacenamiento')}};
+const BASE_RESOURCE_COUNT=RESOURCES.length;
+let favorites=safeGet('tdl-fav',[]),done=safeGet('tdl-done',[]),ideas=safeGet('tdl-ideas',[]),savedMood=safeGet('tdl-mood',[]),customResources=safeGet('tdl-custom',[]),selectedCat='Todos',searchValue='',visible=24; RESOURCES.push(...customResources);
+const $=id=>document.getElementById(id);const esc=s=>String(s).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+function toast(t){const e=$('toast');e.textContent=t;e.classList.add('show');clearTimeout(window._toast);window._toast=setTimeout(()=>e.classList.remove('show'),2200)}
+function syncStats(){$('favoriteCount').textContent=favorites.length;$('resourceCount').textContent=RESOURCES.length}
+function renderFilters(){ $('filters').innerHTML=CATS.map(c=>`<button class="filter ${selectedCat===c?'active':''}" data-cat="${esc(c)}">${esc(c)}${c==='♡ Guardados'?' ('+favorites.length+')':''}</button>`).join('')}
+function filtered(){const term=searchValue.trim().toLocaleLowerCase('es');return RESOURCES.filter(r=>(selectedCat==='Todos'||(selectedCat==='♡ Guardados'?favorites.includes(r.url):r.cat===selectedCat))&&(!term||[r.title,r.desc,r.cat,r.fmt].some(x=>x.toLocaleLowerCase('es').includes(term))))}
+function renderResources(){const list=filtered();$('filterStats').textContent=`${list.length} de ${RESOURCES.length} recursos`;$('resourceGrid').innerHTML=list.length?list.slice(0,visible).map(r=>`<article class="resource"><div class="resource-top"><span class="resource-cat">${esc(r.cat.toUpperCase())}</span><button class="save ${favorites.includes(r.url)?'saved':''}" data-fav="${esc(r.url)}" aria-label="${favorites.includes(r.url)?'Quitar de':'Guardar en'} favoritos">${favorites.includes(r.url)?'♥':'♡'}</button></div><h3>${esc(r.title)}</h3><p>${esc(r.desc)}</p><div class="resource-bottom"><span class="fmt">${esc(r.fmt)}</span><a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${r.cat==='Libros'?'Buscar libro':'Explorar recurso'} ↗</a></div><div class="lab-trigger-row">${labButton({kind:'Recurso del archivo',title:r.title,summary:r.desc,topic:r.cat,url:r.url})}</div></article>`).join(''):`<div class="empty" style="grid-column:1/-1">No hay coincidencias. Prueba otra palabra o elimina los filtros.</div>`;$('loadMore').hidden=list.length<=visible;renderFilters();syncStats()}
+function renderStudy(){ $('studyList').innerHTML=missions.map((m,i)=>`<label class="study-item"><input type="checkbox" data-mission="${i}" ${done.includes(i)?'checked':''}><span>${esc(m)}</span></label>`).join('');$('studyProgress').style.width=(done.length/missions.length*100)+'%';$('progressLabel').textContent=`${done.length} DE ${missions.length} MISIONES COMPLETADAS`}
+function renderIdeas(){const nc=document.getElementById('noteCount'),nm=document.getElementById('nbMeta');if(nc)nc.textContent=ideas.length;if(nm)nm.textContent=ideas.length+' notas'; $('ideasList').innerHTML=ideas.length?ideas.slice().reverse().map((n,i)=>`<div class="note"><button data-delete="${ideas.length-1-i}" aria-label="Eliminar nota">Eliminar ×</button><small>${esc(n.date)}</small><p>${esc(n.text)}</p></div>`).join(''):'<p style="color:#6d786c;font-size:12px">Todavía no tienes notas. Tu próxima idea empieza aquí.</p>'}
+function nextRitual(){const prev=Number(sessionStorage.getItem('tdl-ritual')||'0');const i=(prev+1)%rituals.length;sessionStorage.setItem('tdl-ritual',i);$('ritualTitle').textContent=rituals[i][0];$('ritualText').textContent=rituals[i][1]}
+const dateFmt=new Intl.DateTimeFormat('es-MX',{day:'numeric',month:'long',year:'numeric'});$('today').textContent=dateFmt.format(new Date()).toUpperCase();
+$('newRitual').addEventListener('click',nextRitual);
+$('search').addEventListener('input',e=>{searchValue=e.target.value;visible=24;renderResources()});
+$('quickSearch').addEventListener('click',()=>{location.hash='biblioteca';setTimeout(()=>$('search').focus(),120)});
+document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();location.hash='biblioteca';$('search').focus()}});
+$('filters').addEventListener('click',e=>{const b=e.target.closest('[data-cat]');if(!b)return;selectedCat=b.dataset.cat;visible=24;renderResources()});
+$('resourceGrid').addEventListener('click',e=>{const b=e.target.closest('[data-fav]');if(!b)return;const u=b.dataset.fav;favorites=favorites.includes(u)?favorites.filter(v=>v!==u):[...favorites,u];safeSet('tdl-fav',favorites);renderResources();toast('Favoritos actualizados')});
+$('loadMore').addEventListener('click',()=>{visible+=24;renderResources()});
+$('studyList').addEventListener('change',e=>{const i=Number(e.target.dataset.mission);done=e.target.checked?[...new Set([...done,i])]:done.filter(x=>x!==i);safeSet('tdl-done',done);renderStudy()});
+$('saveIdea').addEventListener('click',()=>{const v=$('ideaInput').value.trim();if(!v){toast('Escribe una observación primero');return}ideas.push({date:dateFmt.format(new Date()),text:v});safeSet('tdl-ideas',ideas);$('ideaInput').value='';renderIdeas();toast('Idea guardada en tu cuaderno')});
+$('ideasList').addEventListener('click',e=>{const b=e.target.closest('[data-delete]');if(!b)return;ideas.splice(Number(b.dataset.delete),1);safeSet('tdl-ideas',ideas);renderIdeas()});
+$('exportData').addEventListener('click',()=>{const pack={version:'1.4',conceptos:window.Lab?Lab.list():[],gimnasio:{detective:safeGet('tdl-detective',{}),retos:safeGet('tdl-gym-done',{})},paletas:safeGet('tdl-palettes',[]),materialesGuardados:safeGet('tdl-materials-fav',[]),mesa:safeGet('tdl-mesa',[]),mesaSemanas:safeGet('tdl-mesa-semanas',[]),dudas:safeGet('tdl-dudas',[]),dudasFotos:safeGet('tdl-dudas-fotos',{}),bocetos:safeGet('tdl-sketches',[]),citasCreativas:safeGet('tdl-quests',[]),creatividadBio:safeGet('tdl-bio',{}),moodboardsPersonales:safeGet('tdl-boards',[]),exportado:new Date().toISOString(),favoritos:favorites,misionesCompletadas:done,notas:ideas,moodboardsGuardados:savedMood,recursosPropios:customResources};const blob=new Blob([JSON.stringify(pack,null,2)],{type:'application/json'});const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download='mi_design_library_backup.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),500);toast('Copia de seguridad descargada')});
+$('toggleCustom').addEventListener('click',()=>{const f=$('customForm');f.hidden=!f.hidden;if(!f.hidden)$('customTitle').focus()});
+$('customForm').addEventListener('submit',e=>{e.preventDefault();const title=$('customTitle').value.trim(),url=$('customURL').value.trim(),desc=$('customDesc').value.trim(),cat=$('customCat').value;let parsed;try{parsed=new URL(url)}catch(x){toast('El enlace no es válido');return}if(!['http:','https:'].includes(parsed.protocol)){toast('Usa un enlace http o https');return}if(RESOURCES.some(r=>r.url===parsed.href)){toast('Ese recurso ya existe en tu biblioteca');return}const obj={title,url:parsed.href,cat,desc:desc||'Recurso que agregaste a tu biblioteca personal.',fmt:'Mi descubrimiento',icon:'↗'};customResources.push(obj);RESOURCES.push(obj);safeSet('tdl-custom',customResources);selectedCat=cat;searchValue='';$('search').value='';visible=24;renderResources();$('customForm').reset();$('customForm').hidden=true;toast('Nuevo recurso agregado');});
+$('importData').addEventListener('click',()=>$('importFile').click());
+$('importFile').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;try{const pack=JSON.parse(await file.text());if(!Array.isArray(pack.favoritos)||!Array.isArray(pack.notas))throw Error('Formato no válido');favorites=pack.favoritos.filter(x=>typeof x==='string');ideas=pack.notas.filter(x=>x&&typeof x.text==='string');done=Array.isArray(pack.misionesCompletadas)?pack.misionesCompletadas.filter(x=>Number.isInteger(x)&&x>=0&&x<missions.length):[];savedMood=Array.isArray(pack.moodboardsGuardados)?pack.moodboardsGuardados.filter(x=>typeof x==='string'):[];customResources=Array.isArray(pack.recursosPropios)?pack.recursosPropios.filter(x=>x&&typeof x.title==='string'&&typeof x.url==='string'&&/^https?:\/\//.test(x.url)&&CATS.includes(x.cat)).map(x=>({title:x.title.slice(0,110),url:x.url,cat:x.cat,desc:String(x.desc||'Recurso personal').slice(0,220),fmt:'Mi descubrimiento',icon:'↗'})):[];RESOURCES.splice(BASE_RESOURCE_COUNT,RESOURCES.length-BASE_RESOURCE_COUNT,...customResources);safeSet('tdl-fav',favorites);safeSet('tdl-ideas',ideas);safeSet('tdl-done',done);safeSet('tdl-mood',savedMood);safeSet('tdl-custom',customResources);if(Array.isArray(pack.paletas))safeSet('tdl-palettes',pack.paletas.filter(x=>x&&typeof x.id==='string'&&Array.isArray(x.colors)&&!x.deleted).map(x=>({id:x.id,name:String(x.name||'Mi paleta').slice(0,60),date:String(x.date||''),colors:x.colors.filter(c=>/^#[0-9a-f]{6}$/i.test(c)).slice(0,6),thumb:/^data:image\/jpeg;base64,/.test(x.thumb||'')?x.thumb:'',harmony:String(x.harmony||'').slice(0,40),note:String(x.note||'').slice(0,600),source:x.source&&typeof x.source==='object'?{kind:String(x.source.kind||''),label:String(x.source.label||'').slice(0,140),url:String(x.source.url||'').slice(0,300)}:null,links:Array.isArray(x.links)?x.links.filter(l=>l&&typeof l.id==='string').slice(0,40):[],updated:Number(x.updated)||Date.now()})));if(Array.isArray(pack.materialesGuardados))safeSet('tdl-materials-fav',pack.materialesGuardados.filter(x=>typeof x==='string'));if(pack.gimnasio&&typeof pack.gimnasio==='object'){const g=pack.gimnasio,obj=v=>v&&typeof v==='object'&&!Array.isArray(v)?v:{};safeSet('tdl-detective',obj(g.detective));safeSet('tdl-gym-done',Object.fromEntries(Object.entries(obj(g.retos)).filter(([k])=>/^\d{4}-\d{2}-\d{2}$/.test(k))))}if(Array.isArray(pack.conceptos)&&window.Lab){const cs=pack.conceptos.map(Lab.normalize).filter(Boolean);try{localStorage.setItem(Lab.KEY,JSON.stringify(cs))}catch(x){toast('Las fichas no caben en el almacenamiento')}}if(Array.isArray(pack.mesa))safeSet('tdl-mesa',pack.mesa);if(Array.isArray(pack.mesaSemanas))safeSet('tdl-mesa-semanas',pack.mesaSemanas);if(Array.isArray(pack.dudas))safeSet('tdl-dudas',pack.dudas);if(pack.dudasFotos&&typeof pack.dudasFotos==='object')safeSet('tdl-dudas-fotos',Object.fromEntries(Object.entries(pack.dudasFotos).filter(([,v])=>/^data:image\/jpeg;base64,/.test(v))));const isImgData=v=>typeof v==='string'&&/^data:image\/(jpeg|png|webp);base64,/.test(v);if(Array.isArray(pack.bocetos))safeSet('tdl-sketches',pack.bocetos.filter(x=>x&&typeof x.id==='string'&&isImgData(x.img)).map(x=>({...x,title:String(x.title||'Boceto').slice(0,80),prev:isImgData(x.prev)?x.prev:undefined})));if(Array.isArray(pack.citasCreativas))safeSet('tdl-quests',pack.citasCreativas.filter(x=>x&&typeof x.id==='string').map(x=>({...x,photos:Array.isArray(x.photos)?x.photos.filter(isImgData).slice(0,3):[]})));if(pack.creatividadBio&&typeof pack.creatividadBio==='object'&&!Array.isArray(pack.creatividadBio))safeSet('tdl-bio',{cols:Array.isArray(pack.creatividadBio.cols)?pack.creatividadBio.cols.filter(c=>c&&typeof c.id==='string'):[],refs:Array.isArray(pack.creatividadBio.refs)?pack.creatividadBio.refs.filter(r=>r&&typeof r.id==='string'):[]});if(Array.isArray(pack.moodboardsPersonales))safeSet('tdl-boards',pack.moodboardsPersonales.filter(b=>b&&typeof b.id==='string'));window.MesaDeTrabajo?.reload();renderMood();renderStudy();renderIdeas();renderResources();toast('Biblioteca personal restaurada')}catch(err){toast('No se pudo importar este archivo')}e.target.value=''});
+$('resetFilters').addEventListener('click',()=>{selectedCat='Todos';searchValue='';visible=24;$('search').value='';renderResources();location.hash='biblioteca'});
+/* ===== Daily moodboards: one new visual direction per day (America/Mexico_City) ===== */
+const MOOD_EXTRA={
+ raiz:{title:'Soft Nature',concept:'Organic calm: madera cálida, curvas, tactilidad y luz que respira.',story:'Una dirección que baja el ritmo. Las superficies se sienten antes de verse: vetas abiertas, cantos redondeados y una luz que se filtra en vez de iluminar. El color nace de la madera y de las hojas, nunca de una pintura.',materials:['Roble aceitado','Chapa de nogal','Lino natural'],textures:['Veta abierta','Mate sedoso','Tejido grueso'],language:'Radios generosos, cantos suavizados, volúmenes bajos y continuos.',refs:['Patrones biofílicos de Terrapin','Uniones de madera vistas','Iluminación difusa indirecta'],application:'Un puesto de trabajo con sobre de roble aceitado, canto en “bullnose” y un panel textil de lino que absorbe sonido.',motifs:['photo','photo','photo','grain','leaf','arch']},
+ modular:{title:'Soft Industrial',concept:'Future workplace: acero, modularidad inteligente, azul profundo y terracota.',story:'La oficina deja de ser una retícula rígida. El acero se pinta en tonos profundos, los módulos se reconfiguran y un acento terracota devuelve calidez a lo técnico.',materials:['Acero pintado en polvo','Fieltro PET','Laminado HPL'],textures:['Microtexturizado','Fieltro denso','Perforado fino'],language:'Retícula modular, perfiles delgados, uniones visibles y repetición rítmica.',refs:['Sistemas USM Haller','Bancadas modulares de oficina','Pantallas acústicas de fieltro'],application:'Una bancada de trabajo de cuatro módulos con estructura de acero azul y divisores de fieltro terracota intercambiables.',motifs:['photo','photo','photo','grid','perf','blocks']},
+ material:{title:'Playful Matter',concept:'Material stories: cromo, pigmentos intensos, laminados y acabados inesperados.',story:'La materia se vuelve personaje. Un laminado de color pleno convive con cromo y con un pigmento que parece recién mezclado: el acabado es el protagonista y la forma se simplifica para dejarlo hablar.',materials:['Laminado de color pleno','Acero cromado','Resina pigmentada'],textures:['Brillo espejo','Color sólido','Moteado'],language:'Formas primarias, contraste brillo/mate y bloques de color superpuestos.',refs:['Tendencias de color RAL','Laminados de alta presión de color','Mobiliario de tubo cromado'],application:'Una mesa auxiliar con base de tubo cromado y sobre de laminado azul con canto amarillo visto.',motifs:['photo','photo','photo','circles','terrazzo','swatch']}
+};
+const MOOD_NEW=[
+ {id:'forest-chrome',title:'Forest Meets Chrome',concept:'Lo vegetal frente a lo pulido.',story:'Un verde profundo de sotobosque se encuentra con el reflejo frío del cromo. La tensión entre lo vivo y lo industrial produce objetos precisos, pero nunca fríos: el metal refleja el verde que lo rodea.',colors:['#1F3A2E','#5E7F5B','#C9CDD1','#8C9399','#E9E4D8'],materials:['Acero cromado','Linóleo verde musgo','Chapa de nogal'],textures:['Reflejo especular','Mate suave','Veta cerrada'],language:'Tubo continuo, radios constantes y contraste brillo/mate.',refs:['Sillas cantiléver de tubo','Linóleo para mobiliario','Herrajes cromados'],application:'Una mesa auxiliar de tubo cromado doblado con sobre de linóleo verde y canto de nogal.',link:'https://www.dezeen.com/design/',motifs:['tube','leaf','grain','waves','swatch','perf']},
+ {id:'botanical-brutalism',title:'Botanical Brutalism',concept:'Masa mineral, vida que crece encima.',story:'Volúmenes pesados de concreto y terrazo dejan espacio a lo verde. La masa se vuelve base, soporte y refugio; la vegetación aporta el ritmo que la geometría no tiene.',colors:['#8A8A82','#B9B3A6','#3E5B3F','#9DB17C','#D9D2C3'],materials:['Concreto GFRC','Terrazo','Roble macizo'],textures:['Huella de encofrado','Árido visto','Poro abierto'],language:'Masas rotundas, voladizos, bases pesadas y cantos rectos.',refs:['Mobiliario de concreto ligero','Terrazo con árido reciclado','Arquitectura brutalista'],application:'Un banco con base de concreto GFRC aligerado y asiento de roble, con hueco para una jardinera integrada.',link:'https://www.designboom.com/design/',motifs:['blocks','terrazzo','leaf','arch','grid','swatch']},
+ {id:'poetry-steel',title:'The Poetry of Steel',concept:'La chapa que se dobla con intención.',story:'El acero se trabaja como papel: plegados limpios, perforaciones que aligeran y un único acento naranja de seguridad. Todo lo estructural se queda a la vista y se vuelve ornamento.',colors:['#2B2F33','#6B7378','#B7BDBF','#D9572B','#EFEBE3'],materials:['Chapa de acero plegada','Acero inoxidable','Pintura en polvo'],textures:['Perforado','Cepillado','Granallado'],language:'Plegado, nervaduras de rigidez y uniones sin tornillería visible.',refs:['Sistemas modulares de acero','Chapa plegada y perforada','Señalética industrial'],application:'Una repisa de chapa plegada de 2 mm, sin soldaduras, con perforaciones que la aligeran y organizan cables.',link:'https://www.usm.com/',motifs:['fold','perf','grid','blocks','tube','swatch']},
+ {id:'warm-future',title:'Warm Future',concept:'Tecnología que se siente como un atardecer.',story:'El futuro no es gris. Aluminio anodizado en tonos bronce, corcho y lana componen una tecnología amable, de bordes suaves y luz cálida, pensada para habitar y no solo para usar.',colors:['#E4A15B','#C4572E','#F3E3CC','#6E4A3A','#2F2A28'],materials:['Aluminio anodizado bronce','Corcho aglomerado','Lana bouclé'],textures:['Satinado','Granulado','Rizado'],language:'Cápsulas, esquinas redondeadas y volúmenes suaves.',refs:['Iluminación cálida regulable','Corcho en mobiliario','Textiles bouclé'],application:'Una cabina de concentración con estructura de aluminio bronce, paneles de corcho y asiento tapizado en bouclé.',link:'https://www.wallpaper.com/design',motifs:['circles','arch','waves','swatch','grain','blocks']},
+ {id:'mexican-modernism',title:'Mexican Modernism',concept:'Sombra, muro de color y oficio.',story:'Muros saturados, sombras profundas y el oficio de la palma y la madera tropical. Una modernidad que no olvida la mano: el mueble es bajo, generoso y pensado para el clima.',colors:['#C2462E','#E59A3A','#F2D7B5','#6C3D2A','#2E6C73'],materials:['Parota','Palma tejida','Cuero curtido'],textures:['Tejido a mano','Veta amplia','Piedra volcánica'],language:'Butaque, asientos bajos, muros de color y estructuras de madera expresivas.',refs:['El butaque mexicano','Clara Porset','Arquitectura de muros de color'],application:'Un butaque contemporáneo con estructura de parota, asiento de palma tejida y respaldo de cuero.',link:'https://www.designboom.com/design/',motifs:['arch','weave','blocks','grain','circles','swatch']},
+ {id:'playful-geometry',title:'Playful Geometry',concept:'Círculo, cuadrado y triángulo vuelven a jugar.',story:'Primarias, pero no infantiles. Las formas básicas se ensamblan como un juego de construcción: cada pieza tiene un color y una función, y el mueble se lee como un diagrama.',colors:['#F1C232','#2D5DA8','#E2574C','#F4EEE2','#1E1E1E'],materials:['MDF lacado','Laminado de color','Tubo de acero'],textures:['Laca satinada','Color sólido','Canto visto'],language:'Primitivas geométricas, ensamble por piezas y color por función.',refs:['Memphis Group','Juguetes de construcción','Bauhaus y color'],application:'Un organizador de escritorio de cinco piezas geométricas que encajan entre sí, una por color.',link:'https://www.dezeen.com/design/',motifs:['blocks','circles','grid','tube','terrazzo','swatch']},
+ {id:'organic-office',title:'Organic Office',concept:'La oficina como un claro en el bosque.',story:'Biofilia sin macetas: textura, luz y patrones naturales construyen calma. El fieltro amortigua, el roble da calidez y las formas se curvan como un sendero.',colors:['#4F6B4A','#A9B98F','#E8E1CF','#B98B5E','#3A3530'],materials:['Fieltro PET reciclado','Roble','Corcho'],textures:['Fieltro','Veta media','Granulado'],language:'Curvas en planta, pantallas suaves y alturas escalonadas.',refs:['14 patrones de diseño biofílico','Pantallas acústicas','Oficinas híbridas'],application:'Un sistema de pantallas curvas de fieltro con canto de roble que organiza un área de trabajo abierta.',link:'https://www.terrapinbrightgreen.com/report/14-patterns/',motifs:['leaf','waves','grain','arch','honey','swatch']},
+ {id:'natural-structures',title:'Natural Structures',concept:'Aprender de cómo la naturaleza reparte cargas.',story:'Panales, nervaduras y ramificaciones: estructuras que usan el mínimo material para el máximo rendimiento. Aquí la forma no se dibuja, se calcula a partir de la carga.',colors:['#2E4636','#7D9A6B','#D8D3B5','#A8673F','#F1ECDF'],materials:['Contrachapado de abedul','Aluminio fundido','Bioplástico'],textures:['Celdas','Nervado','Laminado visto'],language:'Celdas hexagonales, nervaduras radiales y ramificaciones.',refs:['AskNature','Nervaduras de hojas gigantes','Estructuras de panal'],application:'Un sobre de mesa aligerado con núcleo celular y nervaduras que siguen el camino de la carga hacia las patas.',link:'https://asknature.org/',motifs:['honey','leaf','grid','waves','fold','swatch']},
+ {id:'earth-metal',title:'Earth & Metal',concept:'Arcilla, óxido y latón.',story:'Una paleta que viene del suelo. El acero corten y el latón envejecen con dignidad, la arcilla aporta calidez y todo el conjunto acepta el paso del tiempo como parte del diseño.',colors:['#7A4B32','#B7835A','#D9C7A8','#5C6266','#2A2826'],materials:['Acero corten','Latón','Cerámica de arcilla'],textures:['Pátina','Óxido','Esmalte crudo'],language:'Volúmenes macizos, uniones artesanales y acabados que envejecen.',refs:['Pátinas metálicas','Cerámica artesanal','Herrajes de latón'],application:'Una consola con estructura de acero corten, tiradores de latón y sobre de baldosa cerámica esmaltada.',link:'https://www.wallpaper.com/design',motifs:['terrazzo','circles','fold','grain','blocks','swatch']},
+ {id:'digital-craft',title:'Digital Craft',concept:'La máquina como herramienta del oficio.',story:'El CNC, el láser y la impresión 3D se usan como un cincel. Los ensambles se calculan, pero la huella de la herramienta queda visible y orgullosa.',colors:['#23304A','#6C8EBF','#E7E3DA','#D98E5F','#A3C4BC'],materials:['Contrachapado CNC','Acero cortado por láser','PLA reciclado'],textures:['Huella de fresa','Corte láser','Capa impresa'],language:'Ensambles a caja y espiga digitales, patrones paramétricos y piezas planas.',refs:['Mobiliario de fabricación digital','Uniones CNC sin herrajes','Diseño paramétrico'],application:'Un taburete de contrachapado que se arma sin tornillos con uniones fresadas a partir de una sola hoja.',link:'https://www.dezeen.com/design/',motifs:['grid','honey','perf','fold','waves','swatch']},
+ {id:'new-materialism',title:'New Materialism',concept:'Materiales que crecen, se cultivan o se rescatan.',story:'Micelio, bioresinas y tableros de residuos agrícolas. La materia prima cuenta su origen y el diseño se convierte en una forma de cuidar el ciclo del material.',colors:['#D9CBB8','#8E9B7A','#5B6E73','#C98E7A','#2F3B36'],materials:['Micelio','Tablero de residuo agrícola','Bioresina'],textures:['Fibroso','Moteado','Translúcido'],language:'Formas moldeadas, espesores honestos y piezas desmontables.',refs:['Biomateriales en diseño','Tableros de residuos','Diseño circular'],application:'Una lámpara de mesa con pantalla de micelio moldeado y base de tablero de residuo agrícola, desmontable para compostar.',link:'https://www.designboom.com/design/',motifs:['terrazzo','waves','circles','leaf','swatch','grain']}
+];
+const MOOD_CATALOG=[...moodboards.map(m=>({...m,...MOOD_EXTRA[m.id]})),...MOOD_NEW];
+const MOOD_EPOCH=Date.UTC(2026,10,1);
+function mxDateKey(d=new Date()){const p=Object.fromEntries(new Intl.DateTimeFormat('en-US',{timeZone:'America/Mexico_City',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(d).map(x=>[x.type,x.value]));return `${p.year}-${p.month}-${p.day}`}
+const dayIndexOf=k=>{const [y,m,d]=k.split('-').map(Number);return Math.round((Date.UTC(y,m-1,d)-MOOD_EPOCH)/864e5)};
+const keyOfIndex=i=>new Date(MOOD_EPOCH+i*864e5).toISOString().slice(0,10);
+const moodFor=i=>{const n=MOOD_CATALOG.length;return MOOD_CATALOG[(((i*5)%n)+n)%n]};
+const issueNo=i=>String(i+1).padStart(3,'0');
+const keyDate=(k,opt)=>{const [y,m,d]=k.split('-').map(Number);return new Intl.DateTimeFormat('es-MX',{timeZone:'UTC',...opt}).format(new Date(Date.UTC(y,m-1,d)))};
+let todayKey=mxDateKey(),moodView=null;
+function seeded(str){let a=2166136261;for(const ch of str){a^=ch.charCodeAt(0);a=Math.imul(a,16777619)}return()=>{a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function motifSVG(kind,c,seed){
+ const r=seeded(seed),R=(a,b)=>a+(b-a)*r(),bg=f=>`<rect width="400" height="400" fill="${f}"/>`;let b='';
+ switch(kind){
+  case 'arch':b=bg(c[4])+`<path d="M${R(50,90)|0} 400V215a130 130 0 0 1 260 0V400Z" fill="${c[0]}"/><path d="M110 400V245a90 90 0 0 1 180 0V400" fill="none" stroke="${c[4]}" stroke-opacity=".35" stroke-width="2"/><circle cx="${R(260,320)|0}" cy="${R(80,130)|0}" r="${R(40,60)|0}" fill="${c[2]}"/><path d="M0 352H400" stroke="${c[3]}" stroke-width="3"/>`;break;
+  case 'grain':{b=bg(c[3]);for(let i=0;i<18;i++){const y=i*24+R(-6,6),k=R(-26,26);b+=`<path d="M-10 ${y}Q100 ${y+k} 200 ${y}T410 ${y+R(-10,10)}" fill="none" stroke="${c[0]}" stroke-opacity="${R(.12,.32).toFixed(2)}" stroke-width="${R(1.5,4).toFixed(1)}"/>`}const kx=R(120,280),ky=R(120,280);b+=`<ellipse cx="${kx}" cy="${ky}" rx="34" ry="13" fill="none" stroke="${c[0]}" stroke-opacity=".35" stroke-width="3"/><ellipse cx="${kx}" cy="${ky}" rx="14" ry="5" fill="${c[0]}" fill-opacity=".35"/>`;break}
+  case 'tube':b=bg(c[4])+`<path d="M0 340H400" stroke="${c[3]}" stroke-width="2"/><path d="M120 340V190Q120 150 160 150H230" fill="none" stroke="${c[1]}" stroke-width="15" stroke-linecap="round"/><path d="M300 340V250H130" fill="none" stroke="${c[1]}" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><rect x="130" y="232" width="182" height="20" rx="10" fill="${c[0]}"/><circle cx="${R(290,330)|0}" cy="90" r="34" fill="${c[2]}"/>`;break;
+  case 'leaf':{b=bg(c[4]);for(let i=0;i<5;i++){const x=R(40,320),y=R(50,330),a=R(-80,80)|0,s=R(.6,1.3).toFixed(2),f=c[i%2?3:0];b+=`<g transform="translate(${x|0} ${y|0}) rotate(${a}) scale(${s})"><path d="M0 0C40-58 120-58 160 0C120 58 40 58 0 0Z" fill="${f}" fill-opacity=".9"/><path d="M0 0H158M50 0l22-18M50 0l22 18M95 0l20-16M95 0l20 16" stroke="${c[4]}" stroke-opacity=".6" stroke-width="2" fill="none"/></g>`}break}
+  case 'grid':{b=bg(c[4]);for(let i=0;i<=400;i+=20)b+=`<path d="M${i} 0V400M0 ${i}H400" stroke="${c[0]}" stroke-opacity=".1"/>`;const w=R(200,260)|0,x=(400-w)/2;b+=`<rect x="${x}" y="150" width="${w}" height="18" fill="none" stroke="${c[0]}" stroke-width="3"/><path d="M${x+18} 168V300M${x+w-18} 168V300M${x+18} 260H${x+w-18}" stroke="${c[0]}" stroke-width="3"/><path d="M${x} 330H${x+w}M${x} 322V338M${x+w} 322V338" stroke="${c[3]}" stroke-width="2"/><text x="200" y="352" text-anchor="middle" font-family="DM Mono,monospace" font-size="13" fill="${c[3]}">${(w*6)|0} mm</text><circle cx="${x+w-18}" cy="260" r="16" fill="none" stroke="${c[3]}" stroke-width="2" stroke-dasharray="4 4"/><text x="28" y="44" font-family="DM Mono,monospace" font-size="12" fill="${c[0]}" fill-opacity=".7">ALZADO · 1:10</text>`;break}
+  case 'perf':{b=bg(c[1]);for(let y=22;y<400;y+=24)for(let x=(y/24%2?22:34);x<400;x+=24)b+=`<circle cx="${x}" cy="${y}" r="5.5" fill="${c[4]}" fill-opacity=".8"/>`;b+=`<rect x="0" y="${R(250,300)|0}" width="400" height="120" fill="${c[0]}"/><path d="M0 ${R(250,300)|0}H400" stroke="${c[2]}" stroke-width="2"/>`;break}
+  case 'blocks':{const o=[0,1,2,3,4].sort(()=>r()-.5),x1=R(120,240)|0,y1=R(110,240)|0,y2=R(y1+40,330)|0,x2=R(x1+40,340)|0;b=`<rect width="400" height="400" fill="${c[o[0]]}"/><rect x="${x1}" width="${400-x1}" height="${y1}" fill="${c[o[1]]}"/><rect y="${y1}" width="${x1}" height="${400-y1}" fill="${c[o[2]]}"/><rect x="${x1}" y="${y2}" width="${x2-x1}" height="${400-y2}" fill="${c[o[3]]}"/><rect x="${x2}" y="${y1}" width="${400-x2}" height="${400-y1}" fill="${c[o[4]]}"/><circle cx="${x1}" cy="${y1}" r="${R(30,60)|0}" fill="${c[o[0]]}"/>`;break}
+  case 'circles':b=bg(c[3])+`<circle cx="${R(140,180)|0}" cy="${R(170,210)|0}" r="120" fill="${c[0]}"/><circle cx="${R(240,280)|0}" cy="${R(220,260)|0}" r="100" fill="${c[2]}" fill-opacity=".85"/><circle cx="${R(80,320)|0}" cy="${R(60,110)|0}" r="26" fill="${c[1]}"/><path d="M40 360H360" stroke="${c[4]}" stroke-width="4"/>`;break;
+  case 'honey':{b=bg(c[4]);const s=26,h=s*Math.sqrt(3);for(let row=-1;row<10;row++)for(let col=-1;col<10;col++){const cx=col*s*1.5,cy=row*h+(col%2?h/2:0),pts=[0,1,2,3,4,5].map(k=>{const a=Math.PI/3*k;return (cx+s*.92*Math.cos(a)).toFixed(1)+','+(cy+s*.92*Math.sin(a)).toFixed(1)}).join(' '),fill=r()<.16?c[2]:(r()<.1?c[3]:'none');b+=`<polygon points="${pts}" fill="${fill}" stroke="${c[0]}" stroke-opacity=".55" stroke-width="2"/>`}break}
+  case 'terrazzo':{b=bg(c[4]);for(let i=0;i<90;i++){const x=R(0,400),y=R(0,400),s=R(4,18),pts=[0,1,2,3].map(k=>{const a=k*1.57+R(-.5,.5);return (x+s*Math.cos(a)).toFixed(1)+','+(y+s*R(.5,1)*Math.sin(a)).toFixed(1)}).join(' ');b+=`<polygon points="${pts}" fill="${c[(r()*4)|0]}"/>`}break}
+  case 'weave':{b=bg(c[3]);for(let i=0;i<10;i++)for(let j=0;j<10;j++){const over=(i+j)%2;b+=over?`<rect x="${i*40+4}" y="${j*40}" width="32" height="40" fill="${c[2]}"/>`:`<rect x="${i*40}" y="${j*40+4}" width="40" height="32" fill="${c[1]}" fill-opacity=".85"/>`}break}
+  case 'fold':b=bg(c[4])+`<polygon points="60,250 200,170 340,250 200,330" fill="${c[2]}"/><polygon points="60,250 60,190 200,110 200,170" fill="${c[1]}"/><polygon points="200,170 200,110 340,190 340,250" fill="${c[0]}"/><path d="M60 250L200 330L340 250" fill="none" stroke="${c[0]}" stroke-width="3"/><circle cx="${R(110,150)|0}" cy="${R(60,90)|0}" r="18" fill="${c[3]}"/>`;break;
+  case 'waves':{b=bg(c[0]);for(let i=0;i<14;i++){const y=20+i*28,a=R(10,30);b+=`<path d="M-10 ${y}C60 ${y-a} 120 ${y+a} 200 ${y}S330 ${y-a} 410 ${y}" fill="none" stroke="${c[i%3?4:2]}" stroke-opacity="${i%3?.45:.9}" stroke-width="${i%3?2:5}"/>`}break}
+  default:{b=bg(c[3])+`<rect x="70" y="60" width="260" height="290" fill="${c[4]}"/><rect x="70" y="60" width="260" height="170" fill="${c[0]}"/><rect x="70" y="230" width="86" height="34" fill="${c[1]}"/><rect x="156" y="230" width="87" height="34" fill="${c[2]}"/><rect x="243" y="230" width="87" height="34" fill="${c[3]}"/><text x="88" y="300" font-family="DM Mono,monospace" font-size="15" fill="${c[0]}">${c[0]}</text><text x="88" y="326" font-family="DM Mono,monospace" font-size="11" fill="${c[0]}" fill-opacity=".7">CMF · SAMPLE</text>`}
+ }
+ return `<svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">${b}</svg>`;
+}
+function moodTiles(m,key){let p=0;return m.motifs.map((k,i)=>{if(k==='photo'){const src=m.imgs[p],fb=m.fallback[p++];return `<div class="mt-photo" style="background-image:url('${src}'),url('${fb}');background-color:${m.colors[i%5]}"></div>`}return motifSVG(k,m.colors,m.id+key+i)})}
+function setHeroIssue(){const i=dayIndexOf(todayKey);$('heroIssue').textContent=`✳ 01 / Portada · Nº ${issueNo(i)} · ${keyDate(todayKey,{day:'numeric',month:'long',year:'numeric'})}`}
+function renderMood(){
+ const ti=dayIndexOf(todayKey),vi=moodView??ti,key=keyOfIndex(vi),m=moodFor(vi),isToday=vi===ti,saved=savedMood.includes(m.id);
+ const labels=[...m.materials,...m.textures];
+ const tiles=moodTiles(m,key);
+ $('moodToday').innerHTML=`<article class="mt" style="--m0:${m.colors[0]};--m1:${m.colors[1]};--m2:${m.colors[2]};--m3:${m.colors[3]};--m4:${m.colors[4]}">
+  ${isToday?'':`<div class="mt-back"><span>Estás viendo el archivo del ${esc(keyDate(key,{day:'numeric',month:'long'}))}</span><button type="button" data-mood-view="${ti}">Volver al moodboard de hoy →</button></div>`}
+  <div class="mt-collage">${tiles.map((t,i)=>`<figure class="mt-tile t${i+1}">${t}<figcaption>${esc(labels[i]||'')}</figcaption></figure>`).join('')}<span class="mt-tape" aria-hidden="true"></span><span class="mt-hand" aria-hidden="true">${isToday?'hoy ✳':'archivo'} — Nº ${issueNo(vi)}</span></div>
+  <div class="mt-copy">
+   <div class="mt-issue"><span>Nº ${issueNo(vi)}</span><span>${esc(keyDate(key,{weekday:'long',day:'numeric',month:'long',year:'numeric'}))}</span></div>
+   <h3>${esc(m.title)}</h3><p class="mt-concept">${esc(m.concept)}</p><p class="mt-story">${esc(m.story)}</p>
+   <div class="mt-palette">${m.colors.map(c=>`<button type="button" data-hex="${c}" style="--c:${c}" aria-label="Copiar ${c}"><span></span><b>${c}</b></button>`).join('')}</div>
+   <dl class="mt-specs"><div><dt>Materiales y acabados</dt><dd>${m.materials.map(esc).join(' · ')}</dd></div><div><dt>Texturas</dt><dd>${m.textures.map(esc).join(' · ')}</dd></div><div><dt>Lenguaje formal</dt><dd>${esc(m.language)}</dd></div><div><dt>Referencias para buscar</dt><dd>${m.refs.map(esc).join(' · ')}</dd></div></dl>
+   <div class="mt-apply"><span>Aplicación en mobiliario</span><p>${esc(m.application)}</p></div>
+   <div class="mt-actions"><button type="button" class="mt-save ${saved?'saved':''}" data-mood="${m.id}" aria-pressed="${saved}">${saved?'♥ Guardado':'♡ Guardar'}</button><button type="button" data-copy-palette="${m.colors.join(', ')}">Copiar paleta</button><a href="/cuaderno">✎ Llevar al cuaderno</a><a href="${esc(m.link)}" target="_blank" rel="noopener noreferrer">Explorar universo ↗</a>${labButton({kind:'Moodboard',title:m.title,summary:[m.concept,m.application,'Materiales: '+m.materials.join(', ')].join(' '),topic:'Color y materiales'})}</div>
+  </div></article>`;
+ const days=[];for(let k=0;k<8&&ti-k>=0;k++)days.push(ti-k);
+ $('moodArchive').innerHTML=days.map(i=>{const mm=moodFor(i),kk=keyOfIndex(i);return `<button type="button" class="ma ${i===vi?'active':''}" data-mood-view="${i}" aria-label="Ver moodboard ${esc(mm.title)} del ${esc(keyDate(kk,{day:'numeric',month:'long'}))}"><span class="ma-thumb">${motifSVG(mm.motifs.find(x=>x!=='photo'),mm.colors,mm.id+kk)}</span><span class="ma-bar">${mm.colors.map(c=>`<i style="background:${c}"></i>`).join('')}</span><span class="ma-meta">${i===ti?'HOY':esc(keyDate(kk,{day:'2-digit',month:'short'}).toUpperCase())} · Nº ${issueNo(i)}</span><strong>${esc(mm.title)}</strong>${savedMood.includes(mm.id)?'<span class="ma-heart">♥</span>':''}</button>`}).join('');
+ $('moodArchiveNote').textContent=`${days.length} ${days.length===1?'edición':'ediciones'} · ${MOOD_CATALOG.length} direcciones en rotación · ${savedMood.length} guardado${savedMood.length===1?'':'s'}`;
+}
+function copyText(t,label){if(navigator.clipboard?.writeText){navigator.clipboard.writeText(t).then(()=>toast('Copiado '+label)).catch(()=>toast(label))}else toast(label)}
+$('moodboards').addEventListener('click',e=>{
+ const s=e.target.closest('[data-hex]');if(s){copyText(s.dataset.hex,s.dataset.hex);return}
+ const cp=e.target.closest('[data-copy-palette]');if(cp){copyText(cp.dataset.copyPalette,'paleta: '+cp.dataset.copyPalette);return}
+ const v=e.target.closest('[data-mood-view]');if(v){const i=Number(v.dataset.moodView);moodView=i===dayIndexOf(todayKey)?null:i;renderMood();$('moodToday').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});return}
+ const b=e.target.closest('[data-mood]');if(!b)return;const id=b.dataset.mood;savedMood=savedMood.includes(id)?savedMood.filter(x=>x!==id):[...savedMood,id];safeSet('tdl-mood',savedMood);renderMood();toast(savedMood.includes(id)?'Moodboard guardado':'Moodboard quitado de guardados')});
+setInterval(()=>{const k=mxDateKey();if(k!==todayKey){todayKey=k;moodView=null;renderMood();setHeroIssue();toast('Nuevo moodboard del día publicado')}},60000);
+
+(function(){const nav=document.querySelector('.nav');const links=[...nav.querySelectorAll('a[href^="#"]')];const secs=links.map(a=>document.getElementById(a.getAttribute('href').slice(1))).filter(Boolean);let cur=null,lock=0,tick=false;
+function setActive(a,scrollNav){if(!a||a===cur)return;links.forEach(x=>{x.classList.remove('active');x.removeAttribute('aria-current')});a.classList.add('active');a.setAttribute('aria-current','true');cur=a;if(scrollNav){const horiz=nav.scrollWidth>nav.clientWidth+4&&getComputedStyle(nav).flexDirection==='row';if(horiz){nav.scrollTo({left:a.offsetLeft-nav.clientWidth/2+a.offsetWidth/2,behavior:'smooth'})}else if(nav.scrollHeight>nav.clientHeight+4){const t=a.offsetTop-nav.offsetTop,b=t+a.offsetHeight;if(t<nav.scrollTop+20||b>nav.scrollTop+nav.clientHeight-20)nav.scrollTo({top:t-nav.clientHeight/2+a.offsetHeight/2,behavior:'smooth'})}}}
+function spy(){tick=false;if(Date.now()<lock)return;const line=innerHeight*.35;let best=secs[0];for(const s of secs){if(s.offsetParent===null&&s.getClientRects().length===0)continue;if(s.getBoundingClientRect().top<=line)best=s}if(innerHeight+scrollY>=document.documentElement.scrollHeight-4)best=secs[secs.length-1];const a=links.find(l=>l.getAttribute('href')==='#'+best.id);setActive(a,true)}
+addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(spy)}},{passive:true});addEventListener('resize',spy);
+links.forEach(a=>a.addEventListener('click',()=>{setActive(a,true);lock=Date.now()+900;setTimeout(spy,950)}));
+addEventListener('load',spy);spy()})();
+renderMood();setHeroIssue();renderResources();renderStudy();renderIdeas();
+
+/* EDITION 02 - editorial selections verified 2026-11-05 */
+const WEEKLY_EDIT=[{"date":"04 NOV 2026","tag":"EXPOSICIONES / BIOFILIA","title":"Clásicos brasileños dentro de una exposición que parece un hogar","desc":"CASACOR Santa Catarina transforma el recorrido, la luz y los materiales en parte de la narrativa del mueble.","apply":"NORVID: ¿qué debería sentir el visitante al atravesar tu stand?","url":"https://d5mag.com/mariana-maisonnave-brings-brazilian-furniture-classics-into-a-home-like-exhibition/","symbol":"◒"},{"date":"03 NOV 2026","tag":"DISEÑO / HISTORIA","title":"Fredericia recupera los diseños de Nanna y Jørgen Ditzel","desc":"Dos piezas de mediados del siglo XX regresan con estructuras visibles y curvas envolventes.","apply":"NORVID: estudia cómo mantener vigente una estructura durante décadas.","url":"https://d5mag.com/fredericia-brings-back-nanna-and-jorgen-ditzels-sculptural-lounge-chair-and-sofa/","symbol":"✳"},{"date":"30 OCT 2026","tag":"OFICINAS / MODULARIDAD","title":"Session: 23 elementos para reconfigurar el espacio de trabajo","desc":"Doshi Levien y Brunner presentan un sistema de asientos flexibles y reparables para oficinas.","apply":"NORVID: imagina tres configuraciones usando el mínimo de componentes distintos.","url":"https://www.wallpaper.com/design-interiors/furniture/brunner-group-doshi-levien-session-collection-office-furniture","symbol":"⌁"},{"date":"30 OCT 2026","tag":"ESTRUCTURAS / CIRCULARIDAD","title":"El mobiliario reparable empieza por uniones desmontables","desc":"Una silla demuestra por qué los insertos roscados y el despiece importan tanto como la forma.","apply":"NORVID: dibuja una unión que facilite reparar un escritorio sin destruirlo.","url":"https://d5mag.com/furniture-designed-to-be-repaired-starts-with-the-way-it-comes-apart/","symbol":"⟡"},{"date":"30 OCT 2026","tag":"SUBSTACK / PROCESO CREATIVO","title":"Kelly Wearstler y el carrito que organiza una biblioteca material","desc":"Una mirada al estudio creativo, sus muestras físicas y la movilidad del material board.","apply":"NORVID: diseña un kit móvil para llevar muestras, perfiles y acabados a reuniones.","url":"https://wearstlerworld.substack.com/p/how-to-organize-roll-with-it","symbol":"↗"},{"date":"06 OCT 2026","tag":"TENDENCIAS / CMF","title":"Japandi táctil, tonos vino y nuevos lanzamientos de mobiliario","desc":"Cate St Hill recopila colaboraciones, acabados y nuevas piezas de diseño.","apply":"NORVID: transforma dos de esos hallazgos en una paleta de tablero + metal.","url":"https://catesthill.substack.com/p/on-my-radar-new-design-launches-to-070","symbol":"✺"},{"date":"01 NOV 2026","tag":"MOBILIARIO / FORMAS","title":"Los muebles y objetos favoritos de octubre, según Dezeen","desc":"Mesas escultóricas y objetos contemporáneos que exploran geometría y materiales.","apply":"NORVID: compara la silueta de tres piezas y cómo justifican su soporte.","url":"https://www.architecture-now.co.uk/article/153296/dezeens-favourite-furniture-and-homeware-from-october","symbol":"◕"}];
+const DESIGN_LETTERS=[{"name":"SNAKE","author":"Sami Reiss","desc":"Muebles vintage, iconos, subastas y cultura material.","link":"https://snake.substack.com/","symbol":"S","topic":"MOBILIARIO"},{"name":"Standard Practice","author":"Utility Design","desc":"Piezas, interiores y diseñadores de ayer y hoy.","link":"https://standardpractice.substack.com/","symbol":"U","topic":"HISTORIA"},{"name":"WEARSTLERWORLD","author":"Kelly Wearstler","desc":"Color, moodboards, materialidad y procesos creativos.","link":"https://wearstlerworld.substack.com/","symbol":"W","topic":"COLOR"},{"name":"The Design Release","author":"Julia y equipo","desc":"Ferias, exhibiciones y talentos emergentes.","link":"https://thedesignrelease.substack.com/","symbol":"D","topic":"FERIAS"},{"name":"Ground Condition","author":"Kelsey Keith","desc":"Mirada crítica sobre objetos y diseño contemporáneo.","link":"https://kelseykeith.substack.com/","symbol":"G","topic":"IDEAS"},{"name":"COLA STUDIOS","author":"Sam y Olya","desc":"News, fuentes de producto y piezas interesantes.","link":"https://colastudios.substack.com/","symbol":"C","topic":"CURADURÍA"},{"name":"Design Lobster","author":"Ben Strak","desc":"Historias sorprendentes del universo del diseño.","link":"https://substack.com/@designlobster","symbol":"L","topic":"CULTURA"},{"name":"Untold Spaces","author":"Cate St Hill","desc":"Nuevos lanzamientos, Japandi y diseño habitable.","link":"https://catesthill.substack.com/","symbol":"T","topic":"TENDENCIAS"},{"name":"FOR SCALE","author":"David Michon","desc":"Crítica, objetos, interiorismo y atmósferas.","link":"https://forscale.substack.com/","symbol":"F","topic":"ENSAYO"},{"name":"there_y0u_are","author":"Talia Mayden","desc":"Vocabulario visual, arte, lámparas y estética.","link":"https://therey0uare.substack.com/","symbol":"✳","topic":"ESTÉTICA"},{"name":"The Culture Creative Papers","author":"Sean Yashar","desc":"Teoría del diseño y cultura del espacio.","link":"https://theculturecreative.substack.com/","symbol":"✴","topic":"TEORÍA"},{"name":"design again","author":"Eliza Teixeira","desc":"Formas, escala, muebles y hallazgos vintage.","link":"https://designagain.substack.com/","symbol":"A","topic":"REFERENTES"}];
+const RSS_FEEDS=[
+  {name:'Dezeen',url:'https://www.dezeen.com/feed/'},
+  {name:'Designboom',url:'https://www.designboom.com/feed/'},
+  {name:'Design Milk',url:'https://design-milk.com/feed/'},
+  {name:'SNAKE',url:'https://snake.substack.com/feed',topic:'Substack'},
+  {name:'WEARSTLERWORLD',url:'https://wearstlerworld.substack.com/feed',topic:'Substack'}
+];
+let liveItems=[],livePeriod='week',liveTopic='Todo',newsLoading=false;
+const goodUrl=u=>{try{const a=new URL(String(u));return ['http:','https:'].includes(a.protocol)?a.href:''}catch(e){return ''}};
+const humanNewsDate=d=>{const dt=new Date(d);return Number.isFinite(+dt)?new Intl.DateTimeFormat('es-MX',{day:'numeric',month:'short',year:'numeric'}).format(dt):'Fecha no disponible'};
+function renderWeekly(){
+  $('editionGrid').innerHTML=WEEKLY_EDIT.map(x=>`<article class="edit-card"><div class="edit-color"><span>${esc(x.symbol)}</span></div><div class="edit-content"><span class="edit-meta">${esc(x.date)} · ${esc(x.tag)}</span><h3>${esc(x.title)}</h3><p>${esc(x.desc)}</p><div class="norvid-note">↳ ${esc(x.apply)}</div><a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">Leer artículo ↗</a><div class="lab-trigger-row">${labButton({kind:'Artículo',title:x.title,summary:x.desc,topic:x.tag,url:x.url})}</div></div></article>`).join('');
+}
+function renderLetters(){
+  $('lettersGrid').innerHTML=DESIGN_LETTERS.map((x,i)=>`<article class="letter-card"><div class="letter-top"><span>${String(i+1).padStart(2,'0')} / LETTERS</span><span>${esc(x.topic)}</span></div><span class="letter-symbol">${esc(x.symbol)}</span><h3>${esc(x.name)}</h3><p><strong>${esc(x.author)}</strong> · ${esc(x.desc)}</p><a href="${esc(x.link)}" target="_blank" rel="noopener noreferrer">Leer newsletter ↗</a></article>`).join('');
+}
+const topics={Mobiliario:/furniture|chair|sofa|desk|table|workplace|workspace|office|modular|storage|shelf|cabinet|seating|mueble|asiento|mesa|silla|interior/i,Materiales:/material|timber|wood|metal|plywood|steel|aluminium|aluminum|recycl|circular|plastic|fabric|textile|finish|colour|color|pigment|ceramic|madera|tablero|biomaterial/i,Biofilia:/biofil|biomim|nature|natural|plant|forest|greenery|organic|ecolog|landscape|leaf|tree|biodivers|naturaleza|biodesign/i};
+function renderLive(){
+ const now=Date.now(),millis={day:86400000,week:604800000,month:2592000000}[livePeriod];
+ const candidates=liveItems.filter(x=>now-x.ts<=millis&&now-x.ts>=-86400000&& (liveTopic==='Todo'||(liveTopic==='Substack'?x.topic==='Substack':topics[liveTopic].test(x.title+' '+x.desc))));
+ const shown=candidates.slice(0,12);
+ if(!liveItems.length){$('liveGrid').innerHTML=`<div class="live-empty"><strong>El RSS no está disponible en este navegador ahora.</strong><span>La biblioteca y la selección editorial siguen funcionando. Para ver noticias al momento, abre las publicaciones originales.</span><div><a href="https://www.dezeen.com/design/" target="_blank" rel="noopener noreferrer">Dezeen ↗</a> &nbsp; · &nbsp; <a href="https://www.designboom.com/design/" target="_blank" rel="noopener noreferrer">Designboom ↗</a> &nbsp; · &nbsp; <a href="https://tdc.studio/news?desk=product" target="_blank" rel="noopener noreferrer">Radar de diseño ↗</a></div></div>`;return}
+ if(!shown.length){$('liveGrid').innerHTML=`<div class="live-empty">No aparecen publicaciones de este tema en el período elegido. Prueba “Todo” o amplía a 30 días.</div>`;return}
+ $('liveGrid').innerHTML=shown.map(x=>`<article class="live-card"><div class="live-meta">${esc(x.source.toUpperCase())} / ${esc(humanNewsDate(x.ts))}</div><h3>${esc(x.title)}</h3><p>${esc(x.desc.slice(0,170))}</p><a href="${esc(x.link)}" target="_blank" rel="noopener noreferrer">Leer en ${esc(x.source)} ↗</a><div class="lab-trigger-row">${labButton({kind:'Noticia',title:x.title,summary:String(x.desc||'').slice(0,600),topic:x.topic||'',source:x.source,url:x.link},'on-dark')}</div></article>`).join('');
+}
+function setLiveStatus(s,ok){$('liveStatus').textContent=s;$('signalDot').classList.toggle('ok',!!ok)}
+function parseFromXml(raw,feed){
+ const doc=new DOMParser().parseFromString(raw,'application/xml');if(doc.querySelector('parsererror'))throw Error('Feed XML no válido');
+ return [...doc.querySelectorAll('item')].slice(0,14).map(item=>{const g=t=>item.getElementsByTagName(t)[0]?.textContent?.trim()||''; const date=new Date(g('pubDate'));return {source:feed.name,topic:feed.topic||'',title:g('title'),desc:g('description').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim().slice(0,230),link:goodUrl(g('link')),ts:+date};});
+}
+function normalizeFromJson(data,feed){if(data.status!=='ok'||!Array.isArray(data.items))throw Error('Feed no disponible');return data.items.slice(0,14).map(x=>({source:feed.name,topic:feed.topic||'',title:String(x.title||''),desc:String(x.description||'').replace(/<[^>]*>/g,' ').replace(/&nbsp;/g,' ').replace(/\s+/g,' ').trim().slice(0,230),link:goodUrl(x.link),ts:Date.parse(String(x.pubDate||'').replace(' ','T')+'Z')}));}
+async function fetchSafe(u,timeout=8000){const c=new AbortController();const t=setTimeout(()=>c.abort(),timeout);try{const r=await fetch(u,{signal:c.signal,cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);return r}finally{clearTimeout(t)}}
+async function fetchFeed(feed){
+ try{const api='https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(feed.url);return normalizeFromJson(await (await fetchSafe(api)).json(),feed)}catch(e){
+ const proxy='https://api.allorigins.win/raw?url='+encodeURIComponent(feed.url);return parseFromXml(await (await fetchSafe(proxy)).text(),feed);
+ }
+}
+async function loadLiveNews(force=false){
+ if(newsLoading)return;
+ const c=safeGet('tdl-rss-cache-v2',null),age=c?Date.now()-c.checked:Infinity;
+ if(!force&&c&&Array.isArray(c.items)&&c.items.length&&age<3600000){liveItems=c.items;renderLive();setLiveStatus('Noticias consultadas '+new Intl.DateTimeFormat('es-MX',{hour:'2-digit',minute:'2-digit'}).format(new Date(c.checked))+' · versión en caché reciente',true);return;}
+ if(c&&Array.isArray(c.items)&&c.items.length){liveItems=c.items;renderLive();setLiveStatus('Mostrando noticias guardadas mientras consultamos las fuentes…',false)}
+ newsLoading=true;$('refreshNews').disabled=true;$('refreshNews').textContent='↻ Consultando…';
+ const outcomes=await Promise.allSettled(RSS_FEEDS.map(fetchFeed));
+ const valid=outcomes.filter(r=>r.status==='fulfilled').flatMap(r=>r.value).filter(x=>x.link&&x.title&&Number.isFinite(x.ts)&&x.ts>0);
+ if(valid.length){let seen=new Set();liveItems=valid.filter(x=>{if(seen.has(x.link))return false;seen.add(x.link);return true}).sort((a,b)=>b.ts-a.ts);safeSet('tdl-rss-cache-v2',{checked:Date.now(),items:liveItems});setLiveStatus(liveItems.length+' artículos recuperados · actualizado '+new Intl.DateTimeFormat('es-MX',{hour:'2-digit',minute:'2-digit'}).format(new Date()),true)}
+ else setLiveStatus(liveItems.length?'No se pudo refrescar. Mostrando la última copia local disponible.':'No se pudieron consultar los RSS. Abre las fuentes desde sus enlaces.',false);
+ renderLive();newsLoading=false;$('refreshNews').disabled=false;$('refreshNews').textContent='↻ Buscar novedades';
+}
+$('timeFilters').addEventListener('click',e=>{const b=e.target.closest('[data-time]');if(!b)return;livePeriod=b.dataset.time;$('timeFilters').querySelectorAll('button').forEach(x=>x.classList.toggle('active',x===b));renderLive();});
+$('topicFilters').addEventListener('click',e=>{const b=e.target.closest('[data-topic]');if(!b)return;liveTopic=b.dataset.topic;$('topicFilters').querySelectorAll('button').forEach(x=>x.classList.toggle('active',x===b));renderLive();});
+$('refreshNews').addEventListener('click',()=>loadLiveNews(true));
+renderWeekly();renderLetters();loadLiveNews();
+
+
+// Private, browser-only PDFs: shared static site never receives the bytes.
+const SHELF_KEY='tdl-shelf-checks-v1';
+let shelfChecks=safeGet(SHELF_KEY,{});
+document.querySelectorAll('[data-read]').forEach(c=>{c.checked=!!shelfChecks[c.dataset.read];c.addEventListener('change',()=>{shelfChecks[c.dataset.read]=c.checked;safeSet(SHELF_KEY,shelfChecks);});});
+const bookInput=$('shelfFileInput');let selectedShelfBook=null;
+function shelfDb(){return new Promise((resolve,reject)=>{if(!('indexedDB' in window)){reject(Error('IndexedDB no disponible'));return}const req=indexedDB.open('tdl-private-reading-v1',1);req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains('pdfs'))req.result.createObjectStore('pdfs',{keyPath:'id'});};req.onerror=()=>reject(req.error);req.onsuccess=()=>resolve(req.result);});}
+async function shelfStore(id,file){const db=await shelfDb();return new Promise((resolve,reject)=>{const t=db.transaction('pdfs','readwrite');t.objectStore('pdfs').put({id:id,blob:file,name:file.name,updated:Date.now()});t.oncomplete=()=>{db.close();resolve()};t.onerror=()=>{db.close();reject(t.error)};});}
+async function shelfGet(id){const db=await shelfDb();return new Promise((resolve,reject)=>{const t=db.transaction('pdfs','readonly');const q=t.objectStore('pdfs').get(id);q.onsuccess=()=>{db.close();resolve(q.result)};q.onerror=()=>{db.close();reject(q.error)};});}
+async function shelfRemove(id){const db=await shelfDb();return new Promise((resolve,reject)=>{const t=db.transaction('pdfs','readwrite');t.objectStore('pdfs').delete(id);t.oncomplete=()=>{db.close();resolve()};t.onerror=()=>{db.close();reject(t.error)};});}
+const cloudOn=()=>!!(window.TDLCloud&&TDLCloud.signedIn);
+async function shelfStatus(id){const st=document.querySelector(`[data-status="${id}"]`);const open=document.querySelector(`[data-open="${id}"]`);const remove=document.querySelector(`[data-remove="${id}"]`);const info=cloudOn()?TDLCloud.fileInfo(id):null;try{const r=await shelfGet(id);open.disabled=!(r||info);remove.disabled=!(r||info);st.textContent=r?(info?`✓ Copia privada en este navegador y en tu nube: ${r.name}`:`✓ Copia privada guardada en este navegador: ${r.name}`+(cloudOn()?' · subiendo a tu nube…':' · inicia sesión para tenerla en todos tus dispositivos')):info?`☁ Copia en tu nube privada: ${info.name}. Se descarga al abrirla.`:'Sin copia vinculada.';}catch(e){open.disabled=!info;remove.disabled=!info;st.textContent=info?`☁ Copia en tu nube privada: ${info.name}`:'El navegador bloquea el almacenamiento privado. Usa el enlace oficial o revisa permisos.';}}
+const SHELF_IDS=['lawson','biophilic','norman'];if(window.TDLCloud)TDLCloud.onChange(()=>SHELF_IDS.forEach(shelfStatus));
+bookInput.addEventListener('change',async e=>{const f=e.target.files?.[0];const id=selectedShelfBook;if(!f||!id)return;if(!f.name.toLowerCase().endsWith('.pdf')){toast('Selecciona un archivo PDF');return;}if(f.size>35000000){toast('El archivo supera el límite de 35 MB');return;}try{await shelfStore(id,f);await shelfStatus(id);bookInput.value='';if(cloudOn()){toast('PDF guardado. Subiendo a tu nube privada…');try{await TDLCloud.pdfSaved(id,f);toast('PDF guardado en tu nube privada');}catch(x){toast('Guardado en este navegador; se subirá a la nube al sincronizar');}shelfStatus(id);}else toast('PDF guardado en este navegador. Inicia sesión para tenerlo en la nube');}catch(err){toast('No se pudo guardar: revisa espacio o permisos');}finally{bookInput.value='';}});
+document.querySelectorAll('[data-choose]').forEach(b=>b.addEventListener('click',()=>{selectedShelfBook=b.dataset.choose;bookInput.click();}));
+document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',async()=>{const id=b.dataset.open;const w=window.open('about:blank','_blank');try{let r=await shelfGet(id).catch(()=>null);if(!r&&cloudOn()&&TDLCloud.fileInfo(id)){toast('Descargando tu copia desde la nube…');r=await TDLCloud.pdfFetch(id);shelfStatus(id);}if(!r)throw Error('No hay copia');const objUrl=URL.createObjectURL(r.blob);if(w){w.location.href=objUrl;setTimeout(()=>URL.revokeObjectURL(objUrl),120000);}else{const a=document.createElement('a');a.href=objUrl;a.target='_blank';a.click();setTimeout(()=>URL.revokeObjectURL(objUrl),120000);}}catch(e){if(w)w.close();toast('No se encontró la copia privada');}}));
+document.querySelectorAll('[data-remove]').forEach(b=>b.addEventListener('click',async()=>{const id=b.dataset.remove;const inCloud=cloudOn()&&TDLCloud.fileInfo(id);if(inCloud&&!confirm('¿Quitar este PDF de este navegador y de tu nube privada (en todos tus dispositivos)?'))return;try{await shelfRemove(id).catch(()=>{});if(cloudOn())await TDLCloud.pdfRemoved(id);await shelfStatus(id);toast(inCloud?'PDF quitado de este navegador y de tu nube':'PDF privado retirado de este navegador');}catch(e){toast('No se pudo quitar el archivo de la nube; inténtalo de nuevo');shelfStatus(id);}}));
+SHELF_IDS.forEach(shelfStatus);
+
+</script><script>
+(function(){if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;document.documentElement.classList.add('js-reveal');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.06});document.querySelectorAll('.section').forEach(function(el){io.observe(el)})})();
+</script>
+<script src="/daily.js"></script>
+<script src="/gym.js"></script>
+<script src="/explora-data.js"></script>
+<script src="/explora-species.js"></script>
+<script src="/explora.js"></script>
+<script src="/explora-hub.js"></script>
+<script src="/atlas.js"></script>
+<script src="/calendar.js"></script>
+<script src="/mesa.js"></script>
+</body></html>

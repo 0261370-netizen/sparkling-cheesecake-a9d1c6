@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1f3a30">
+<meta name="description" content="Bitácora silvestre: el animal del día, fichas de especies poco conocidas con paletas y retos de diseño, noticias de naturaleza y una revista de referencias.">
+<title>Bitácora silvestre · Creative Gym · The Design Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/lab.css">
+<link rel="stylesheet" href="/explora.css">
+<script src="/cloud.js"></script>
+</head>
+<body class="tdx-page">
+<a class="tdx-skip" href="#main">Saltar al contenido</a>
+<header class="tdx-top"><a class="brand" href="/">the design <em>library.</em></a><span data-cloud-slot></span><a class="back" href="/#gym">← Creative Gym</a></header>
+<nav class="tdx-sub" aria-label="Exploración creativa"><a href="/color">◐ Laboratorio de color</a><a href="/citas">✦ Citas creativas</a><a href="/bio" aria-current="page">❦ Bitácora silvestre</a><a href="/cuaderno">✎ Cuaderno</a><a href="/#gym">← Creative Gym</a></nav>
+<main class="tdx-wrap" id="main">
+<section class="tdx-hero" aria-labelledby="pageTitle">
+  <div class="tdx-eyebrow">❦ Creative Gym · Bitácora silvestre</div>
+  <h1 id="pageTitle">Bitácora <em>silvestre.</em></h1>
+  <p>Un cuaderno de campo y una revista para mirar la naturaleza con ojos de diseñadora: cada día un animal poco conocido, fichas para crear, referencias para hojear y noticias reales de naturaleza.</p>
+  <nav class="tdx-toc" aria-label="En esta página"><a href="#portada">Animal del día</a><a href="#fichas">Fichas de especies</a><a href="#archivo">Mi archivo</a><a href="#noticias">Noticias</a><a href="#explorar">Revista de referencias</a><a href="#colecciones">Colecciones</a><a href="#moodboards">Moodboards</a></nav>
+  <div id="saveState"></div>
+</section>
+<section class="tdx-sec" id="portada-sec" aria-labelledby="hCover">
+  <header><div><div class="tdx-eyebrow">Portada · cambia cada día</div><h2 id="hCover">El animal del día</h2></div><p>Una especie poco conocida cada día, alternando marinos, insectos, reptiles, aves, anfibios, arácnidos y otros grupos. La tarjeta cambia a medianoche (hora de Ciudad de México).</p></header>
+  <div id="portada" aria-live="polite"></div>
+</section>
+<section class="tdx-sec" id="fichas" aria-labelledby="hFichas">
+  <header><div><div class="tdx-eyebrow">Catálogo verificado</div><h2 id="hFichas">Fichas de especies</h2></div><p>Cada ficha tiene una fotografía con licencia libre y su crédito, una paleta extraída de la imagen y una observación. Los datos curiosos que afirman algo concreto enlazan a su fuente.</p></header>
+  <div class="qx-filters" id="spFilters" aria-label="Filtros de fichas"></div>
+  <p class="tdx-muted" id="spCount" aria-live="polite"></p>
+  <div class="sp-grid" id="spGrid"></div>
+</section>
+<section class="tdx-sec" id="archivo" aria-labelledby="hArch">
+  <header><div><div class="tdx-eyebrow">Lo tuyo</div><h2 id="hArch">Mi archivo de fichas</h2></div><p>Las especies que guardaste, con tus notas y las fotos de tus bocetos.</p></header>
+  <div id="spArchive"></div>
+</section>
+<section class="tdx-sec" id="noticias" aria-labelledby="hNews">
+  <header><div><div class="tdx-eyebrow">Se actualiza solo</div><h2 id="hNews">Noticias de la naturaleza</h2></div><p>Artículos recientes sobre animales, plantas, especies nuevas y conservación, de Mongabay, ScienceDaily, Smithsonian, Live Science y Phys.org. Se muestran con su título, fuente, fecha y enlace originales; algunos están en inglés.</p></header>
+  <div class="bx-cats" id="newsTopics" role="group" aria-label="Temas"></div>
+  <p class="tdx-muted" id="newsMeta"></p>
+  <div class="nw-grid" id="newsGrid"></div>
+</section>
+<section class="tdx-sec" id="explorar" aria-labelledby="hExplore">
+  <div class="bx-bar"><div><div class="tdx-eyebrow">Revista de referencias</div><h2 id="hExplore" class="tdx-serif" style="margin:0;font-size:clamp(30px,4vw,46px)">Naturaleza y diseño</h2></div><div class="bx-view" role="group" aria-label="Vista"><button type="button" data-view="mosaic" aria-pressed="true">▦ Mosaico</button><button type="button" data-view="mag" aria-pressed="false">❏ Revista</button></div></div>
+  <div class="bx-cats" id="cats" role="group" aria-label="Categorías"></div>
+  <div class="bx-filters" id="filters"></div>
+  <p class="tdx-muted" id="count" aria-live="polite"></p>
+  <div id="view"></div>
+</section>
+<section class="tdx-sec" id="colecciones" aria-labelledby="hCols">
+  <header><div><div class="tdx-eyebrow">Lo tuyo</div><h2 id="hCols">Mis colecciones</h2></div><p>Agrupa referencias a tu manera. Toca una colección para ver solo sus referencias.</p></header>
+  <div id="cols"></div>
+</section>
+<section class="tdx-sec" id="moodboards" aria-labelledby="hBoards">
+  <header><div><div class="tdx-eyebrow">Lo tuyo</div><h2 id="hBoards">Mis moodboards</h2></div><p>Referencias, paletas, aventuras y bocetos que reuniste con «▦ Crear moodboard». Cada elemento enlaza a su origen.</p></header>
+  <div id="boards"></div>
+</section>
+<p class="bx-credit">Fotografías de Wikimedia Commons con licencias libres (dominio público, CC BY o CC BY-SA), redimensionadas para la web. El autor y la licencia de cada una aparecen en su página de la revista.</p>
+
+</main>
+<script src="/sketchpad.js" defer></script>
+<script src="/lab.js" defer></script>
+<script src="/explora-data.js" defer></script>
+<script src="/explora.js" defer></script>
+<script src="/calendar.js" defer></script>
+<script src="/explora-species.js" defer></script>
+<script src="/bio.js" defer></script>
+<script src="/bitacora.js" defer></script>
+</body>
+</html>

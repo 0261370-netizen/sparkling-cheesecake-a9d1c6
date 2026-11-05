@@ -1,0 +1,66 @@
+/* CREATIVE GYM — each exercise has its own accent (--g), in the library's warm palette. */
+.gym-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+.gym-tabs a{display:inline-flex;gap:8px;align-items:center;padding:9px 14px;border-radius:999px;background:#efe7d6;font-size:13px;font-weight:600}
+.gym-tabs a b{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#193b32;color:#fff;font:11px 'DM Mono',monospace}
+.gym-tabs a:hover{background:#193b32;color:#fff}
+.gym-block{border-radius:18px;background:color-mix(in srgb,var(--g) 9%,#fffdf8);border:1px solid color-mix(in srgb,var(--g) 25%,#fff);padding:22px;margin-bottom:16px;scroll-margin-top:20px}
+.gym-block>header{display:flex;gap:14px;align-items:center;margin-bottom:16px}
+.gym-block>header>b{display:grid;place-items:center;flex:0 0 46px;height:46px;border-radius:50%;background:var(--g);color:#fff;font:400 26px 'Instrument Serif',Georgia,serif}
+.gym-block h3{margin:0;font:400 clamp(28px,3vw,40px)/1 'Instrument Serif',Georgia,serif}
+.gym-block header p{margin:4px 0 0;font-size:13px;color:#5f675f}
+.gym-pair{display:grid;grid-template-columns:1.5fr 1fr;gap:16px}.gym-pair .gym-block{margin-bottom:16px}
+.gym-hint{font-size:12px;color:#6e766e;line-height:1.5;margin:8px 0 0}
+.gc-tag{display:inline-block;font:10px 'DM Mono',monospace;letter-spacing:1.5px;text-transform:uppercase;background:var(--g);color:#fff;padding:4px 9px;border-radius:4px}
+.gc-layout{display:grid;grid-template-columns:1.6fr 1fr;gap:18px}
+.gc-card,.dt-card,.wk-card,.wk-gallery,.dt-reveal{background:#fff;border-radius:14px;padding:20px;border:1px solid #ece5d6}
+.gc-chain{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:16px 0}
+.gc-chain span{display:flex;flex-direction:column;background:color-mix(in srgb,var(--g) 14%,#fff);border-radius:12px;padding:12px 16px;font:400 clamp(22px,2.4vw,30px)/1.05 'Instrument Serif',Georgia,serif}
+.gc-chain span small{font:9.5px 'DM Mono',monospace;letter-spacing:1px;text-transform:uppercase;color:#6e766e;margin-top:4px}
+.gc-chain i{font:400 32px 'Instrument Serif',serif;color:var(--g);font-style:normal}
+.gym-block h4{font:10.5px 'DM Mono',monospace;letter-spacing:1.6px;text-transform:uppercase;color:var(--g);margin:14px 0 8px}
+.gc-q{margin:0;padding-left:20px;display:grid;gap:8px;font-size:14px;line-height:1.55}
+.gc-check{margin-top:14px;background:#faf6ec;border-radius:10px;padding:10px 14px;font-size:13px}
+.gc-check summary{cursor:pointer;font-weight:600}.gc-check ul{margin:8px 0;padding-left:18px;line-height:1.6}.gc-check p{margin:0;font-size:12px;color:#8a5a3c}
+.gc-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:14px}
+.gc-side{display:flex;flex-direction:column}
+.gc-surprise{border:0;border-radius:999px;padding:15px 22px;font:600 15px 'Hanken Grotesk',sans-serif;color:#fff;cursor:pointer;background:linear-gradient(100deg,var(--g),#c98f2c,#547ca2);box-shadow:0 8px 20px color-mix(in srgb,var(--g) 30%,transparent);transition:transform .2s}
+.gc-surprise:hover{transform:translateY(-2px) rotate(-.5deg)}
+.gc-pills{display:flex;flex-wrap:wrap;gap:6px}
+.gc-pill{border:1px solid #dcd3c0;background:#fff;border-radius:999px;padding:7px 11px;font-size:12px;cursor:pointer;text-align:left}
+.gc-pill.on,.gc-pill:hover{background:var(--g);border-color:var(--g);color:#fff}
+.gc-btn{display:inline-flex;align-items:center;border:0;border-radius:999px;padding:9px 14px;font:600 12px 'Hanken Grotesk',sans-serif;background:#193b32;color:#fff;cursor:pointer}
+.gc-btn.ghost{background:none;color:#193b32;box-shadow:inset 0 0 0 1px #193b32}.gc-btn.done{background:var(--g)}
+.dt-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:16px}
+.dt-card{text-align:center;background:linear-gradient(160deg,#fff,color-mix(in srgb,var(--g) 14%,#fff))}
+.dt-mystery{width:120px;height:120px;margin:18px auto 10px;border-radius:50%;display:grid;place-items:center;background:var(--g);color:#fff;font:400 72px 'Instrument Serif',serif;box-shadow:inset 0 -10px 0 rgba(0,0,0,.12)}
+.dt-type{font:10px 'DM Mono',monospace;letter-spacing:1.6px;text-transform:uppercase;margin:0}
+.dt-card h4{font:400 28px/1.05 'Instrument Serif',Georgia,serif;color:#193b32;text-transform:none;letter-spacing:0;margin:6px 0}
+.dt-clue{font-size:13px;line-height:1.55;margin:8px 0 0}
+.dt-qs fieldset{border:0;padding:0;margin:0 0 12px}.dt-qs legend{font-weight:600;font-size:14px;margin-bottom:6px}
+.dt-opts{display:flex;flex-wrap:wrap;gap:6px}
+.dt-opts button{border:1px solid #d6d9e2;background:#fff;border-radius:10px;padding:9px 12px;font-size:13px;cursor:pointer;text-align:left}
+.dt-opts button.on{background:var(--g);color:#fff;border-color:var(--g)}
+.dt-opts button.ok{background:#2f6b55;color:#fff;border-color:#2f6b55}.dt-opts button.bad{background:#f3d6cc;border-color:#b8674f;color:#7b2f1d}
+.dt-opts button:disabled{cursor:default}
+.dt-reveal{margin-top:6px}.dt-reveal h4{font:400 30px/1 'Instrument Serif',serif;color:#193b32;text-transform:none;letter-spacing:0}.dt-reveal p{font-size:14px;line-height:1.6}.dt-meta{font:11px 'DM Mono',monospace!important;color:var(--g)}
+.wk-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:16px}
+.wk-card h4,.wk-gallery h4{text-transform:none;letter-spacing:0}
+.wk-card h4{font:400 34px/1.05 'Instrument Serif',Georgia,serif;color:#193b32;margin:12px 0 8px}.wk-card p{font-size:14px;line-height:1.6}.wk-card ul{padding-left:18px;font-size:13px;line-height:1.7}
+.wk-gallery h4{font:400 28px 'Instrument Serif',serif;color:#193b32;margin:0}
+.wk-days{display:flex;gap:6px;margin-top:16px}.wk-days span{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#eee9dd;font:11px 'DM Mono',monospace}
+.wk-days span.on{background:var(--g);color:#fff}.wk-days span.now{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--g)}
+.wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:12px}
+.wk-grid figure{margin:0;background:#faf7ef;border-radius:10px;padding:6px;transform:rotate(var(--r,0deg))}.wk-grid figure:nth-child(3n+1){--r:-1deg}.wk-grid figure:nth-child(3n+2){--r:.8deg}
+.wk-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:6px;background:#fff}
+.wk-grid figcaption{font-size:12px;margin-top:5px}.wk-grid small{display:block;font:9.5px 'DM Mono',monospace;color:#6e766e;text-transform:uppercase}
+.wk-grid.preview figure{opacity:.75}
+.wk-empty{margin-top:12px;padding:26px;border:1px dashed #cfc7b4;border-radius:12px;font-size:13px;color:#6e766e;text-align:center}
+.st-layout{display:flex;flex-direction:column;gap:12px}
+.st-big{display:flex;align-items:baseline;gap:10px;background:#fff;border-radius:14px;padding:16px 20px}
+.st-big b{font:400 84px/.9 'Instrument Serif',Georgia,serif;color:var(--g)}.st-big span{font:11px 'DM Mono',monospace;letter-spacing:1.5px;text-transform:uppercase}
+.st-msg{font-size:14px;line-height:1.5;margin:0 0 10px}
+.st-dots{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;max-width:260px}
+.st-dots span{aspect-ratio:1;border-radius:6px;background:#ebe4d3}.st-dots span.on{background:var(--g)}.st-dots span.now{box-shadow:0 0 0 2px var(--g)}
+@media(max-width:980px){.gym-pair,.gc-layout,.dt-layout,.wk-layout{grid-template-columns:1fr}}
+@media(max-width:520px){.gym-block{padding:16px}.gc-chain i{font-size:24px}}
+@media(prefers-reduced-motion:reduce){.gc-surprise{transition:none}}

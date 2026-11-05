@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1f3a30">
+<meta name="description" content="Cuaderno de ideas — notas, etiquetas y bocetos a mano alzada de The Design Library.">
+<title>Cuaderno de ideas · The Design Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#193b32;--cream:#f7f5ef;--paper:#fffdf8;--muted:#6e766e;--line:#dcded4;--terra:#b8674f;--forest:#17392e;--butter:#e8d9a8;--kraft:#e7d6bb}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);font-family:'Hanken Grotesk',Arial,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit;color:inherit}button{cursor:pointer}
+:focus-visible{outline:3px solid #d68a70;outline-offset:3px}
+.mono{font:10px 'DM Mono',monospace;letter-spacing:1.8px;text-transform:uppercase}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px clamp(20px,4vw,64px);background:var(--forest);color:var(--cream)}
+.top a.back{border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:9px 15px;font-size:12px}.top a.back:hover{background:#365a4c}
+.brand{font:400 22px/1 'Instrument Serif',serif}.brand em{color:#cbd8ac}
+.wrap{max-width:1380px;margin:auto;padding:36px clamp(20px,4vw,64px) 80px}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:22px}
+.head h1{font:400 clamp(48px,7vw,104px)/.9 'Instrument Serif',serif;letter-spacing:-3px;margin:10px 0 0}.head h1 em{color:var(--terra)}
+.head p{max-width:360px;color:var(--muted);font-size:13px;line-height:1.6;margin:0}
+.stats{display:flex;gap:22px;margin-top:12px}.stats b{font:400 30px 'Instrument Serif',serif;display:block}
+.tabs{display:flex;gap:8px;margin:26px 0 22px}.tabs button{border:1px solid var(--ink);background:none;border-radius:999px;padding:10px 18px;font-size:13px}.tabs button[aria-selected=true]{background:var(--ink);color:#fff}
+.panel[hidden]{display:none}
+.notes-layout{display:grid;grid-template-columns:minmax(280px,.8fr) 1.2fr;gap:20px;align-items:start}
+.composer{background:var(--kraft);padding:26px;border-radius:4px;position:sticky;top:20px;background-image:repeating-linear-gradient(transparent 0 27px,rgba(25,59,50,.09) 27px 28px)}
+.composer h2{font:400 34px 'Instrument Serif',serif;margin:8px 0 14px}
+.composer input,.composer textarea{width:100%;border:1px solid #c4ae8f;background:#faf3e7;padding:12px;border-radius:4px;font-size:13px;margin-bottom:10px}
+.composer textarea{height:170px;resize:vertical;line-height:1.55}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.btn{border:0;background:var(--ink);color:#fff;border-radius:999px;padding:11px 18px;font-size:12px}.btn.ghost{background:none;color:var(--ink);border:1px solid var(--ink)}.btn.terra{background:var(--terra)}
+.hint{font-size:11px;color:var(--muted);margin-top:8px}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.toolbar input{flex:1;min-width:200px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:11px 16px;font-size:13px}
+.tags{display:flex;gap:6px;flex-wrap:wrap}.tag{border:1px solid #c9d2c4;background:none;border-radius:999px;padding:5px 10px;font-size:11px}.tag.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.notes{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.note{background:var(--paper);border:1px solid var(--line);padding:18px;border-radius:4px;display:flex;flex-direction:column;gap:8px;position:relative}
+.note:nth-child(4n+2){background:#f3f1e4}.note:nth-child(4n+3){background:#f4ebe3}
+.note h3{font:400 24px/1.1 'Instrument Serif',serif;margin:0}.note p{font-size:13px;line-height:1.6;margin:0;white-space:pre-wrap;word-break:break-word}
+.note small{color:var(--muted)}.note .acts{display:flex;gap:12px;margin-top:auto;padding-top:8px;font-size:11px}.note .acts button{border:0;background:none;padding:0;border-bottom:1px solid currentColor}.note .acts .del{color:var(--terra)}
+.note .ntags{display:flex;gap:5px;flex-wrap:wrap}.note .ntags span{font:10px 'DM Mono',monospace;background:#e5e9d6;padding:3px 7px;border-radius:999px}
+.empty{color:var(--muted);font-size:13px;padding:30px;border:1px dashed var(--line);border-radius:4px;text-align:center}
+.sketch-layout{display:grid;grid-template-columns:1fr 300px;gap:20px;align-items:start}
+.board{background:var(--paper);border:1px solid var(--line);padding:14px;border-radius:4px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.swatch{width:28px;height:28px;border-radius:50%;border:2px solid transparent;background:var(--c)}.swatch.active{border-color:var(--ink);box-shadow:0 0 0 2px #fff inset}
+.tools label{font-size:12px;display:flex;align-items:center;gap:6px}
+.tools .tool{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;font-size:12px}.tools .tool.active{background:var(--ink);color:#fff}
+canvas{width:100%;aspect-ratio:4/3;display:block;background:#fff;border:1px solid var(--line);touch-action:none;cursor:crosshair;background-image:radial-gradient(#dcded4 1px,transparent 1px);background-size:20px 20px}
+.gallery{display:grid;gap:10px}.gallery figure{margin:0;background:var(--paper);border:1px solid var(--line);padding:8px}.gallery img{width:100%;display:block;background:#fff}
+.gallery figcaption{display:flex;justify-content:space-between;align-items:center;font-size:11px;margin-top:6px;gap:6px}.gallery figcaption button,.gallery figcaption a{border:0;background:none;padding:0;font-size:11px;border-bottom:1px solid currentColor}.gallery .del{color:var(--terra)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(80px);background:var(--forest);color:#fff;padding:12px 18px;border-radius:999px;font-size:13px;transition:transform .25s;z-index:50}.toast.show{transform:translateX(-50%)}
+@media(max-width:900px){.notes-layout,.sketch-layout{grid-template-columns:1fr}.composer{position:static}}
+.tab-count{display:inline-block;min-width:20px;padding:1px 6px;margin-left:4px;border-radius:999px;background:var(--terra);color:#fff;font-size:11px}
+.concepts-intro{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;background:linear-gradient(120deg,#f4e3d7,#efe7c9 55%,#dfe7da);padding:24px;border-radius:14px;margin-bottom:18px}
+.concepts-intro h2{font:400 40px/1 'Instrument Serif',serif;margin:8px 0}.concepts-intro p{max-width:620px;font-size:13px;line-height:1.6;margin:0;color:#4d564f}
+.concepts{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.concept{background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.concept .cthumb{aspect-ratio:16/9;background:linear-gradient(135deg,var(--c1,#e8d9a8),var(--c2,#b8674f));display:grid;place-items:center;color:#fff;font:400 54px 'Instrument Serif',serif}
+.concept .cthumb img{width:100%;height:100%;object-fit:cover;background:#fff}
+.concept .cbody{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.concept h3{font:400 26px/1.05 'Instrument Serif',serif;margin:0}.concept p{font-size:12px;line-height:1.55;margin:0;color:var(--muted)}
+.concept .cprog{display:flex;gap:4px}.concept .cprog i{flex:1;height:5px;border-radius:3px;background:#e4e2d8}.concept .cprog i.on{background:var(--terra)}
+.concept .acts{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:8px}.concept .acts button{border:1px solid var(--ink);background:none;border-radius:999px;padding:7px 11px;font-size:11px}.concept .acts button.primary{background:var(--ink);color:#fff}.concept .acts .del{border-color:var(--terra);color:var(--terra)}
+</style>
+<link rel="stylesheet" href="/lab.css">
+<link rel="stylesheet" href="/gym.css">
+<link rel="stylesheet" href="/mesa.css">
+<link rel="stylesheet" href="/explora.css">
+<script src="/cloud.js"></script>
+</head>
+<body>
+<header class="top"><a class="brand" href="/">the design <em>library.</em></a><span data-cloud-slot></span><a class="back" href="/#cuaderno">← Volver a la biblioteca</a></header>
+<main class="wrap">
+  <div class="head">
+    <div><div class="mono">10 / Creative notes · Atelier NORVID sketchbook</div><h1>Cuaderno <em>de ideas.</em></h1>
+      <div class="stats"><span><b id="sNotes">0</b><span class="mono">notas</span></span><span><b id="sSketch">0</b><span class="mono">bocetos</span></span><span><b id="sTags">0</b><span class="mono">etiquetas</span></span><span><b id="sConcepts">0</b><span class="mono">fichas</span></span></div></div>
+    <div class="head-side"><p>Escribe lo que observas, combina texto, fotos, paletas y bocetos en una misma entrada, y dibuja a mano alzada. Sin sesión, todo se guarda solo en este navegador; con sesión, también en tu nube privada. Nada se publica.</p><div id="saveState"></div>
+    <nav class="cx-links" aria-label="Exploración creativa"><a href="/color">◐ Color</a><a href="/citas">✦ Citas creativas</a><a href="/bio">❦ Bitácora silvestre</a></nav></div>
+  </div>
+
+  <div class="tabs" role="tablist">
+    <button role="tab" id="tabNotes" aria-controls="pNotes" aria-selected="true">✎ Notas</button>
+    <button role="tab" id="tabSketch" aria-controls="pSketch" aria-selected="false">✐ Bocetos</button>
+    <button role="tab" id="tabConcepts" aria-controls="pConcepts" aria-selected="false">✳ Fichas de concepto <span id="cCount" class="tab-count">0</span></button>
+    <button role="tab" id="tabDudas" aria-controls="pDudas" aria-selected="false">? Dudas y visitas <span id="dCount" class="tab-count">0</span></button>
+  </div>
+
+  <section class="panel" id="pNotes" role="tabpanel" aria-labelledby="tabNotes">
+    <div class="notes-layout">
+      <form class="composer" id="noteForm">
+        <div class="mono" id="formLabel">Nueva nota</div>
+        <h2>¿Qué observaste hoy?</h2>
+        <input id="nTitle" placeholder="Título (opcional)" maxlength="120" aria-label="Título">
+        <textarea id="nText" placeholder="Vi una unión metálica interesante... / ¿Y si el recorte de tablero se convierte en...?" aria-label="Texto de la nota" required></textarea>
+        <input id="nTags" placeholder="Etiquetas separadas por comas: madera, cmf, sillas" aria-label="Etiquetas">
+        <input id="nLink" placeholder="Enlace de referencia (opcional)" aria-label="Enlace de referencia">
+        <div id="nSource"></div>
+        <div class="att-bar" role="group" aria-label="Añadir a la entrada"><label class="att-btn">＋ Fotos<input type="file" id="nPhotos" accept="image/*" multiple hidden></label><button type="button" class="att-btn" id="nAddPal">＋ Paleta</button><button type="button" class="att-btn" id="nAddSk">＋ Boceto</button><button type="button" class="att-btn" id="nDraw">✐ Dibujar uno nuevo</button></div>
+        <div id="nAtt" class="att-list"></div>
+        <div class="row"><button class="btn" type="submit" id="saveBtn">Guardar nota ↗</button><button class="btn ghost" type="button" id="cancelEdit" hidden>Cancelar</button></div>
+        <div class="hint" id="nHint">Atajo: Ctrl/⌘ + Enter para guardar. El texto que escribes se conserva si cierras la página sin guardar.</div>
+      </form>
+      <div>
+        <div class="toolbar"><input id="q" type="search" placeholder="Buscar en tus notas…" aria-label="Buscar notas"><span class="mono" id="count"></span></div>
+        <div class="tags" id="tagFilter" style="margin-bottom:14px"></div>
+        <div class="notes" id="notes"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="pSketch" role="tabpanel" aria-labelledby="tabSketch" hidden>
+    <div class="sketch-layout">
+      <div class="board">
+        <div id="sDraft"></div>
+        <div id="sPrompt"></div>
+        <div class="sk-head"><span class="sk-mode" id="sMode">Boceto nuevo</span><span class="sk-state" id="sState" role="status" aria-live="polite">Lienzo en blanco</span></div>
+        <div id="pad"></div>
+        <div class="row" style="margin-top:12px"><input id="sTitle" placeholder="Nombre del boceto" maxlength="80" style="flex:1;min-width:180px;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font-size:13px" aria-label="Nombre del boceto"><button class="btn terra" id="saveSketch" type="button">Guardar boceto ↗</button><button class="btn ghost" id="replaceSketch" type="button" hidden>Reemplazar el original</button><button class="btn ghost" id="newSketch" type="button">＋ Lienzo nuevo</button></div>
+        <p class="hint" id="sHelp">Al editar un boceto guardado, «Guardar» crea una copia nueva y el original no cambia. Si eliges reemplazarlo, la versión anterior se conserva y puedes recuperarla desde la galería.</p>
+      </div>
+      <aside><div class="gal-head"><span class="mono">Galería de bocetos</span><label class="att-btn">📷 Subir foto de boceto en papel<input type="file" id="paperIn" accept="image/*" multiple hidden></label></div><div class="gallery" id="gallery"></div></aside>
+    </div>
+  </section>
+  <section class="panel" id="pConcepts" role="tabpanel" aria-labelledby="tabConcepts" hidden>
+    <div class="concepts-intro"><div><div class="mono">✳ ¿Qué puedo crear con esto?</div><h2>Mis fichas de concepto</h2><p>Cada vez que usas el botón <b>✳ ¿Qué puedo crear con esto?</b> en una noticia, recurso, moodboard u objeto del día, tu trabajo se guarda aquí automáticamente. Ábrela para revisarla, sigue editándola o descárgala en PDF.</p></div><a class="btn terra" href="/#biblioteca">Buscar una referencia nueva ↗</a></div>
+    <div class="toolbar"><input id="cq" type="search" placeholder="Buscar en tus fichas…" aria-label="Buscar fichas"><span class="mono" id="cShown"></span></div>
+    <div class="concepts" id="concepts"></div>
+  </section>
+  <section class="panel" id="pDudas" role="tabpanel" aria-labelledby="tabDudas" hidden><div id="dudasRoot"></div></section>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/sketchpad.js"></script>
+<script src="/lab.js"></script>
+<script src="/explora-data.js"></script>
+<script src="/explora-species.js"></script>
+<script src="/explora.js"></script>
+<script>
+(()=>{
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const get=(k,f)=>{try{const v=localStorage.getItem(k);return v?JSON.parse(v):f}catch(e){return f}};
+const set=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){toast('No se pudo guardar: el almacenamiento del navegador está lleno o bloqueado');return false}};
+let tt;const toast=m=>{const t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('show'),2200)};
+const dateFmt=new Intl.DateTimeFormat('es-MX',{day:'numeric',month:'long',year:'numeric'});
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
+
+/* Tabs */
+const tabs=[['tabNotes','pNotes','#notas'],['tabSketch','pSketch','#bocetos'],['tabConcepts','pConcepts','#fichas'],['tabDudas','pDudas','#dudas']];
+function show(which){tabs.forEach(([t,p])=>{const on=t===which;$(t).setAttribute('aria-selected',on);$(p).hidden=!on});history.replaceState(null,'',tabs.find(x=>x[0]===which)[2])}
+tabs.forEach(([t])=>$(t).addEventListener('click',()=>show(t)));
+{const h=tabs.find(x=>x[2]===location.hash);if(h)show(h[0]);else if(/^#visita-/.test(location.hash))show('tabDudas')}
+
+/* Notes — shares the 'tdl-ideas' key with the library page.
+   A note can combine text, photos, palettes, sketches and the reference it came from. */
+const isImg=v=>typeof v==='string'&&/^data:image\/(jpeg|png|webp);base64,/.test(v);
+const normNote=n=>({...n,id:n.id||uid(),tags:Array.isArray(n.tags)?n.tags:[],images:Array.isArray(n.images)?n.images.filter(isImg):[],palettes:Array.isArray(n.palettes)?n.palettes.filter(p=>p&&Array.isArray(p.colors)):[],sketches:Array.isArray(n.sketches)?n.sketches.filter(x=>typeof x==='string'):[]});
+let ideas=get('tdl-ideas',[]);if(!Array.isArray(ideas))ideas=[];
+ideas=ideas.filter(n=>n&&typeof n.text==='string').map(normNote);
+if(ideas.some((n,i)=>!get('tdl-ideas',[])[i]?.id))set('tdl-ideas',ideas);
+let editing=null,activeTag=null;
+const blankDraft=()=>({images:[],palettes:[],sketches:[],source:null,prompt:''});
+let draft=blankDraft();
+const parseTags=s=>[...new Set(s.split(',').map(x=>x.trim().toLowerCase().replace(/^#/,'')).filter(Boolean))].slice(0,8);
+const safeUrl=u=>{try{const p=new URL(u,location.origin);return['http:','https:'].includes(p.protocol)?p.href:''}catch(e){return''}};
+const srcLink=s=>s&&s.label?`<a class="src-link" href="${esc(safeUrl(s.url||'')||'#')}">↳ Nació de: ${esc(TDX.KIND_LABEL[s.kind]||s.kind||'Referencia')} · ${esc(s.label)}</a>`:'';
+const palStrip=p=>`<div class="pal-strip" title="${esc(p.name||'Paleta')}"><span>${p.colors.map(c=>`<i style="background:${esc(c)}"></i>`).join('')}</span><small>${esc(p.name||'Paleta')}</small></div>`;
+function stats(){const tags=new Set(ideas.flatMap(n=>n.tags));$('sNotes').textContent=ideas.length;$('sTags').textContent=tags.size;$('sSketch').textContent=sketches.length;return tags}
+function renderNotes(){
+  const tags=stats(),q=$('q').value.trim().toLowerCase();
+  if(activeTag&&!tags.has(activeTag))activeTag=null;
+  $('tagFilter').innerHTML=tags.size?`<button class="tag ${activeTag?'':'active'}" data-tag="">Todas</button>`+[...tags].sort().map(t=>`<button class="tag ${t===activeTag?'active':''}" data-tag="${esc(t)}">#${esc(t)}</button>`).join(''):'';
+  const list=ideas.slice().reverse().filter(n=>(!activeTag||n.tags.includes(activeTag))&&(!q||[n.title,n.text,n.tags.join(' '),n.source?.label].join(' ').toLowerCase().includes(q)));
+  $('count').textContent=list.length+' / '+ideas.length;
+  $('notes').innerHTML=list.length?list.map(n=>{const sk=n.sketches.map(id=>sketches.find(s=>s.id===id)).filter(Boolean);const pics=[...n.images.map(src=>({src,alt:'Foto de la entrada'})),...sk.map(s=>({src:s.img,alt:'Boceto: '+s.title,sk:s.id}))];
+    return `<article class="note"><small class="mono">${esc(n.date||'')}</small>${n.title?`<h3>${esc(n.title)}</h3>`:''}${srcLink(n.source)}<p>${esc(n.text)}</p>${pics.length?`<div class="note-pics">${pics.map(p=>`<img src="${esc(p.src)}" alt="${esc(p.alt)}" loading="lazy" ${p.sk?`data-opensk="${p.sk}" title="Abrir boceto"`:''}>`).join('')}</div>`:''}${n.palettes.map(palStrip).join('')}${n.tags.length?`<div class="ntags">${n.tags.map(t=>`<span>#${esc(t)}</span>`).join('')}</div>`:''}${n.link?`<a href="${esc(n.link)}" target="_blank" rel="noopener noreferrer" style="font-size:12px;color:var(--terra)">Referencia ↗</a>`:''}<div class="acts"><button data-edit="${n.id}">Editar</button><button data-ndraw="${n.id}">✐ Dibujar para esta nota</button><button class="del" data-del="${n.id}">Eliminar ×</button></div></article>`}).join(''):`<div class="empty">${ideas.length?'Ninguna nota coincide con tu búsqueda.':'Todavía no tienes notas. Tu próxima idea empieza aquí.'}</div>`;
+}
+function renderAtt(){
+  const sk=draft.sketches.map(id=>sketches.find(s=>s.id===id)).filter(Boolean);
+  $('nSource').innerHTML=draft.source?`<div class="src-box"><div>${srcLink(draft.source)}${draft.prompt?`<p><b>Consigna:</b> ${esc(draft.prompt)}</p>`:''}</div><button type="button" class="x" data-rmsrc aria-label="Quitar referencia de origen">×</button></div>`:'';
+  $('nAtt').innerHTML=[...draft.images.map((src,i)=>`<figure class="att"><img src="${esc(src)}" alt="Foto ${i+1}"><button type="button" data-rmimg="${i}" aria-label="Quitar foto ${i+1}">×</button></figure>`),
+    ...sk.map(s=>`<figure class="att"><img src="${esc(s.img)}" alt="Boceto ${esc(s.title)}"><figcaption>${esc(s.title)}</figcaption><button type="button" data-rmsk="${s.id}" aria-label="Quitar boceto ${esc(s.title)}">×</button></figure>`),
+    ...draft.palettes.map((p,i)=>`<figure class="att pal">${palStrip(p)}<button type="button" data-rmpal="${i}" aria-label="Quitar paleta ${esc(p.name)}">×</button></figure>`)].join('');
+  saveComposerDraft();
+}
+const composerHasContent=()=>!!($('nText').value.trim()||$('nTitle').value.trim()||draft.images.length||draft.sketches.length||draft.palettes.length);
+let composerSaved=true;
+function saveComposerDraft(){composerSaved=false;try{if(!editing&&composerHasContent())localStorage.setItem('tdl-note-draft',JSON.stringify({title:$('nTitle').value,text:$('nText').value,tags:$('nTags').value,link:$('nLink').value,draft,at:Date.now()}));else if(!editing)localStorage.removeItem('tdl-note-draft')}catch(e){/* photos may not fit as a draft; the note itself still saves */}}
+function resetForm(){editing=null;$('noteForm').reset();draft=blankDraft();$('formLabel').textContent='Nueva nota';$('saveBtn').textContent='Guardar nota ↗';$('cancelEdit').hidden=true;renderAtt();composerSaved=true;try{localStorage.removeItem('tdl-note-draft')}catch(e){}}
+$('noteForm').addEventListener('submit',e=>{e.preventDefault();const text=$('nText').value.trim();if(!text&&!draft.images.length&&!draft.sketches.length){toast('Escribe una observación o añade una foto o boceto');return}
+  const rawLink=$('nLink').value.trim(),link=rawLink?safeUrl(rawLink):'';if(rawLink&&!link){toast('El enlace no es válido (usa http o https)');return}
+  const data={title:$('nTitle').value.trim(),text,tags:parseTags($('nTags').value),link,images:draft.images,palettes:draft.palettes,sketches:draft.sketches,source:draft.source,prompt:draft.prompt,updated:Date.now()};
+  const before=JSON.stringify(ideas);
+  if(editing){const n=ideas.find(x=>x.id===editing);if(n)Object.assign(n,data,{edited:dateFmt.format(new Date())})}else ideas.push({id:uid(),date:dateFmt.format(new Date()),...data});
+  if(set('tdl-ideas',ideas)){toast(editing?'Nota actualizada':'Nota guardada');resetForm();renderNotes()}else ideas=JSON.parse(before).map(normNote)});
+['nTitle','nText','nTags','nLink'].forEach(id=>$(id).addEventListener('input',saveComposerDraft));
+$('nText').addEventListener('keydown',e=>{if(e.key==='Enter'&&(e.ctrlKey||e.metaKey))$('noteForm').requestSubmit()});
+$('cancelEdit').addEventListener('click',resetForm);
+$('q').addEventListener('input',renderNotes);
+$('tagFilter').addEventListener('click',e=>{const b=e.target.closest('[data-tag]');if(!b)return;activeTag=b.dataset.tag||null;renderNotes()});
+$('nPhotos').addEventListener('change',async e=>{const fs=[...(e.target.files||[])].slice(0,6);e.target.value='';for(const f of fs){try{const r=await TDX.compressImage(f,1000,.72);draft.images.push(r.data)}catch(x){toast('No se pudo leer una de las fotos')}}renderAtt();if(fs.length)toast(fs.length===1?'Foto añadida a la entrada':fs.length+' fotos añadidas')});
+$('nAddPal').addEventListener('click',()=>{const ps=TDX.palettes.list();TDX.dialog({title:'Añadir una paleta',body:ps.length?`<div class="tdx-pick">${ps.map(p=>`<button type="button" data-p="${esc(p.id)}"><span class="pal-mini">${p.colors.map(c=>`<i style="background:${esc(c)}"></i>`).join('')}</span><b>${esc(p.name)}</b></button>`).join('')}</div>`:'<p class="tdx-muted">Aún no tienes paletas guardadas. Crea una en el <a href="/color">laboratorio de color</a>.</p>',onMount:d=>d.querySelectorAll('[data-p]').forEach(b=>b.onclick=()=>{const p=TDX.palettes.find(b.dataset.p);if(p&&!draft.palettes.some(x=>x.id===p.id))draft.palettes.push({id:p.id,name:p.name,colors:p.colors});renderAtt();d.close()})})});
+$('nAddSk').addEventListener('click',()=>{TDX.dialog({title:'Añadir bocetos de tu galería',wide:true,body:sketches.length?`<div class="sk-pick">${sketches.slice().reverse().map(s=>`<button type="button" data-s="${s.id}" aria-pressed="${draft.sketches.includes(s.id)}"><img src="${esc(s.img)}" alt=""><span>${esc(s.title)}</span></button>`).join('')}</div><div class="tdx-row end"><button class="tdx-btn" data-close>Listo</button></div>`:'<p class="tdx-muted">Aún no tienes bocetos. Dibuja uno en la pestaña Bocetos.</p>',onMount:d=>d.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>{const id=b.dataset.s;draft.sketches=draft.sketches.includes(id)?draft.sketches.filter(x=>x!==id):[...draft.sketches,id];b.setAttribute('aria-pressed',draft.sketches.includes(id));renderAtt()})})});
+$('nDraw').addEventListener('click',()=>{attachToNote='composer';sketchSource=draft.source;setPrompt(draft.prompt?{prompt:draft.prompt,source:draft.source}:null);show('tabSketch');toast('Dibuja y guarda: el boceto se añadirá a la nota que estás escribiendo')});
+$('noteForm').addEventListener('click',e=>{const t=e.target.closest('button');if(!t)return;
+  if(t.dataset.rmimg!=null){draft.images.splice(Number(t.dataset.rmimg),1);renderAtt()}
+  if(t.dataset.rmpal!=null){draft.palettes.splice(Number(t.dataset.rmpal),1);renderAtt()}
+  if(t.dataset.rmsk){draft.sketches=draft.sketches.filter(x=>x!==t.dataset.rmsk);renderAtt()}
+  if(t.hasAttribute('data-rmsrc')){draft.source=null;draft.prompt='';renderAtt()}});
+$('notes').addEventListener('click',e=>{
+  const d=e.target.closest('[data-del]'),ed=e.target.closest('[data-edit]'),dr=e.target.closest('[data-ndraw]'),os=e.target.closest('[data-opensk]');
+  if(os){openSketch(os.dataset.opensk);return}
+  if(d){if(!confirm('¿Eliminar esta nota? Los bocetos adjuntos siguen en tu galería.'))return;ideas=ideas.filter(n=>n.id!==d.dataset.del);if(editing===d.dataset.del)resetForm();set('tdl-ideas',ideas);renderNotes();toast('Nota eliminada')}
+  if(dr){const n=ideas.find(x=>x.id===dr.dataset.ndraw);if(!n)return;attachToNote=n.id;sketchSource={kind:'note',label:n.title||n.text.slice(0,50),url:'/cuaderno#notas'};setPrompt({prompt:n.title||n.text.slice(0,140),source:sketchSource});show('tabSketch');toast('El boceto se adjuntará a esta nota al guardarlo')}
+  if(ed){const n=ideas.find(x=>x.id===ed.dataset.edit);if(!n)return;editing=n.id;$('nTitle').value=n.title||'';$('nText').value=n.text;$('nTags').value=n.tags.join(', ');$('nLink').value=n.link||'';draft={images:[...n.images],palettes:[...n.palettes],sketches:[...n.sketches],source:n.source||null,prompt:n.prompt||''};renderAtt();composerSaved=true;$('formLabel').textContent='Editando nota';$('saveBtn').textContent='Guardar cambios ↗';$('cancelEdit').hidden=false;$('nText').focus();$('noteForm').scrollIntoView({behavior:TDX.reduced()?'auto':'smooth',block:'start'})}
+});
+window.addEventListener('storage',e=>{if(e.key==='tdl-ideas'){ideas=get('tdl-ideas',[]).filter(n=>n&&typeof n.text==='string').map(normNote);renderNotes()}});
+
+/* Sketches — reusable canvas with undo/redo, palettes, enlarge, photo underlay and PNG download.
+   Editing a saved sketch never overwrites it by accident: saving creates a copy; replacing keeps the previous version. */
+let sketches=get('tdl-sketches',[]);if(!Array.isArray(sketches))sketches=[];
+sketches=sketches.filter(s=>s&&s.id&&isImg(s.img));
+let editingSk=null,sessionOwned=false,sketchSource=null,sketchPrompt=null,attachToNote=null,savedAt=0,draftAt=0,draftTimer=0;
+const hm=t=>new Date(t).toLocaleTimeString('es-MX',{hour:'2-digit',minute:'2-digit'});
+const pad=Sketchpad($('pad'),{label:'Lienzo del cuaderno',onChange:()=>{renderSkState();clearTimeout(draftTimer);draftTimer=setTimeout(saveSkDraft,1200)},filename:()=>$('sTitle').value.trim()||'boceto'});
+function saveSkDraft(){if(!pad.isDirty())return;try{localStorage.setItem('tdl-sketch-draft',JSON.stringify({img:pad.snapshot(1000,750,.8),title:$('sTitle').value,editing:editingSk,owned:sessionOwned,source:sketchSource,prompt:sketchPrompt,note:attachToNote,at:Date.now()}));draftAt=Date.now()}catch(e){draftAt=0}renderSkState()}
+const clearSkDraft=()=>{try{localStorage.removeItem('tdl-sketch-draft')}catch(e){}draftAt=0};
+function renderSkState(){
+  const cur=editingSk&&sketches.find(s=>s.id===editingSk);
+  $('sMode').textContent=cur?(sessionOwned?'Editando: '+cur.title:'Editando una copia de «'+cur.title+'»'):'Boceto nuevo';
+  $('saveSketch').textContent=cur&&!sessionOwned?'Guardar como copia nueva ↗':cur?'Guardar cambios ↗':'Guardar boceto ↗';
+  $('replaceSketch').hidden=!(cur&&!sessionOwned);
+  const st=$('sState');
+  if(pad.isDirty()){st.dataset.s='dirty';st.textContent='● Cambios sin guardar'+(draftAt?' · borrador protegido en este navegador ('+hm(draftAt)+')':'')}
+  else if(savedAt){st.dataset.s='ok';st.textContent='✓ Guardado en tu galería a las '+hm(savedAt)}
+  else{st.dataset.s='';st.textContent=cur?'Sin cambios':'Lienzo en blanco'}
+}
+function setPrompt(p){sketchPrompt=p&&p.prompt?p.prompt:null;$('sPrompt').innerHTML=p&&(p.prompt||p.source)?`<div class="src-box prompt"><div><span class="mono">Consigna</span><p>${esc(p.prompt||'')}</p>${srcLink(p.source)}</div><button type="button" class="x" data-rmprompt aria-label="Quitar consigna">×</button></div>`:''}
+$('sPrompt').addEventListener('click',e=>{if(e.target.closest('[data-rmprompt]')){setPrompt(null);sketchSource=null}});
+function renderGallery(){stats();$('gallery').innerHTML=sketches.length?sketches.slice().reverse().map(s=>`<figure class="${s.id===editingSk?'editing':''}"><img src="${esc(s.img)}" alt="${esc(s.title)}" loading="lazy"><figcaption><span><strong>${esc(s.title)}</strong>${s.kind==='papel'?' <em class="chip">papel</em>':''}<br><small>${esc(s.date)}${s.edited?' · editado '+esc(s.edited):''}</small>${s.source?.label?`<br>${srcLink(s.source)}`:''}</span></figcaption><div class="g-acts"><button data-load="${s.id}">✐ Editar</button><a href="${esc(s.img)}" download="${esc(s.title)}.jpg">↓ Descargar</a><button data-attach="${s.id}">Adjuntar a…</button>${s.prev?`<button data-prev="${s.id}" title="Versión del ${esc(s.prevDate||'')}">↺ Versión anterior</button>`:''}<button class="del" data-sdel="${s.id}" aria-label="Eliminar ${esc(s.title)}">×</button></div></figure>`).join(''):'<div class="empty">Aún no hay bocetos guardados. Dibuja en el lienzo o sube la foto de un boceto en papel.</div>'}
+function persistSketches(){return set('tdl-sketches',sketches)}
+function linkToNote(id){if(!attachToNote)return;if(attachToNote==='composer'){if(!draft.sketches.includes(id))draft.sketches.push(id);renderAtt();toast('Boceto añadido a la nota en curso');show('tabNotes')}else{const n=ideas.find(x=>x.id===attachToNote);if(n&&!n.sketches.includes(id)){n.sketches.push(id);n.updated=Date.now();set('tdl-ideas',ideas);renderNotes()}}attachToNote=null}
+$('saveSketch').addEventListener('click',()=>{
+  const title=$('sTitle').value.trim()||'Boceto '+(sketches.length+1),img=pad.snapshot();
+  const cur=editingSk&&sketches.find(s=>s.id===editingSk);
+  if(cur&&sessionOwned){const old={...cur};Object.assign(cur,{title,img,updated:Date.now(),edited:dateFmt.format(new Date())});if(!persistSketches()){Object.assign(cur,old);return}}
+  else{const s={id:uid(),title:cur&&!$('sTitle').value.trim()?cur.title+' (copia)':title,date:dateFmt.format(new Date()),img,updated:Date.now(),kind:'dibujo',source:sketchSource||(cur?{kind:'sketch',label:cur.title,url:'/cuaderno#bocetos'}:null),prompt:sketchPrompt||undefined,parent:cur?cur.id:undefined};
+    sketches.push(s);if(!persistSketches()){sketches.pop();return}editingSk=s.id;sessionOwned=true;$('sTitle').value=s.title;linkToNote(s.id);if(s.source&&s.source.ref&&['quest','bio'].includes(s.source.kind)&&TDX.attach({kind:s.source.kind,id:s.source.ref},{kind:'sketch',id:s.id,img:s.img,title:s.title}))toast('Boceto guardado y unido a «'+s.source.label+'»')}
+  pad.markClean();clearSkDraft();savedAt=Date.now();renderGallery();renderSkState();renderNotes();toast(cur&&!sessionOwned?'Copia guardada':'Boceto guardado en tu galería')});
+$('replaceSketch').addEventListener('click',()=>{const cur=sketches.find(s=>s.id===editingSk);if(!cur)return;
+  if(!confirm(`¿Reemplazar «${cur.title}» con lo que hay en el lienzo?\n\nLa versión actual se conserva como «versión anterior» y puedes recuperarla desde la galería.`))return;
+  const old={...cur};Object.assign(cur,{prev:cur.img,prevDate:cur.edited||cur.date,img:pad.snapshot(),title:$('sTitle').value.trim()||cur.title,updated:Date.now(),edited:dateFmt.format(new Date())});
+  if(!persistSketches()){Object.assign(cur,old);return}sessionOwned=true;pad.markClean();clearSkDraft();savedAt=Date.now();renderGallery();renderSkState();toast('Boceto reemplazado; la versión anterior quedó guardada')});
+function confirmDiscard(){return !pad.isDirty()||confirm('Tienes cambios sin guardar en el lienzo. ¿Descartarlos?')}
+$('newSketch').addEventListener('click',()=>{if(!confirmDiscard())return;pad.clear();editingSk=null;sessionOwned=false;savedAt=0;$('sTitle').value='';setPrompt(null);sketchSource=null;attachToNote=null;clearSkDraft();renderSkState();renderGallery()});
+async function openSketch(id){const s=sketches.find(x=>x.id===id);if(!s)return;if(!confirmDiscard())return;show('tabSketch');await pad.load(s.img);editingSk=s.id;sessionOwned=false;savedAt=0;$('sTitle').value=s.title;sketchSource=s.source||null;setPrompt(s.prompt||s.source?{prompt:s.prompt,source:s.source}:null);clearSkDraft();renderSkState();renderGallery();$('pad').scrollIntoView({behavior:TDX.reduced()?'auto':'smooth',block:'start'});toast('Boceto abierto. Al guardar se crea una copia; el original no cambia.')}
+$('gallery').addEventListener('click',e=>{const l=e.target.closest('[data-load]'),d=e.target.closest('[data-sdel]'),a=e.target.closest('[data-attach]'),pv=e.target.closest('[data-prev]');
+  if(l)openSketch(l.dataset.load);
+  if(a){const s=sketches.find(x=>x.id===a.dataset.attach);if(s)TDX.pickAttachTarget({kind:'sketch',id:s.id,img:s.img,title:s.title},{done:()=>{ideas=get('tdl-ideas',[]).filter(n=>n&&typeof n.text==='string').map(normNote);renderNotes();renderConcepts()}})}
+  if(pv){const s=sketches.find(x=>x.id===pv.dataset.prev);if(!s||!confirm('¿Recuperar la versión anterior? La versión actual pasará a ser la «anterior», así que no se pierde ninguna.'))return;[s.img,s.prev]=[s.prev,s.img];s.updated=Date.now();if(persistSketches()){renderGallery();toast('Versión anterior recuperada')}}
+  if(d){const s=sketches.find(x=>x.id===d.dataset.sdel);if(!s||!confirm(`¿Eliminar «${s.title}»? No se puede deshacer.`))return;sketches=sketches.filter(x=>x.id!==s.id);if(editingSk===s.id){editingSk=null;sessionOwned=false}persistSketches();renderGallery();renderSkState();renderNotes()}});
+$('paperIn').addEventListener('change',async e=>{const fs=[...(e.target.files||[])].slice(0,6);e.target.value='';let n=0;for(const f of fs){try{const r=await TDX.compressImage(f,1400,.78);sketches.push({id:uid(),title:(f.name||'Boceto en papel').replace(/\.[a-z0-9]+$/i,'').slice(0,80),date:dateFmt.format(new Date()),img:r.data,kind:'papel',updated:Date.now(),source:sketchSource||undefined});if(persistSketches())n++;else{sketches.pop();break}}catch(x){toast('No se pudo leer una de las fotos')}}if(n){renderGallery();toast(n===1?'Foto del boceto guardada en tu galería':n+' fotos guardadas en tu galería')}});
+// Recover a draft left by a closed tab.
+(()=>{const d=get('tdl-sketch-draft',null);if(!d||!isImg(d.img))return;$('sDraft').innerHTML=`<div class="src-box warn"><div><b>Tienes un boceto sin guardar</b><p>Del ${esc(dateFmt.format(new Date(d.at)))} a las ${esc(hm(d.at))}${d.title?' · «'+esc(d.title)+'»':''}.</p></div><div class="row"><button type="button" class="btn" data-rec>Recuperar</button><button type="button" class="btn ghost" data-disc>Descartar</button></div></div>`;
+  $('sDraft').querySelector('[data-rec]').onclick=async()=>{await pad.load(d.img,true);editingSk=d.editing&&sketches.some(s=>s.id===d.editing)?d.editing:null;sessionOwned=!!d.owned;$('sTitle').value=d.title||'';sketchSource=d.source||null;attachToNote=d.note||null;setPrompt(d.prompt||d.source?{prompt:d.prompt,source:d.source}:null);draftAt=d.at;$('sDraft').innerHTML='';show('tabSketch');renderSkState();toast('Borrador recuperado. Guárdalo para conservarlo en tu galería.')};
+  $('sDraft').querySelector('[data-disc]').onclick=()=>{if(!confirm('¿Descartar este borrador?'))return;clearSkDraft();$('sDraft').innerHTML=''};
+  if(location.hash!=='#bocetos'&&location.hash!=='#notas')$('tabSketch').insertAdjacentHTML('beforeend',' <span class="tab-count">1</span>')})();
+// Recover the note being written.
+(()=>{const d=get('tdl-note-draft',null);if(!d||!(d.text||d.title||d.draft?.images?.length))return;$('nTitle').value=d.title||'';$('nText').value=d.text||'';$('nTags').value=d.tags||'';$('nLink').value=d.link||'';draft={...blankDraft(),...(d.draft||{})};composerSaved=false;renderAtt();composerSaved=false;$('nHint').textContent='Recuperamos la nota que estabas escribiendo. Guárdala o pulsa Cancelar para descartarla.';$('cancelEdit').hidden=false})();
+// Accidental close protection.
+window.addEventListener('beforeunload',e=>{if(pad.isDirty()){saveSkDraft()}if(pad.isDirty()||(!composerSaved&&composerHasContent())){e.preventDefault();e.returnValue=''}});
+window.addEventListener('storage',e=>{if(e.key==='tdl-sketches'){sketches=get('tdl-sketches',[]).filter(s=>s&&s.id&&isImg(s.img));renderGallery();renderNotes()}});
+// File inputs inside labels: make them reachable with the keyboard.
+document.querySelectorAll('label.att-btn').forEach(l=>{l.tabIndex=0;l.setAttribute('role','button');l.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();l.querySelector('input').click()}})});
+
+/* Handoff from Color, Citas creativas, Bitácora silvestre and moodboards: keeps the prompt and the original reference. */
+(()=>{const h=get('tdl-handoff',null);if(!h||Date.now()-(h.at||0)>30*60000)return;try{localStorage.removeItem('tdl-handoff')}catch(e){}
+  const source={kind:h.kind,label:h.label,url:h.url||'',ref:h.ref||''},pal=Array.isArray(h.colors)&&h.colors.length?{id:'ref-'+(h.ref||uid()),name:h.label||'Paleta',colors:h.colors.slice(0,6)}:null;
+  if(h.tab==='bocetos'){sketchSource=source;setPrompt({prompt:h.prompt,source});$('sTitle').value=(h.label||'').slice(0,80);if(pal)pad.setColor(pal.colors[0]);show('tabSketch');renderSkState();toast('Consigna abierta en el lienzo. Al guardar, el boceto recordará su origen.');return}
+  if(composerHasContent()&&!confirm('Tienes una nota sin guardar. ¿Reemplazarla por esta nueva referencia?'))return;
+  resetForm();draft.source=source;draft.prompt=h.prompt||'';if(pal)draft.palettes.push(pal);
+  $('nTitle').value=(h.label||'').slice(0,120);$('nText').value=h.prompt?h.prompt+'\n\n':'';$('nTags').value=({palette:'color',quest:'cita creativa',bio:'naturaleza',lesson:'color'}[h.kind]||'');
+  renderAtt();show('tabNotes');$('nText').focus();$('nText').setSelectionRange($('nText').value.length,$('nText').value.length);toast('Referencia lista en una nota nueva');})();
+TDX.mountStatus($('saveState'));
+renderSkState();
+
+/* Concept cards created with the creative lab */
+const STEP_KEYS=['observe','reinterpret','create','develop','connect'];
+function renderConcepts(){
+  const all=Lab.list(),q=$('cq').value.trim().toLowerCase();
+  $('cCount').textContent=all.length;$('sConcepts').textContent=all.length;
+  const list=all.filter(c=>!q||JSON.stringify([c.develop,c.source?.title,c.create?.name]).toLowerCase().includes(q));
+  $('cShown').textContent=list.length+' / '+all.length;
+  $('concepts').innerHTML=list.length?list.map(c=>{const name=Lab.nameOf(c),thumb=c.create?.sketches?.[0]||c.create?.images?.[0]||'';const done=Lab.progress(c);
+    return `<article class="concept"><div class="cthumb">${thumb?`<img src="${esc(thumb)}" alt="">`:'✳'}</div><div class="cbody"><small class="mono">${esc(c.source?.kind||'')} · ${esc(dateFmt.format(new Date(c.updated||c.created)))}</small><h3>${esc(name)}</h3><p>Inspiración: ${esc(c.source?.title||'—')}</p><div class="cprog" title="${done} de 5 pasos">${STEP_KEYS.map((k,i)=>`<i class="${i<done?'on':''}"></i>`).join('')}</div><div class="acts"><button class="primary" data-cview="${c.id}">Abrir</button><button data-cedit="${c.id}">Editar</button><button data-cpdf="${c.id}">PDF ↓</button><button data-duda="${esc(JSON.stringify({topic:'Otros',ref:{kind:'Ficha',label:name,url:'/cuaderno#fichas'}}))}">＋ Duda</button><button class="del" data-cdel="${c.id}">Borrar ×</button></div></div></article>`}).join(''):`<div class="empty" style="grid-column:1/-1">${all.length?'Ninguna ficha coincide con tu búsqueda.':'Todavía no tienes fichas. Abre la biblioteca y pulsa <b>✳ ¿Qué puedo crear con esto?</b> en cualquier noticia, recurso o moodboard.'}</div>`;
+}
+$('cq').addEventListener('input',renderConcepts);
+$('concepts').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+  if(b.dataset.cview)Lab.preview(b.dataset.cview);
+  if(b.dataset.cedit)Lab.edit(b.dataset.cedit);
+  if(b.dataset.cpdf)Lab.pdf(b.dataset.cpdf);
+  if(b.dataset.cdel){if(!confirm('¿Borrar esta ficha de concepto? No se puede deshacer.'))return;Lab.remove(b.dataset.cdel);toast('Ficha borrada')}});
+document.addEventListener('lab:change',renderConcepts);
+window.addEventListener('storage',e=>{if(e.key==='tdl-concepts')renderConcepts()});
+renderNotes();renderGallery();renderConcepts();
+})();
+</script>
+<script src="/calendar.js"></script>
+<script src="/dudas.js"></script>
+</body>
+</html>

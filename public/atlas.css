@@ -1,0 +1,56 @@
+/* VISUAL ATLAS tools + Inspiration DNA. Reuses .gym-block / .gc-* from gym.css. */
+.pal-layout{display:grid;grid-template-columns:.9fr 1.3fr;gap:16px;margin-bottom:8px}
+.pal-drop{min-height:240px;border:2px dashed color-mix(in srgb,var(--g) 45%,#fff);border-radius:14px;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:20px;cursor:pointer;overflow:hidden;transition:background .2s}
+.pal-drop:hover,.pal-drop.over{background:color-mix(in srgb,var(--g) 10%,#fff)}
+.pal-drop img{max-width:100%;max-height:300px;border-radius:10px;display:block}
+.pal-drop strong{font:400 28px 'Instrument Serif',Georgia,serif}.pal-drop small{font-size:12px;color:#6e766e;max-width:260px;line-height:1.5}.pal-icon{font-size:40px}
+.pal-result{background:#fff;border-radius:14px;padding:18px;border:1px solid #ece5d6}
+.pal-sw{display:flex;gap:6px;margin:14px 0 4px;height:150px}
+.pal-sw button{flex:1;border:0;border-radius:10px;background:var(--c);display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:10px;cursor:pointer;transition:transform .2s;font-family:'DM Mono',monospace}
+.pal-sw button:hover{transform:translateY(-4px)}.pal-sw b{font-size:12px;font-weight:500}.pal-sw small{font-size:10px;opacity:.85}
+.pal-save{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.pal-save input{flex:1 1 220px;border:1px solid #d9d4c6;border-radius:999px;padding:10px 14px;font:13px 'Hanken Grotesk',sans-serif}
+.pal-saved{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.pal-saved article{background:#fff;border-radius:12px;overflow:hidden;border:1px solid #ece5d6;display:flex;flex-direction:column}
+.pal-saved img{width:100%;height:90px;object-fit:cover;display:block}
+.pal-bar{display:flex;height:34px}.pal-bar button{flex:1;border:0;cursor:pointer;padding:0}
+.pal-meta{padding:8px 12px 0}.pal-meta strong{display:block;font:400 20px 'Instrument Serif',serif}.pal-meta small{font:10px 'DM Mono',monospace;color:#6e766e}
+.pal-acts{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:8px 12px 12px}.pal-acts>button:not(.lab-trigger){border:1px solid #193b32;background:none;border-radius:999px;padding:6px 10px;font-size:11px;cursor:pointer}.pal-acts .del{border-color:#b8674f!important;color:#b8674f}
+.pal-acts .lab-trigger{padding:6px 10px;font-size:11px}
+.mat-tools{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;margin-bottom:14px}
+.mat-cats{display:flex;flex-wrap:wrap;gap:6px}.mat-cats button{border:1px solid #cfd8cf;background:#fff;border-radius:999px;padding:8px 14px;font-size:13px;cursor:pointer}.mat-cats button[aria-pressed=true]{background:var(--g);border-color:var(--g);color:#fff}
+.mat-tools input{flex:0 1 300px;border:1px solid #d9d4c6;border-radius:999px;padding:10px 14px;font:13px 'Hanken Grotesk',sans-serif}
+.mat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.mat-card{--mc:#2f6b55;background:#fff;border-radius:14px;padding:18px;border:1px solid #ece5d6;border-top:6px solid var(--mc);display:flex;flex-direction:column;gap:8px}
+.mat-card[data-c=Madera]{--mc:#a8743f}.mat-card[data-c=Metales]{--mc:#6f7f8f}.mat-card[data-c=Tableros]{--mc:#c98f2c}.mat-card[data-c=Plásticos]{--mc:#547ca2}.mat-card[data-c=Textiles]{--mc:#8c5a8a}.mat-card[data-c=Acabados]{--mc:#b8674f}
+.mat-card .gc-tag{background:var(--mc)}
+.mat-top{display:flex;justify-content:space-between;align-items:center}
+.mat-fav{border:0;background:none;font-size:22px;color:#b8674f;cursor:pointer;line-height:1}
+.mat-card h4{font:400 30px/1 'Instrument Serif',Georgia,serif!important;color:#193b32!important;text-transform:none!important;letter-spacing:0!important;margin:4px 0 0!important}
+.mat-tip{font-size:13px;font-style:italic;color:#56605a;margin:0}
+.mat-card dl{margin:0;font-size:13px;line-height:1.5}.mat-card dt{font:10px 'DM Mono',monospace;letter-spacing:1.4px;text-transform:uppercase;color:var(--mc);margin-top:8px}.mat-card dd{margin:3px 0 0}.mat-card ul{margin:0;padding-left:16px}
+.mat-cost{font:600 14px 'DM Mono',monospace;color:#193b32;margin-right:4px}.mat-cost i{font-style:normal;color:#d9d4c6}
+.mat-card .lab-trigger{margin-top:auto}
+.dna{display:flex;flex-direction:column;gap:14px}
+.dna-hero{display:grid;grid-template-columns:1.4fr 1fr;gap:20px;align-items:center;padding:26px;border-radius:18px;background:linear-gradient(115deg,#f4e3d7,#efe7c9 50%,#dfe7da)}
+.dna-hero .gc-tag{--g:#6d4a48}.dna-hero h3{font:400 clamp(32px,4vw,52px)/1 'Instrument Serif',Georgia,serif;margin:10px 0}
+.dna-line{font:italic 20px/1.4 'Instrument Serif',Georgia,serif;margin:0;color:#4d3a38}
+.dna-strand{display:flex;justify-content:center;gap:6px;height:150px;align-items:center}
+.dna-strand i{width:22px;border-radius:999px;background:var(--c);height:calc(60px + 60px * var(--s,0));animation:dnaWave 3s ease-in-out infinite;animation-delay:calc(var(--d) * -.35s);box-shadow:0 6px 14px rgba(0,0,0,.08)}
+@keyframes dnaWave{0%,100%{height:50px}50%{height:140px}}
+.dna-counts{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.dna-counts a{background:#fff;border:1px solid #ece5d6;border-radius:12px;padding:12px 14px;display:flex;flex-direction:column}
+.dna-counts a:hover{border-color:#6d4a48}.dna-counts b{font:400 38px/1 'Instrument Serif',serif;color:#6d4a48}.dna-counts span{font:10px 'DM Mono',monospace;letter-spacing:1.2px;text-transform:uppercase;margin-top:4px}
+.dna-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dna-card{background:#fff;border:1px solid #ece5d6;border-radius:14px;padding:18px}
+.dna-card h4{font:400 28px 'Instrument Serif',Georgia,serif;margin:0 0 12px}
+.dna-colors{display:flex;height:110px;border-radius:10px;overflow:hidden}
+.dna-colors button{border:0;background:var(--c);min-width:34px;display:flex;align-items:flex-end;padding:8px;cursor:pointer;font:10px 'DM Mono',monospace}
+.dna-colors button b{font-weight:500;writing-mode:vertical-rl;transform:rotate(180deg)}
+.dna-bars{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.dna-bars li{display:grid;grid-template-columns:minmax(90px,38%) 1fr 26px;gap:10px;align-items:center;font-size:13px}
+.dna-k{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dna-track{height:12px;border-radius:6px;background:#f1ece0;overflow:hidden}.dna-track i{display:block;height:100%;border-radius:6px}
+.dna-bars b{font:500 12px 'DM Mono',monospace;text-align:right}
+@media(max-width:900px){.pal-layout,.dna-hero,.dna-grid{grid-template-columns:1fr}.dna-counts{grid-template-columns:repeat(3,1fr)}.dna-strand{height:100px}}
+@media(max-width:520px){.dna-counts{grid-template-columns:1fr 1fr}.pal-sw{height:110px}}
+@media(prefers-reduced-motion:reduce){.dna-strand i{animation:none;height:110px}}

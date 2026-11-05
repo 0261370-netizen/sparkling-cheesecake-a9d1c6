@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1f3a30">
+<meta name="description" content="Laboratorio de color: rueda interactiva, armonías, paleta del día, extraer paletas de fotos, lecciones, psicología del color y comprobador de contraste WCAG.">
+<title>Laboratorio de color · Creative Gym · The Design Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/lab.css">
+<link rel="stylesheet" href="/explora.css">
+<script src="/cloud.js"></script>
+</head>
+<body class="tdx-page">
+<a class="tdx-skip" href="#main">Saltar al contenido</a>
+<header class="tdx-top"><a class="brand" href="/">the design <em>library.</em></a><span data-cloud-slot></span><a class="back" href="/#gym">← Creative Gym</a></header>
+<nav class="tdx-sub" aria-label="Exploración creativa"><a href="/color" aria-current="page">◐ Laboratorio de color</a><a href="/citas">✦ Citas creativas</a><a href="/bio">❦ Bitácora silvestre</a><a href="/cuaderno">✎ Cuaderno</a><a href="/#gym">← Creative Gym</a></nav>
+<main class="tdx-wrap" id="main">
+<section class="tdx-hero" aria-labelledby="pageTitle">
+  <div class="tdx-eyebrow">✦ Creative Gym · Laboratorio de color</div>
+  <h1 id="pageTitle">El color <em>se aprende mirando.</em></h1>
+  <p>Elige un color en la rueda, mira por qué funcionan sus armonías, bloquea los que te gustan y genera otras combinaciones. Después pruébalas en un cartel, un objeto o un interior y guárdalas con tus moodboards, notas y fichas.</p>
+  <nav class="tdx-toc" aria-label="En esta página"><a href="#estudio">Rueda y armonías</a><a href="#dia">Paleta del día</a><a href="#foto">Desde una foto</a><a href="#probar">Probar en una composición</a><a href="#mis-paletas">Mis paletas</a><a href="#lecciones">Lecciones</a><a href="#psicologia">Psicología del color</a><a href="#ejercicios">Ejercicios</a><a href="#contraste">Contraste WCAG</a></nav>
+  <div id="saveState"></div>
+</section>
+
+<section class="tdx-sec" id="estudio" aria-labelledby="hStudio">
+  <header><div><div class="tdx-eyebrow">01 · Estudio</div><h2 id="hStudio">Rueda y armonías</h2></div><p>Arrastra el punto grande o usa las flechas del teclado sobre la rueda (← → matiz, ↑ ↓ saturación). Toca una muestra para editarla; el candado la conserva cuando generas otra combinación.</p></header>
+  <div class="cl-studio tdx-card">
+    <div>
+      <div class="cl-wheel-box" id="wheelBox"></div>
+      <p class="cl-hint" id="wheelHint"></p>
+    </div>
+    <div>
+      <div class="cl-harm" role="group" aria-label="Tipo de armonía" id="harmBtns"></div>
+      <div class="cl-why" id="why" aria-live="polite"></div>
+      <div class="cl-swatches" id="swatches" role="list" aria-label="Colores de la combinación"></div>
+      <div class="cl-sliders" id="sliders"></div>
+      <div class="cl-hex"><label class="tdx-lbl">HEX del color elegido<input id="hexIn" maxlength="7" autocomplete="off" spellcheck="false" aria-describedby="hexHelp"></label><button class="tdx-btn ghost" type="button" id="copyHex">Copiar HEX</button><button class="tdx-btn ghost" type="button" id="copyAll">Copiar paleta</button><button class="tdx-btn terra" type="button" id="regen" title="Atajo: barra espaciadora">↻ Nueva combinación</button></div>
+      <p class="tdx-muted" id="hexHelp" style="margin:6px 0 0">Escribe un código como #B65A3C y pulsa Enter. La barra espaciadora genera otra combinación respetando los colores con candado.</p>
+      <form class="tdx-inline" id="saveForm"><label class="tdx-lbl">Nombre de la paleta<input id="palName" maxlength="60" placeholder="Ej.: Terracota de sobremesa" required></label><button class="tdx-btn">♡ Guardar paleta</button></form>
+    </div>
+  </div>
+</section>
+
+<section class="tdx-sec" id="dia" aria-labelledby="hDay">
+  <header><div><div class="tdx-eyebrow">02 · Cada día</div><h2 id="hDay">La paleta del día</h2></div><p>Se mantiene durante todo el día (hora de Ciudad de México) y cambia a medianoche. Puedes explorar otras sin perderla.</p></header>
+  <div id="daily"></div>
+</section>
+
+<section class="tdx-sec" id="foto" aria-labelledby="hPhoto">
+  <header><div><div class="tdx-eyebrow">03 · Desde una foto</div><h2 id="hPhoto">Extrae una paleta</h2></div><p>La foto se procesa en tu navegador; no se sube a ningún servidor. Solo se guarda una miniatura si guardas la paleta.</p></header>
+  <div class="cl-photo tdx-card">
+    <div class="cl-drop" id="drop" tabindex="0" role="button" aria-label="Subir una foto para extraer su paleta"><span style="font-size:34px" aria-hidden="true">📷</span><strong>Sube o arrastra una foto</strong><small class="tdx-muted">JPG, PNG o la cámara del teléfono</small></div>
+    <input type="file" id="photoIn" accept="image/*" hidden>
+    <div id="photoOut"><div class="tdx-empty"><b>Tu foto, en cinco colores</b><span>Prueba con una hoja, un mercado, una pared o un material que te guste.</span></div></div>
+  </div>
+</section>
+
+<section class="tdx-sec" id="probar" aria-labelledby="hComp">
+  <header><div><div class="tdx-eyebrow">04 · Aplicar</div><h2 id="hComp">Probar en una composición</h2></div><p>La misma paleta cambia según cuánto ocupa cada color. Mueve las proporciones o rota los colores.</p></header>
+  <div class="cl-comp tdx-card">
+    <div><div class="cl-comp-tabs" role="tablist" aria-label="Composición"><button role="tab" aria-selected="true" data-comp="cartel">Cartel</button><button role="tab" aria-selected="false" data-comp="objeto">Objeto</button><button role="tab" aria-selected="false" data-comp="interior">Interior</button></div><div id="compArt"></div></div>
+    <div class="cl-props"><div class="tdx-eyebrow" style="margin-bottom:10px">Proporciones</div><div id="props"></div><div class="tdx-row"><button class="tdx-act" type="button" id="rotate">↻ Rotar colores</button><button class="tdx-act" type="button" id="p603010">60 / 30 / 10</button><button class="tdx-act" type="button" id="pEqual">Partes iguales</button></div><p class="tdx-muted" id="compNote"></p></div>
+  </div>
+</section>
+
+<section class="tdx-sec" id="mis-paletas" aria-labelledby="hSaved">
+  <header><div><div class="tdx-eyebrow">05 · Lo tuyo</div><h2 id="hSaved">Mis paletas</h2></div><p>Incluye las que guardaste desde «Paleta desde mis fotos». Relaciónalas con moodboards, notas o fichas de concepto.</p></header>
+  <div class="cl-saved" id="saved"></div>
+</section>
+
+<section class="tdx-sec" id="lecciones" aria-labelledby="hLessons">
+  <header><div><div class="tdx-eyebrow">06 · Aprender</div><h2 id="hLessons">Lecciones breves</h2></div><p>Cada ejemplo usa el color que elegiste en la rueda, así que cambia contigo.</p></header>
+  <div class="cl-lessons" id="lessons"></div>
+</section>
+
+<section class="tdx-sec" id="psicologia" aria-labelledby="hPsy">
+  <header><div><div class="tdx-eyebrow">07 · Contexto</div><h2 id="hPsy">Psicología del color aplicada al diseño</h2></div></header>
+  <div class="cl-psy-note"><b>Antes de empezar:</b> no hay significados universales del color. Las asociaciones que siguen aparecen con frecuencia en estudios, pero su interpretación depende del contexto, la cultura, la experiencia personal, el material, la cantidad y lo que rodea al color. Úsalas como preguntas para tu diseño, no como reglas.</div>
+  <div class="cl-psy" id="psy"></div>
+  <details class="tdx-card" style="margin-top:14px"><summary><b>Fuentes</b></summary><ul class="cl-src" id="sources"></ul></details>
+</section>
+
+<section class="tdx-sec" id="ejercicios" aria-labelledby="hEx">
+  <header><div><div class="tdx-eyebrow">08 · Practicar</div><h2 id="hEx">Ejercicios</h2></div><p>Algunos se comprueban con la paleta que tienes en el estudio. No hay calificaciones: es una pista para seguir.</p></header>
+  <div class="cl-ex" id="exercises"></div>
+</section>
+
+<section class="tdx-sec" id="contraste" aria-labelledby="hContrast">
+  <header><div><div class="tdx-eyebrow">09 · Accesibilidad</div><h2 id="hContrast">Comprobador de contraste</h2></div><p>Según WCAG 2.2: AA pide 4.5:1 para texto normal y 3:1 para texto grande (24 px, o 18.5 px en negrita) y componentes. AAA pide 7:1 y 4.5:1.</p></header>
+  <div class="cl-contrast tdx-card">
+    <div><div class="tdx-row"><label class="tdx-lbl" style="flex:1">Texto<input type="color" id="fgPick" value="#1d2b25"></label><label class="tdx-lbl" style="flex:2">HEX del texto<input id="fgHex" value="#1D2B25" maxlength="7"></label></div>
+      <div class="tdx-row"><label class="tdx-lbl" style="flex:1">Fondo<input type="color" id="bgPick" value="#ecd9a6"></label><label class="tdx-lbl" style="flex:2">HEX del fondo<input id="bgHex" value="#ECD9A6" maxlength="7"></label></div>
+      <button class="tdx-act" type="button" id="swapC">⇅ Intercambiar</button>
+      <div class="tdx-eyebrow" style="margin-top:14px">Parejas de tu paleta actual</div><div class="cl-pairs" id="pairs"></div></div>
+    <div><div class="cl-preview" id="preview"><span class="big">Diseña lo que no existe.</span><span class="small">Texto de párrafo para comprobar la lectura en tamaño normal.</span></div><div class="cl-ratio" id="ratio" aria-live="polite"></div><div class="cl-wcag" id="wcag"></div></div>
+  </div>
+</section>
+
+</main>
+<script src="/sketchpad.js" defer></script>
+<script src="/lab.js" defer></script>
+<script src="/explora-data.js" defer></script>
+<script src="/explora.js" defer></script>
+<script src="/calendar.js" defer></script>
+<script src="/color.js" defer></script>
+</body>
+</html>

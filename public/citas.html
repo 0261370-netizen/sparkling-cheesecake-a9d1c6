@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1f3a30">
+<meta name="description" content="Citas creativas y sidequests: una propuesta diaria, Sorpréndeme y filtros por tiempo, lugar, presupuesto, energía y enfoque.">
+<title>Citas creativas · Creative Gym · The Design Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/lab.css">
+<link rel="stylesheet" href="/explora.css">
+<script src="/cloud.js"></script>
+</head>
+<body class="tdx-page">
+<a class="tdx-skip" href="#main">Saltar al contenido</a>
+<header class="tdx-top"><a class="brand" href="/">the design <em>library.</em></a><span data-cloud-slot></span><a class="back" href="/#gym">← Creative Gym</a></header>
+<nav class="tdx-sub" aria-label="Exploración creativa"><a href="/color">◐ Laboratorio de color</a><a href="/citas" aria-current="page">✦ Citas creativas</a><a href="/bio">❦ Bitácora silvestre</a><a href="/cuaderno">✎ Cuaderno</a><a href="/#gym">← Creative Gym</a></nav>
+<main class="tdx-wrap" id="main">
+<section class="tdx-hero" aria-labelledby="pageTitle">
+  <div class="tdx-eyebrow">✦ Creative Gym · Citas creativas y sidequests</div>
+  <h1 id="pageTitle">Pequeñas aventuras <em>para mirar distinto.</em></h1>
+  <p>Una cita contigo para alimentar la curiosidad: un lugar, un rato, una misión y algo que llevar al cuaderno. Inspirado en la idea de las citas con el artista de Julia Cameron (<i>El camino del artista</i>); todas las propuestas son originales.</p>
+  <p class="tdx-muted" style="max-width:620px"><b>Sin obligaciones:</b> aquí no hay rachas ni penalizaciones. Puedes leer, guardar para después o simplemente inspirarte sin completar nada. No usamos tu ubicación: los lugares son tipos de espacio, no establecimientos concretos.</p>
+  <div id="saveState"></div>
+</section>
+<section class="tdx-sec" id="hoy" aria-labelledby="hToday">
+  <header><div><div class="tdx-eyebrow" id="cardEyebrow">La cita de hoy</div><h2 id="hToday">Tu propuesta</h2></div><p>La cita del día se mantiene hasta medianoche. «Sorpréndeme» elige otra que encaje con tus filtros y evita las que viste hace poco.</p></header>
+  <div class="qx-layout">
+    <div>
+      <div class="qx-filters" id="filters" aria-label="Filtros"></div>
+      <div id="card" aria-live="polite"></div>
+    </div>
+    <aside class="qx-side"><div class="tdx-card"><div class="tdx-eyebrow">Coinciden con tus filtros</div><p id="countTxt" class="tdx-muted" style="margin:6px 0 10px"></p><div id="matches" class="qx-list" style="grid-template-columns:1fr"></div></div></aside>
+  </div>
+</section>
+<section class="tdx-sec" id="mis-citas" aria-labelledby="hMine">
+  <header><div><div class="tdx-eyebrow">Lo tuyo</div><h2 id="hMine">Mis aventuras</h2></div><p>Las que guardaste para después y las que hiciste, con lo que trajiste y tu reflexión.</p></header>
+  <div class="qx-kind" role="tablist" aria-label="Mis aventuras"><button class="tdx-act" role="tab" data-mine="saved" aria-selected="true">Guardadas</button><button class="tdx-act" role="tab" data-mine="done" aria-selected="false">Realizadas</button></div>
+  <div id="mine" class="qx-list"></div>
+</section>
+
+</main>
+<script src="/sketchpad.js" defer></script>
+<script src="/lab.js" defer></script>
+<script src="/explora-data.js" defer></script>
+<script src="/explora.js" defer></script>
+<script src="/calendar.js" defer></script>
+<script src="/citas.js" defer></script>
+</body>
+</html>
