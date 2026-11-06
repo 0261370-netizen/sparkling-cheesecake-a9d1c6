@@ -248,6 +248,7 @@ h1,h2,h3,strong{font-synthesis:none}
 <link rel="stylesheet" href="/atlas.css">
 <link rel="stylesheet" href="/explora.css">
 <link rel="stylesheet" href="/mesa.css">
+<link rel="stylesheet" href="/moodlab.css">
 <script src="/cloud.js"></script>
 </head>
 <body>
@@ -264,15 +265,16 @@ h1,h2,h3,strong{font-synthesis:none}
     <a href="#cartas"><span class="nav-number">06</span><span class="nav-text">Newsletters / Substack</span></a>
     <a href="#estanteria"><span class="nav-number">07</span><span class="nav-text">Mi estantería</span></a>
     <a href="#moodboards"><span class="nav-number">08</span><span class="nav-text">Moodboard del día</span></a>
-    <a href="#mesa"><span class="nav-number">09</span><span class="nav-text">Mesa de trabajo</span></a>
-    <a href="#atlas"><span class="nav-number">10</span><span class="nav-text">Paletas y materiales</span></a>
-    <a href="#biblioteca"><span class="nav-number">11</span><span class="nav-text">Biblioteca completa</span></a>
-    <a href="#gym"><span class="nav-number">12</span><span class="nav-text">Creative Gym</span></a>
-    <a href="#estudio"><span class="nav-number">13</span><span class="nav-text">Mi plan de estudio</span></a>
-    <a href="#guardados"><span class="nav-number">14</span><span class="nav-text">Mis guardados · DNA</span></a>
+    <a href="#moodlab"><span class="nav-number">09</span><span class="nav-text">Moodboard Lab</span></a>
+    <a href="#mesa"><span class="nav-number">10</span><span class="nav-text">Mesa de trabajo</span></a>
+    <a href="#atlas"><span class="nav-number">11</span><span class="nav-text">Paletas y materiales</span></a>
+    <a href="#biblioteca"><span class="nav-number">12</span><span class="nav-text">Biblioteca completa</span></a>
+    <a href="#gym"><span class="nav-number">13</span><span class="nav-text">Creative Gym</span></a>
+    <a href="#estudio"><span class="nav-number">14</span><span class="nav-text">Mi plan de estudio</span></a>
+    <a href="#guardados"><span class="nav-number">15</span><span class="nav-text">Mis guardados · DNA</span></a>
     <div class="nav-caption">OTRAS PÁGINAS</div>
-    <a href="/color" class="nav-own"><span class="nav-number">15</span><span class="nav-text">Color · Citas · Bio</span><i aria-hidden="true">↗</i></a>
-    <a href="/cuaderno" class="nav-own"><span class="nav-number">16</span><span class="nav-text">Cuaderno de ideas</span><i aria-hidden="true">↗</i></a>
+    <a href="/color" class="nav-own"><span class="nav-number">16</span><span class="nav-text">Color · Citas · Bio</span><i aria-hidden="true">↗</i></a>
+    <a href="/cuaderno" class="nav-own"><span class="nav-number">17</span><span class="nav-text">Cuaderno de ideas</span><i aria-hidden="true">↗</i></a>
   </nav>
   <div class="rail-bottom"><div class="rail-deco"><span class="sun"></span><span class="arch"></span><span class="wave"></span></div><p>COLLECT WHAT INSPIRES YOU.<br>STUDY WHAT YOU LOVE.<br><span>DESIGN WHAT DOESN'T EXIST.</span></p></div>
 </aside>
@@ -366,6 +368,7 @@ h1,h2,h3,strong{font-synthesis:none}
     <div class="mood-archive-head"><span class="eyebrow">Archivo de moodboards</span><span id="moodArchiveNote"></span></div>
     <div class="mood-archive" id="moodArchive"></div>
   </section>
+  <section class="section moodlab-section" id="moodlab" aria-labelledby="moodlabTitle"><div class="section-head"><div><div class="eyebrow">✎ MOODBOARD LAB / From vague to sketchable</div><h2 id="moodlabTitle">Moodboard Lab<span style="color:#b67b62">.</span></h2></div><p>Escribe una idea vaga y recibe tres direcciones para bocetar —función, construcción y una analogía inesperada— con fotos reales enlazadas a su fuente. Fija las que te sirvan, pide retos de boceto y guarda el tablero en este navegador.</p></div><div id="moodlabRoot"></div></section>
   <section class="section" id="mesa" aria-labelledby="mesaTitle"><div class="section-head"><div><div class="eyebrow">▦ WORKBENCH / This week</div><h2 id="mesaTitle">Mesa de trabajo<span style="color:#b67b62">.</span></h2></div><p>Tus objetivos de la semana en un tablero, tu agenda día por día, una reflexión semanal y botones para pasarlo todo a Google Calendar sin conectar tu cuenta.</p></div><div id="mesaRoot"></div></section>
   <section class="section atlas-section" id="atlas" aria-labelledby="atlasTitle"><div class="section-head"><div><div class="eyebrow">✦ VISUAL ATLAS / Color & matter</div><h2 id="atlasTitle">Paletas y materiales<span style="color:#b67b62">.</span></h2></div><p>Dos herramientas para tu atlas visual: saca la paleta de cualquier foto tuya y consulta fichas de materiales con sus propiedades, procesos, sostenibilidad y costo aproximado.</p></div>
   <nav class="gym-tabs" aria-label="Herramientas del atlas"><a href="#atlas-palette"><b>1</b>Paleta desde mis fotos</a><a href="#atlas-materials"><b>2</b>Biblioteca de materiales</a></nav>
@@ -1636,4 +1639,5 @@ SHELF_IDS.forEach(shelfStatus);
 <script src="/atlas.js"></script>
 <script src="/calendar.js"></script>
 <script src="/mesa.js"></script>
+<script src="/moodlab.js"></script>
 </body></html>
